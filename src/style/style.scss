@@ -1,0 +1,78 @@
+@import "./utils/vars.scss";
+@import "funcs";
+
+html {
+  height: 100%;
+}
+
+body {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  margin-inline: auto;
+  padding: 0;
+  max-width: 1440px;
+  min-height: 100vh;
+  background-color: $pageBackground;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+p,
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.map {
+  &__ifhame {
+    width: fluid(360, 1440);
+  }
+}
+
+.footer {
+  background-image: url(/src/assets/images/footerBackground.png);
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: contain;
+  @media screen and (min-width: 400px) {
+    background-image: url(/src/assets/images/backgroundMax.png);
+  }
+
+  &__list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: toRem(26);
+    margin-left: toRem(67);
+    margin-right: toRem(67);
+    padding-bottom: toRem(490);
+    gap: toRem(14);
+  }
+
+  &__list-item {
+  }
+
+  &__list-item-link {
+    color: $footerLinkColor;
+    font-size: fluid(15, 32);
+    font-weight: 600;
+  }
+}
