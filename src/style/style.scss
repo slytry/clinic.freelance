@@ -49,12 +49,16 @@ li {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-right: 15px;
-  margin-left: 15px;
   min-height: toRem(515);
 
   @media screen and (min-width: 400px) {
     background-image: url("/src/assets/images/backgroundContactsMax.png");
+  }
+
+  &__list {
+    margin-bottom: 20px;
+    padding-right: 15px;
+    padding-left: 15px;
   }
 
   &__list-item {
@@ -64,7 +68,8 @@ li {
     justify-content: center;
     margin-bottom: 15px;
     color: $c-contactsList;
-    font-size: fluid(15, 32);
+    font-size: fluid(15, 24);
+    text-align: center;
   }
 }
 
@@ -101,7 +106,7 @@ li {
 
   &__list-item-link {
     color: $c-footerLink;
-    font-size: fluid(15, 32);
+    font-size: fluid(15, 24);
     font-weight: 600;
   }
 }
