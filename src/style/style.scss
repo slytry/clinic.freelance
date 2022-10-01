@@ -12,7 +12,7 @@ body {
   padding: 0;
   max-width: 1440px;
   min-height: 100vh;
-  background-color: $pageBackground;
+  background-color: $c-pageBackground;
 }
 
 *,
@@ -41,9 +41,37 @@ li {
   list-style-type: none;
 }
 
+.contacts {
+  background-image: url("/src/assets/images/backgroundContacts.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 15px;
+  margin-left: 15px;
+  min-height: toRem(515);
+
+  @media screen and (min-width: 400px) {
+    background-image: url("/src/assets/images/backgroundContactsMax.png");
+  }
+
+  &__list-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+    color: $c-contactsList;
+    font-size: fluid(15, 32);
+  }
+}
+
 .map {
   &__ifhame {
     width: fluid(360, 1440);
+    height: fluid(230, 530);
   }
 }
 
@@ -52,6 +80,7 @@ li {
   background-repeat: no-repeat;
   background-position: top;
   background-size: contain;
+
   @media screen and (min-width: 400px) {
     background-image: url(/src/assets/images/backgroundMax.png);
   }
@@ -60,7 +89,7 @@ li {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    margin-top: toRem(26);
+    margin-top: toRem(40);
     margin-left: toRem(67);
     margin-right: toRem(67);
     padding-bottom: toRem(490);
@@ -71,7 +100,7 @@ li {
   }
 
   &__list-item-link {
-    color: $footerLinkColor;
+    color: $c-footerLink;
     font-size: fluid(15, 32);
     font-weight: 600;
   }
