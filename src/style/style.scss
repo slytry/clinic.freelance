@@ -15,47 +15,19 @@ body {
   background-color: $c-pageBackground;
 }
 
-*,
-*:before,
-*:after {
-  box-sizing: border-box;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  margin: 0;
-}
-
-a {
-  text-decoration: none;
-}
-p,
-ul,
-li {
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
-}
 
 .about-us {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  // background-image: url(/src/assets/images/aboutusBackground.png);
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
   min-height: toRem(900);
   padding: 0 15px 0 15px;
 
-  // @media screen and (min-width: 500px) {
-  //   background-image: url("/src/assets/images/aboutusBackgroundMax.png");
-  // }
+ 
 
   &__img {
     position: absolute;
@@ -149,9 +121,6 @@ li {
     margin-right: toRem(67);
     padding-bottom: toRem(490);
     gap: toRem(14);
-  }
-
-  &__list-item {
   }
 
   &__list-item-link {
