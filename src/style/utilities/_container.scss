@@ -1,7 +1,7 @@
 @use '/style/abstract' as *;
 
 .container {
-    padding-inline: rem(15);
+    padding-inline: fluid(15, 50, 'vw', 420);
     max-width: var(--container-max);
     margin-inline: auto;
 }
