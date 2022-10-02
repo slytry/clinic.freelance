@@ -1,126 +1,185 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <link rel="icon" type="image/x-icon" href="./images/vite.svg" />
-      <script type="module" defer src="./main.js"></script>
-    <title>CLinicFreelance</title>
-  </head>
-  <body>
-    <header>fffffffffff</header>
-    <main>
-      <section class="about-us">
-        <img
-          src="/images/aboutusBackground.png"
-          alt=""
-          class="about-us__img"
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="icon" type="image/x-icon" href="./images/vite.svg" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"
         />
-        <h3 class="about-us__title">О нас</h3>
-        <div class="about-us__info">
-          <p class="about-us__info-descr">
-            В наших центрах работают опытные специалисты, которые с вниманием
-            относятся к каждому пациенту. Это профессионалы, которые станут
-            вашими партнёрами в сохранении здоровья.
-          </p>
-          <p class="about-us__info-descr">
-            Наша команда – более 3000 врачей различных специальностей. Среди них
-            197 кандидатов медицинских наук, 29 докторов медицинских наук, 8
-            профессоров, 2 академика РАМН, 7 доцентов и старших научных
-            сотрудников, Заслуженный врач России.
-          </p>
-          <p class="about-us__info-descr">
-            В наших медицинских центрах работают врачи как самых востребованных
-            медицинских специальностей: терапевты, кардиологи, урологи,
-            гинекологи, офтальмологи, оториноларингологи, хирурги и другие, так
-            и редких: генетики, репродуктологи, эмбриологи, гепатологи и другие.
-          </p>
-          <p class="about-us__info-descr">
-            В детских отделениях ведут приём доктора, специализирующиеся на
-            лечении детей с первых дней жизни до совершеннолетия.В наших центрах
-            работают опытные специалисты, которые с вниманием относятся к
-            каждому пациенту. Это профессионалы, которые станут вашими
-            партнёрами в сохранении здоровья.
-          </p>
-          <p class="about-us__info-descr">
-            Наша команда – более 3000 врачей различных специальностей. Среди них
-            197 кандидатов медицинских наук, 29 докторов медицинских наук, 8
-            профессоров, 2 академика РАМН, 7 доцентов и старших научных
-            сотрудников, Заслуженный врач России.
-          </p>
-          <p class="about-us__info-descr">
-            В наших медицинских центрах работают врачи как самых востребованных
-            медицинских специаль
-          </p>
-          <p class="about-us__info-descr">
-            В детских отделениях ведут приём доктора, специализирующиеся на
-            лечении детей с первых дней жизни до совершеннолетия.В наших центрах
-            работают опытные специалисты, которые с вниманием относятся к
-            каждому пациенту. Это профессионалы, которые станут вашими
-            партнёрами в сохранении здоровья.
-          </p>
-          <p class="about-us__info-descr">
-            Наша команда – более 3000 врачей различных специальностей. Среди них
-            197 кандидатов медицинских наук, 29 докторов медицинских наук, 8
-            профессоров, 2 академика РАМН, 7 доцентов и старших научных
-            сотрудников, Заслуженный врач
-          </p>
-        </div>
-      </section>
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
+        />
+        <script type="module" defer src="./main.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+        <title>CLinicFreelance</title>
+    </head>
+    <body>
+        <header>fffffffffff</header>
+        <main>
+            <section class="slider">
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src="/images/sales.jpg" alt="" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="/images/sales.jpg" alt="" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="/images/sales.jpg" alt="" />
+                        </div>
+                    </div>
+                    <div class="swiper-button-next">
+                        <img src="/images/arrowNext.png" alt="arrow next" />
+                    </div>
+                    <div class="swiper-button-prev">
+                        <img src="/images/arrowPrev.png" alt="arrow prev" />
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+            </section>
 
-      <section class="contacts">
-        <h2 class="contacts__title">Контакты</h2>
-        <ol class="contacts__list">
-          <li class="contacts__list-item">
-            Наш адрес: <br />
-            г.Домодедово, Мкр. Западный Ул. Зеленая 72/1
-          </li>
-          <li class="contacts__list-item">
-            Телефоны: <br />
-            +7 (496-79) 7-63-75 <br />
-            +7 (496-79) 4-04-27
-          </li>
-          <li class="contacts__list-item">
-            Режим работы: <br />
-            Пн — Сб: с 8 до 20 часов <br />
-            Вс: с 9 до 17 часов
-          </li>
-          <li class="contacts__list-item">
-            Работа процедурного кабинета: с 8:00 до 17:30 (в воскресение с 9:00
-            до 16:00)
-          </li>
-          <li class="contacts__list-item">
-            Анализы принимаются до 13.00, капельницы и уколы до 17:00.
-          </li>
-          <li class="contacts__list-item">
-            Возможен вызовы на дом медсестры (уколы и забор анализов)
-          </li>
-        </ol>
-      </section>
-      <section class="map">
-        <iframe
-          class="map__ifhame"
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2264.20558595797!2d37.76912981612451!3d55.4242079804667!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x414aa6a0d4d23bc1%3A0x7de8d81efb52de69!2z0KHQtdC80LXQudC90YvQuSDQnNC10LTQuNGG0LjQvdGB0LrQuNC5INCm0LXQvdGC0YAg0KHQu9Cw0LnQtA!5e0!3m2!1sru!2sfr!4v1664563364726!5m2!1sru!2sfr"
-          style="border: 0"
-          allowfullscreen=""
-          loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"
-        ></iframe>
-      </section>
-    </main>
-    <footer class="footer">
-      <ul class="footer__list">
-        <li class="footer__list-item">
-          <a href="" class="footer__list-item-link"> Контакты </a>
-        </li>
-        <li class="footer__list-item">
-          <a href="" class="footer__list-item-link"> Вакансии </a>
-        </li>
-        <li class="footer__list-item">
-          <a href="" class="footer__list-item-link"> Запись на прием </a>
-        </li>
-      </ul>
-    </footer>
-  </body>
+            <section class="about-us">
+                <img
+                    src="/images/aboutusBackground.png"
+                    alt=""
+                    class="about-us__imgMin"
+                />
+                <img
+                    src="/images/aboutusBackgroundMax.png"
+                    alt=""
+                    class="about-us__imgMax"
+                />
+                <h3 class="about-us__title">О нас</h3>
+                <div class="about-us__info">
+                    <p class="about-us__info-descr">
+                        В наших центрах работают опытные специалисты, которые с
+                        вниманием относятся к каждому пациенту. Это
+                        профессионалы, которые станут вашими партнёрами в
+                        сохранении здоровья.
+                    </p>
+                    <p class="about-us__info-descr">
+                        Наша команда – более 3000 врачей различных
+                        специальностей. Среди них 197 кандидатов медицинских
+                        наук, 29 докторов медицинских наук, 8 профессоров, 2
+                        академика РАМН, 7 доцентов и старших научных
+                        сотрудников, Заслуженный врач России.
+                    </p>
+                    <p class="about-us__info-descr">
+                        В наших медицинских центрах работают врачи как самых
+                        востребованных медицинских специальностей: терапевты,
+                        кардиологи, урологи, гинекологи, офтальмологи,
+                        оториноларингологи, хирурги и другие, так и редких:
+                        генетики, репродуктологи, эмбриологи, гепатологи и
+                        другие.
+                    </p>
+                    <p class="about-us__info-descr">
+                        В детских отделениях ведут приём доктора,
+                        специализирующиеся на лечении детей с первых дней жизни
+                        до совершеннолетия.В наших центрах работают опытные
+                        специалисты, которые с вниманием относятся к каждому
+                        пациенту. Это профессионалы, которые станут вашими
+                        партнёрами в сохранении здоровья.
+                    </p>
+                    <p class="about-us__info-descr">
+                        Наша команда – более 3000 врачей различных
+                        специальностей. Среди них 197 кандидатов медицинских
+                        наук, 29 докторов медицинских наук, 8 профессоров, 2
+                        академика РАМН, 7 доцентов и старших научных
+                        сотрудников, Заслуженный врач России.
+                    </p>
+                    <p class="about-us__info-descr">
+                        В наших медицинских центрах работают врачи как самых
+                        востребованных медицинских специаль
+                    </p>
+                    <p class="about-us__info-descr">
+                        В детских отделениях ведут приём доктора,
+                        специализирующиеся на лечении детей с первых дней жизни
+                        до совершеннолетия.В наших центрах работают опытные
+                        специалисты, которые с вниманием относятся к каждому
+                        пациенту. Это профессионалы, которые станут вашими
+                        партнёрами в сохранении здоровья.
+                    </p>
+                    <p class="about-us__info-descr">
+                        Наша команда – более 3000 врачей различных
+                        специальностей. Среди них 197 кандидатов медицинских
+                        наук, 29 докторов медицинских наук, 8 профессоров, 2
+                        академика РАМН, 7 доцентов и старших научных
+                        сотрудников, Заслуженный врач
+                    </p>
+                </div>
+            </section>
+
+            <section class="contacts">
+                <h2 class="contacts__title">Контакты</h2>
+                <ol class="contacts__list">
+                    <li class="contacts__list-item">
+                        Наш адрес: <br />
+                        г.Домодедово, Мкр. Западный Ул. Зеленая 72/1
+                    </li>
+                    <li class="contacts__list-item">
+                        Телефоны: <br />
+                        +7 (496-79) 7-63-75 <br />
+                        +7 (496-79) 4-04-27
+                    </li>
+                    <li class="contacts__list-item">
+                        Режим работы: <br />
+                        Пн — Сб: с 8 до 20 часов <br />
+                        Вс: с 9 до 17 часов
+                    </li>
+                    <li class="contacts__list-item">
+                        Работа процедурного кабинета: с 8:00 до 17:30 (в
+                        воскресение с 9:00 до 16:00)
+                    </li>
+                    <li class="contacts__list-item">
+                        Анализы принимаются до 13.00, капельницы и уколы до
+                        17:00.
+                    </li>
+                    <li class="contacts__list-item">
+                        Возможен вызовы на дом медсестры (уколы и забор
+                        анализов)
+                    </li>
+                </ol>
+            </section>
+            <section class="map">
+                <iframe
+                    class="map__ifhame"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2264.20558595797!2d37.76912981612451!3d55.4242079804667!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x414aa6a0d4d23bc1%3A0x7de8d81efb52de69!2z0KHQtdC80LXQudC90YvQuSDQnNC10LTQuNGG0LjQvdGB0LrQuNC5INCm0LXQvdGC0YAg0KHQu9Cw0LnQtA!5e0!3m2!1sru!2sfr!4v1664563364726!5m2!1sru!2sfr"
+                    style="border: 0"
+                    allowfullscreen=""
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"
+                ></iframe>
+            </section>
+        </main>
+        <footer class="footer">
+            <img
+                src="/images/footerBackground.png"
+                alt="фон футера"
+                class="footer__imgMin"
+            />
+            <img
+                src="/images/backgroundMax.png"
+                alt="фон футера"
+                class="footer__imgMax"
+            />
+            <ul class="footer__list">
+                <li class="footer__list-item">
+                    <a href="" class="footer__list-item-link"> Контакты </a>
+                </li>
+                <li class="footer__list-item">
+                    <a href="" class="footer__list-item-link"> Вакансии </a>
+                </li>
+                <li class="footer__list-item">
+                    <a href="" class="footer__list-item-link">
+                        Запись на прием
+                    </a>
+                </li>
+            </ul>
+        </footer>
+    </body>
 </html>

@@ -10,6 +10,42 @@ body {
     background-color: $pageBackground;
 }
 
+.slider {
+    width: fluid(360, 1440);
+    height: fluid(150, 680);
+}
+
+.swiper {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
 
 .about-us {
     display: flex;
@@ -22,7 +58,24 @@ body {
     min-height: toRem(900);
     padding: 0 15px 0 15px;
 
+    &__imgMin {
+        z-index: 0;
+        position: absolute;
 
+        @media screen and (min-width: 400px) {
+            display: none;
+        }
+    }
+
+    &__imgMax {
+        z-index: 0;
+        display: none;
+        position: absolute;
+
+        @media screen and (min-width: 400px) {
+            display: block;
+        }
+    }
 
     &__img {
         position: absolute;
@@ -38,7 +91,7 @@ body {
         margin-bottom: 15px;
         z-index: 2;
 
-        @media screen and (min-width: 400px) {
+        @media screen and (min-width: 1000px) {
             color: $aboutUsTitleMax;
         }
     }
@@ -55,7 +108,7 @@ body {
 }
 
 .contacts {
-    background-image: url("/images/backgroundContacts.png");
+    background-image: url('/images/backgroundContacts.png');
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
@@ -65,7 +118,7 @@ body {
     min-height: toRem(515);
 
     @media screen and (min-width: 400px) {
-        background-image: url("/images/backgroundContactsMax.png");
+        background-image: url('/images/backgroundContactsMax.png');
     }
 
     &__title {
@@ -98,29 +151,53 @@ body {
 }
 
 .footer {
-    background-image: url('/images/footerBackground.png');
-    background-repeat: no-repeat;
-    background-position: top;
-    background-size: contain;
+    display: flex;
+    justify-content: center;
 
-    @media screen and (min-width: 400px) {
-        background-image: url(/'images/backgroundMax.png');
+    &__imgMin {
+        z-index: 0;
+        position: absolute;
+
+        @media screen and (min-width: 400px) {
+            display: none;
+        }
+    }
+
+    &__imgMax {
+        z-index: 0;
+        display: none;
+        position: absolute;
+
+        @media screen and (min-width: 400px) {
+            display: block;
+        }
     }
 
     &__list {
         display: flex;
         justify-content: center;
         flex-wrap: wrap;
-        margin-top: toRem(40);
+        padding-top: toRem(40);
         margin-left: toRem(67);
         margin-right: toRem(67);
-        padding-bottom: toRem(490);
-        gap: toRem(14);
+        padding-bottom: toRem(70);
+        list-style: none;
+        gap: toRem(30);
+        z-index: 2;
+
+        @media screen and (min-width: 500px) {
+            padding-top: toRem(200);
+        }
+    }
+
+    &__list-item {
+        cursor: pointer;
     }
 
     &__list-item-link {
         color: $footerLink;
         font-size: fluid(15, 24);
         font-weight: 600;
+        text-decoration: none;
     }
 }
