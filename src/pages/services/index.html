@@ -10,9 +10,16 @@
     </head>
     <body>
         <header class="header">
-            <div class="header__content">
+            <div class="header__content container">
                 <div class="header__logo">
-                    <img src="/images/headerLogo.svg" alt="logo" />
+                    <a href="/" class="header__logo-link">
+                        <img
+                            class="header__logo-picture"
+                            src="/images/headerLogo.svg"
+                            alt="logo"
+                        />
+                        <p class="header__logo-text">Медицинский центр</p>
+                    </a>
                 </div>
                 <a href="#" class="header__news">Новости и акции</a>
                 <a href="#" class="header__contacts">Контакты</a>
@@ -20,7 +27,7 @@
                     <a href="tel:+79256553328" class="header__phone"
                         >+7-925-655-33-28
                     </a>
-                    <button class="header__callToReception">
+                    <button class="header__callToReception button">
                         Запись на прием
                     </button>
                 </div>
@@ -42,11 +49,11 @@
         </header>
 
         <main class="main">
-            <section class="title">
+            <section class="title container">
                 <h2 class="title__head">Услуги</h2>
                 <p class="title__descr">Гинекология</p>
             </section>
-            <section class="services">
+            <section class="services container">
                 <ul class="services__list">
                     <a href="#" class="services__link"
                         ><li class="services__link-item">

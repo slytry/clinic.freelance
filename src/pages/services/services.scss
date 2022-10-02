@@ -1,20 +1,10 @@
 @use '/style/abstract' as *;
 
-body {
-    display: grid;
-    grid-template-rows: auto 1fr auto;
-    margin-inline: auto;
-    padding: 0;
-    max-width: 1440px;
-    min-height: 100vh;
-    background-color: $pageBackground;
-}
-
 .title {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: toRem(15);
+    padding-top: rem(15);
 
     &__head {
         font-family: 'IBM Plex Sans';
@@ -47,10 +37,10 @@ body {
 
     &__link-item {
         border: 1px solid balck;
-        padding-left: toRem(19);
+        padding-left: rem(19);
         background-image: url(/images/servicesBackground.png);
-        padding-top: toRem(10);
-        padding-bottom: toRem(10);
+        padding-top: rem(10);
+        padding-bottom: rem(10);
         border-radius: 15%;
     }
 }

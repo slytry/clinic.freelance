@@ -1,3 +1,8 @@
-button {
-    padding: 0;
+@use '/style/abstract' as *;
+
+.button {
+    padding: rem(4) rem(8);
+    background: linear-gradient(180deg, #0584d7 0%, #3abdf5 100%);
+    border: 1px solid #fdfeff;
+    border-radius: 16px;
 }
