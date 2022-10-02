@@ -1,0 +1,126 @@
+@use '../abstract' as *;
+
+body {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    margin-inline: auto;
+    padding: 0;
+    max-width: 1440px;
+    min-height: 100vh;
+    background-color: $pageBackground;
+}
+
+
+.about-us {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    min-height: toRem(900);
+    padding: 0 15px 0 15px;
+
+
+
+    &__img {
+        position: absolute;
+        z-index: 0;
+        width: fluid(400, 800);
+    }
+
+    &__title {
+        color: $aboutUsTitle;
+        font-weight: 700;
+        font-size: fluid(16, 36);
+        line-height: 19px;
+        margin-bottom: 15px;
+        z-index: 2;
+
+        @media screen and (min-width: 400px) {
+            color: $aboutUsTitleMax;
+        }
+    }
+
+    &__info {
+        text-align: center;
+        z-index: 2;
+    }
+
+    &__info-descr {
+        margin-bottom: 15px;
+        font-size: fluid(13, 24);
+    }
+}
+
+.contacts {
+    background-image: url("/images/backgroundContacts.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: toRem(515);
+
+    @media screen and (min-width: 400px) {
+        background-image: url("/images/backgroundContactsMax.png");
+    }
+
+    &__title {
+        font-size: fluid(24, 32);
+    }
+
+    &__list {
+        margin-bottom: 20px;
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+
+    &__list-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 15px;
+        color: $contactsList;
+        font-size: fluid(15, 24);
+        text-align: center;
+    }
+}
+
+.map {
+    &__ifhame {
+        width: fluid(360, 1440);
+        height: fluid(230, 530);
+    }
+}
+
+.footer {
+    background-image: url('/images/footerBackground.png');
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: contain;
+
+    @media screen and (min-width: 400px) {
+        background-image: url(/'images/backgroundMax.png');
+    }
+
+    &__list {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-top: toRem(40);
+        margin-left: toRem(67);
+        margin-right: toRem(67);
+        padding-bottom: toRem(490);
+        gap: toRem(14);
+    }
+
+    &__list-item-link {
+        color: $footerLink;
+        font-size: fluid(15, 24);
+        font-weight: 600;
+    }
+}
