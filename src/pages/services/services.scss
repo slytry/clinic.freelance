@@ -97,5 +97,9 @@ body {
     &__link-item {
         border: 1px solid balck;
         padding-left: toRem(19);
+        background-image: url(/images/servicesBackground.png);
+        padding-top: toRem(10);
+        padding-bottom: toRem(10);
+        border-radius: 15%;
     }
 }
