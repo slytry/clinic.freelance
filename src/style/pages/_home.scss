@@ -116,6 +116,7 @@ body {
     flex-direction: column;
     align-items: center;
     min-height: toRem(515);
+    position: relative;
 
     @media screen and (min-width: 400px) {
         background-image: url('/images/backgroundContactsMax.png');
@@ -131,14 +132,19 @@ body {
         padding-left: 15px;
     }
 
+    &__list-link,
+    &__list-item {
+        color: $contactsList;
+        font-size: fluid(15, 24);
+    }
+
     &__list-item {
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
         margin-bottom: 15px;
-        color: $contactsList;
-        font-size: fluid(15, 24);
+
         text-align: center;
     }
 }
