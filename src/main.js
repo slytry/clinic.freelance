@@ -3,6 +3,7 @@ import './home.scss';
 
 const button = document.querySelector('.burger__button');
 const menu = document.querySelector('.menu');
+const closeBtn = document.querySelector('.close');
 
 document.addEventListener('click', (e) => {
     if (!menu.contains(e.target) && !button.contains(e.target)) {
@@ -17,6 +18,10 @@ document.addEventListener('keyup', (e) => {
 
 button.addEventListener('click', () => {
     menu.classList.toggle('menu--open');
+});
+
+closeBtn.addEventListener('click', () => {
+    menu.classList.remove('menu--open');
 });
 
 export const swiper = new Swiper('.mySwiper', {

@@ -1,8 +1,12 @@
 @use '/style/abstract' as *;
 
 .button {
-    padding: rem(4) rem(8);
+    padding: 0.35em 0.7em;
     background: linear-gradient(180deg, #0584d7 0%, #3abdf5 100%);
     border: 1px solid #fdfeff;
     border-radius: 16px;
+
+    font-family: $f-kanit;
+    font-weight: 600;
+    font-size: fluid(18, 28);
 }
