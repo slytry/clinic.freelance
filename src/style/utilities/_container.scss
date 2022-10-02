@@ -1,4 +1,6 @@
+@use '/style/abstract' as *;
+
 .container {
-    width: min(100% - 3rem, var(--container-max, 60ch));
+    width: min(100% - rem(15), var(--container-max, 60ch));
     margin-inline: auto;
 }

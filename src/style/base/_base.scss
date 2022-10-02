@@ -1,0 +1,7 @@
+@use '/style/abstract' as *;
+
+body {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    background-color: $pageBackground;
+}
