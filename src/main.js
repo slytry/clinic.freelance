@@ -1,4 +1,5 @@
 import '/style/main.scss';
+import './home.scss';
 
 const swiper = new Swiper('.mySwiper', {
     autoplay: {
