@@ -1,12 +1,5 @@
 @use "sass:math";
 
-@function rem($size) {
-  $remValue: math.div($size, 16);
-  $roundedValue: decimal-round($remValue, 3) * 1rem;
-
-  @return $roundedValue;
-}
-
 @function decimal-round($number, $digits: 0, $mode: round) {
   $n: 1;
 
@@ -65,7 +58,10 @@
   @return clamp(#{$minSize}, #{$preferredValue}, #{$maxSize});
 }
 
-@function toRem($value) {
-  $remValue: (math.div($value, 16)) + rem;
-  @return $remValue;
+
+@function rem($size) {
+  $remValue: math.div($size, 16);
+  $roundedValue: decimal-round($remValue, 3) * 1rem;
+
+  @return $roundedValue;
 }

@@ -5,7 +5,7 @@
         flex-direction: row;
         justify-content: center;
         align-items: center;
-        gap: toRem(20);
+        gap: rem(20);
         background-color: rgba(238, 235, 235, 0.47);
         // filter: blur(2px);
     }
@@ -18,7 +18,7 @@
 
     &__logo {
         z-index: 2;
-        padding-top: toRem(19);
+        padding-top: rem(19);
     }
 
     &__title {
