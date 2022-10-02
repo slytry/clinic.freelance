@@ -14,7 +14,9 @@ html {
 html,
 body {
     height: 100%;
+    overflow-x: hidden;
     padding: 0;
+    max-width: 100%;
 }
 
 html:focus-within {
@@ -61,6 +63,12 @@ h4,
 h5,
 h6 {
     overflow-wrap: break-word;
+}
+
+button {
+    border: 0;
+    background: none;
+    cursor: pointer;
 }
 
 #root,
