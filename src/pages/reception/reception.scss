@@ -1,9 +1,20 @@
 @use '/style/abstract' as *;
 @use '/style/base' as *;
 
+body {
+    overflow-y: scroll;
+    height: inherit;
+}
+
 .main {
     background-image: url('/images/bigBg.png');
     background-color: #f5f0eb;
+}
+
+.whiteTextBold {
+    color: $c-white;
+    font-weight: 600;
+    font-size: rem(30);
 }
 
 .hr {
@@ -105,6 +116,8 @@
         border: 3px solid #27a7e1;
         border-radius: 100px;
         padding: rem(50);
+        display: flex;
+        justify-content: space-between;
     }
 
     &__picture {
@@ -132,6 +145,82 @@
         right: 0;
         bottom: 0px;
         z-index: 2;
+    }
+
+    &__text {
+        flex-basis: 70%;
+        height: rem(400);
+        // width: 200px;
+
+        // overflow-x: scroll;
+        overflow-y: scroll;
+
+        &::-webkit-scrollbar-track {
+            background: rgba(0, 157, 233, 0.4);
+            border: 1px solid #ffffff;
+            border-radius: 80px;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            background: rgb(197 219 233 / 53%);
+            border-radius: 440px;
+            // width: 25px;
+            // height: 25px;
+            opacity: 0.5;
+        }
+        &::-webkit-scrollbar {
+            width: 28px;
+        }
+
+        &::-webkit-scrollbar-button {
+            display: block;
+            background-repeat: no-repeat;
+            background-size: 50%;
+            background-position: center;
+        }
+
+        &::-webkit-scrollbar-button:vertical:start:increment {
+            background-image: url('https://upload.wikimedia.org/wikipedia/commons/7/7e/Chevron-up.svg');
+        }
+
+        &::-webkit-scrollbar-button:vertical:start:decrement {
+            display: none;
+        }
+
+        &::-webkit-scrollbar-button:vertical:end:increment {
+            display: none;
+        }
+
+        &::-webkit-scrollbar-button:vertical:end:decrement {
+            background-image: url('https://upload.wikimedia.org/wikipedia/commons/e/ee/Chevron-down.svg');
+        }
+
+        &-desc {
+            font-family: $f-ibm;
+            font-weight: 500;
+            font-size: rem(24);
+            line-height: 1.2;
+
+            color: #000000;
+            margin-bottom: rem(10);
+        }
+    }
+
+    &__text-list {
+        display: flex;
+        flex-direction: column;
+        gap: rem(20);
+        padding: 0;
+        margin-top: rem(20);
+    }
+    &__text-list-item {
+        font-family: $f-ibm;
+        font-weight: 500;
+        font-size: rem(24);
+        line-height: 1.2;
+
+        color: #000000;
+        list-style-type: none;
     }
 }
 
@@ -242,4 +331,8 @@
             align-items: center;
         }
     }
+}
+
+.whiteText {
+    color: $c-white !important;
 }
