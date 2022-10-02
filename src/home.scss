@@ -1,13 +1,5 @@
 @use '/style/abstract' as *;
 
-body {
-    display: grid;
-    grid-template-rows: auto 1fr auto;
-    padding: 0;
-    min-height: 100vh;
-    background-color: $pageBackground;
-}
-
 .slider {
     width: fluid(360, 1440);
     height: fluid(150, 680);
