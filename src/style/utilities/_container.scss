@@ -1,6 +1,7 @@
 @use '/style/abstract' as *;
 
 .container {
-    width: min(100% - rem(15), var(--container-max, 60ch));
+    padding-inline: rem(15);
+    max-width: var(--container-max);
     margin-inline: auto;
 }
