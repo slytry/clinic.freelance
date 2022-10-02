@@ -1,26 +1,25 @@
 import '/style/main.scss';
 import './home.scss';
 
-const button = document.querySelector('.header__button');
+const button = document.querySelector('.burger__button');
 const menu = document.querySelector('.menu');
-const buttonRows = document.querySelectorAll('.header__button-row');
 
-export const greeting = () => {
-    document.addEventListener('click', (e) => {
-        if (!menu.contains(e.target) && !button.contains(e.target)) {
-            menu.classList.remove('menu--open');
-        }
-    });
+document.addEventListener('click', (e) => {
+    if (!menu.contains(e.target) && !button.contains(e.target)) {
+        menu.classList.remove('menu--open');
+    }
+});
+document.addEventListener('keyup', (e) => {
+    if (menu.classList.contains('menu--open') && e.key === 'Escape') {
+        menu.classList.remove('menu--open');
+    }
+});
 
-    button.addEventListener('click', () => {
-        menu.classList.toggle('menu--open');
-        buttonRows.forEach((i) => {
-            i.classList.toggle('header__button-row--open');
-        });
-    });
-};
+button.addEventListener('click', () => {
+    menu.classList.toggle('menu--open');
+});
 
-const swiper = new Swiper('.mySwiper', {
+export const swiper = new Swiper('.mySwiper', {
     autoplay: {
         delay: 5000,
     },

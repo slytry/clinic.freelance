@@ -2,34 +2,39 @@
 
 .header {
     width: 100%;
-    padding: 35px rem(100);
-
     background-image: url('/images/headerBackground.png');
     background-repeat: no-repeat;
     background-size: cover;
 
-    &,
-    &__number,
-    &__content,
-    &__logo-link {
+    border-bottom: 23px solid #0072ba29;
+
+    &__content {
         display: flex;
+        gap: 5%;
+        justify-content: center;
+        align-items: center;
+        padding-top: rem(9);
+        @include respond-below('799px') {
+            justify-content: space-between;
+        }
     }
 
-    &,
-    &__content,
+    &__number,
+    &__logo-link {
+        display: flex;
+        flex-direction: column;
+    }
+
     &__logo-link {
         justify-content: center;
     }
 
-    &__content {
-        gap: rem(120);
-        max-width: 1440px;
-        align-items: center;
-    }
-
     &__number,
-    &__logo-link {
-        flex-direction: column;
+    &__news,
+    &__contacts {
+        @include respond-below('799px') {
+            display: none;
+        }
     }
 
     &__logo-link {
@@ -52,4 +57,68 @@
         border-radius: 4px;
         padding: rem(2);
     }
+}
+
+//---------
+//Burger menu
+//---------
+
+.burger__button {
+    flex-shrink: 0;
+    @include respond-above('800px') {
+        display: none;
+    }
+}
+
+.menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: min(100%, 60ch);
+    min-height: 100vh;
+    transform: translateX(100%);
+    transition: transform 200ms ease-in;
+    background-color: $pageBackground;
+    list-style: none;
+    padding: 0 40px;
+
+    &--open {
+        transform: translateX(0);
+    }
+
+    @include respond-above('800px') {
+        display: none;
+    }
+
+    &__item {
+        line-height: 1.2;
+        color: #0a0a0a;
+    }
+}
+
+.close {
+    position: absolute;
+    right: 32px;
+    top: 32px;
+    width: 32px;
+    height: 32px;
+    opacity: 0.3;
+}
+.close:hover {
+    opacity: 1;
+}
+.close:before,
+.close:after {
+    position: absolute;
+    left: 15px;
+    content: ' ';
+    height: 33px;
+    width: 2px;
+    background-color: #333;
+}
+.close:before {
+    transform: rotate(45deg);
+}
+.close:after {
+    transform: rotate(-45deg);
 }
