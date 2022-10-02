@@ -1,6 +1,5 @@
 @use '/style/abstract' as *;
 
-
 body {
     display: grid;
     grid-template-rows: auto 1fr auto;
@@ -9,54 +8,6 @@ body {
     max-width: 1440px;
     min-height: 100vh;
     background-color: $pageBackground;
-}
-
-.header {
-    height: fluid(70, 208);
-    &__mask {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-        gap: toRem(20);
-        background-color: rgba(238, 235, 235, 0.47);
-        // filter: blur(2px);
-    }
-
-    &__bacground {
-        z-index: 0;
-        position: absolute;
-        width: 100%;
-    }
-
-    &__logo {
-        z-index: 2;
-        padding-top: toRem(19);
-    }
-
-    &__title {
-        z-index: 2;
-        font-family: 'Roboto';
-        font-style: normal;
-        font-weight: 800;
-        font-size: 14px;
-        line-height: 16px;
-        letter-spacing: 0.03em;
-        text-transform: capitalize;
-        background: linear-gradient(180deg, #0d8fe2 0%, #35b6ef 100%);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
-    }
-
-    &__burger {
-        z-index: 2;
-        padding: 0;
-        border: none;
-        font: inherit;
-        color: inherit;
-        background-color: transparent;
-    }
 }
 
 .title {
