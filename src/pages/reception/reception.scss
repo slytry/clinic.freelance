@@ -15,6 +15,10 @@ body {
     color: $c-white;
     font-weight: 600;
     font-size: rem(30);
+
+    @media screen and (max-width: 768px) {
+        font-size: rem(40);
+    }
 }
 
 .hr {
@@ -39,6 +43,10 @@ body {
     font-size: rem(38);
     line-height: 1.2;
     color: $c-black;
+    @media screen and (max-width: 414px) {
+        font-size: rem(30);
+        text-align: center;
+    }
 }
 
 .title__desc {
@@ -67,8 +75,8 @@ body {
     border: 1px solid #fdfeff;
     border-radius: 10px;
     font-weight: 500;
-    font-size: 32px;
-    line-height: 42px;
+    font-size: rem(32);
+    line-height: 1.2;
     font-family: $f-ibm;
     padding: rem(10) rem(80);
 
@@ -80,6 +88,10 @@ body {
 
     transform: scale(1);
     transition: transform 0.3s;
+    @media screen and (max-width: 768px) {
+        font-size: rem(24);
+        padding: rem(10) rem(70);
+    }
 
     &:hover {
         transform: scale(1.1);
@@ -101,6 +113,10 @@ body {
 .specialists {
     &__head {
         align-items: flex-start;
+        @media screen and (max-width: 768px) {
+            align-items: center;
+            margin-bottom: rem(40);
+        }
     }
 }
 
@@ -110,20 +126,38 @@ body {
     align-content: stretch;
     grid-auto-rows: 1fr;
 
-    gap: max(0.5em, 1.5vw);
+    gap: max(1.4em, 2.5vw);
+
+    @media screen and (max-width: 768px) {
+        gap: max(5.4em, 6.5vw);
+    }
+
     &__item {
         background: #b6cddc;
         border: 3px solid #27a7e1;
         border-radius: 100px;
         padding: rem(50);
         display: flex;
+        position: relative;
         justify-content: space-between;
+        @media screen and (max-width: 768px) {
+            flex-direction: column;
+            align-items: center;
+            background: #b6cddc00;
+            border: none;
+            padding: 0;
+            gap: rem(20);
+        }
     }
 
     &__picture {
         position: relative;
         width: rem(300);
         height: rem(400);
+        @media screen and (max-width: 1030px) {
+            width: rem(200);
+            height: rem(300);
+        }
     }
 
     &__picture-overlay {
@@ -135,6 +169,14 @@ body {
         z-index: 1;
         bottom: -4px;
         left: -4px;
+        @media screen and (max-width: 1030px) {
+            width: rem(200);
+            height: rem(300);
+            bottom: -10px;
+        }
+        @media screen and (max-width: 768px) {
+            transform: rotate(-15deg);
+        }
     }
 
     img {
@@ -145,15 +187,36 @@ body {
         right: 0;
         bottom: 0px;
         z-index: 2;
+        @media screen and (max-width: 1030px) {
+            width: rem(200);
+            height: rem(300);
+            bottom: 0px;
+        }
+        @media screen and (max-width: 768px) {
+            border-radius: 20px;
+        }
     }
 
     &__text {
         flex-basis: 70%;
         height: rem(400);
-        // width: 200px;
 
-        // overflow-x: scroll;
         overflow-y: scroll;
+
+        @media screen and (max-width: 1400px) {
+            flex-basis: 59%;
+        }
+
+        @media screen and (max-width: 768px) {
+            background: #b6cddc;
+            height: rem(30);
+            flex-basis: 66%;
+            padding: rem(40);
+            overflow-y: auto;
+        }
+        @media screen and (max-width: 420px) {
+            padding: rem(20);
+        }
 
         &::-webkit-scrollbar-track {
             background: rgba(0, 157, 233, 0.4);
@@ -164,12 +227,13 @@ body {
         &::-webkit-scrollbar-thumb {
             background: rgb(197 219 233 / 53%);
             border-radius: 440px;
-            // width: 25px;
-            // height: 25px;
             opacity: 0.5;
         }
         &::-webkit-scrollbar {
             width: 28px;
+            @media screen and (max-width: 1030px) {
+                width: 15px;
+            }
         }
 
         &::-webkit-scrollbar-button {
@@ -203,6 +267,39 @@ body {
 
             color: #000000;
             margin-bottom: rem(10);
+
+            @media screen and (max-width: 1030px) {
+                font-size: rem(17);
+            }
+            @media screen and (max-width: 768px) {
+                font-size: rem(15);
+            }
+
+            &--education {
+                @media screen and (max-width: 768px) {
+                    display: none;
+                }
+            }
+
+            &--heading {
+                font-size: rem(40);
+                @media screen and (max-width: 420px) {
+                    font-size: rem(25);
+                }
+            }
+            &--subheading {
+                font-size: rem(35);
+                @media screen and (max-width: 420px) {
+                    font-size: rem(22);
+                }
+            }
+
+            &--br {
+                display: none;
+                @media screen and (max-width: 768px) {
+                    display: block;
+                }
+            }
         }
     }
 
@@ -212,6 +309,9 @@ body {
         gap: rem(20);
         padding: 0;
         margin-top: rem(20);
+        @media screen and (max-width: 768px) {
+            display: none;
+        }
     }
     &__text-list-item {
         font-family: $f-ibm;
@@ -221,6 +321,12 @@ body {
 
         color: #000000;
         list-style-type: none;
+        @media screen and (max-width: 1030px) {
+            font-size: rem(17);
+        }
+        @media screen and (max-width: 768px) {
+            font-size: rem(13);
+        }
     }
 }
 
@@ -306,8 +412,6 @@ body {
     }
 
     &__link {
-        // width: 100%;
-        // height: 100%;
         text-decoration: none;
         color: $c-black;
         display: block;
@@ -326,7 +430,15 @@ body {
             padding: rem(10);
             padding-right: 40px;
             padding-left: 40px;
-            // font-size: rem(30);
+            font-size: rem(23);
+            display: flex;
+            align-items: center;
+        }
+        @media screen and (max-width: 460px) {
+            padding: rem(10);
+            padding-right: 40px;
+            padding-left: 40px;
+            font-size: rem(17);
             display: flex;
             align-items: center;
         }
