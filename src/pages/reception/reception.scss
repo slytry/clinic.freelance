@@ -14,6 +14,7 @@
 
 .title {
     position: relative;
+    padding-bottom: 250px;
 }
 
 .title__head {
@@ -22,7 +23,7 @@
     align-items: center;
     padding-top: rem(36);
     padding-bottom: rem(36);
-    @include f-IBX;
+    font-family: $f-ibm;
     font-weight: 600;
     font-size: rem(38);
     line-height: 1.2;
@@ -30,7 +31,7 @@
 }
 
 .title__desc {
-    @include f-IBX;
+    font-family: $f-ibm;
     font-weight: 500;
     font-size: rem(30);
     line-height: 1.3;
@@ -42,15 +43,99 @@
 }
 
 .title__btn {
+    display: flex;
+    flex-direction: column;
     position: absolute;
-    bottom: 0;
+    bottom: 40px;
     right: 0;
+    background: linear-gradient(
+        180deg,
+        rgba(5, 132, 215, 0.73) 1.22%,
+        rgba(125, 200, 233, 0.37) 100%
+    );
+    border: 1px solid #fdfeff;
+    border-radius: 10px;
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 42px;
+    font-family: $f-ibm;
+    padding: rem(10) rem(80);
+
+    /* identical to box height */
+
+    text-align: center;
+
+    color: #000000;
+
+    transform: scale(1);
+    transition: transform 0.3s;
+
+    &:hover {
+        transform: scale(1.1);
+    }
+    // padding: ;
+}
+
+.title__btn-subtext {
+    font-size: rem(10);
+    line-height: 1.2;
+    font-weight: 500;
+    align-self: end;
+    margin-right: -65px;
+
+    color: #000000;
+    font-family: $f-ibm;
+}
+
+.specialists {
+    &__head {
+        align-items: flex-start;
+    }
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    align-content: stretch;
+    grid-auto-rows: 1fr;
+
+    gap: max(0.5em, 1.5vw);
+    &__item {
+        background: #b6cddc;
+        border: 3px solid #27a7e1;
+        border-radius: 100px;
+        padding: rem(50);
+    }
+
+    &__picture {
+        position: relative;
+        width: rem(300);
+        height: rem(400);
+    }
+
+    &__picture-overlay {
+        position: absolute;
+        width: rem(320);
+        height: rem(300);
+        border: 3px solid #ffffff;
+        border-radius: 0px 140px;
+        z-index: 1;
+        bottom: -4px;
+        left: -4px;
+    }
+
+    img {
+        position: absolute;
+        width: 100%;
+        height: auto;
+        border-radius: 0px 140px;
+        right: 0;
+        bottom: 0px;
+        z-index: 2;
+    }
 }
 
 .services {
-    display: flex;
-    justify-content: center;
-    margin: 0 15px;
     padding-bottom: rem(100);
     &__list {
         justify-content: center;
@@ -67,7 +152,7 @@
             grid-template-columns: repeat(2, 2fr);
         }
         @media screen and (max-width: 600px) {
-            grid-template-columns: repeat(1, rem(770));
+            grid-template-columns: repeat(1, 1fr);
         }
     }
 
@@ -108,10 +193,8 @@
                 #f5e5a7 95.49%,
                 #84daeb 100%
             );
-            -webkit-mask: linear-gradient(#fff 0 0) content-box,
-                linear-gradient(#fff 0 0);
-            mask: linear-gradient(#fff 0 0) content-box,
-                linear-gradient(#fff 0 0);
+            -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
             -webkit-mask-composite: xor;
             mask-composite: exclude;
         }
@@ -140,17 +223,21 @@
         color: $c-black;
         display: block;
         z-index: 2;
-        @include f-IBX;
+        font-family: $f-ibm;
         font-weight: 400;
         font-size: rem(36);
         line-height: 1.3;
         word-break: normal;
 
+        @media screen and (max-width: 1300px) {
+            font-size: rem(23);
+        }
+
         @media screen and (max-width: 600px) {
             padding: rem(10);
             padding-right: 40px;
             padding-left: 40px;
-            font-size: rem(30);
+            // font-size: rem(30);
             display: flex;
             align-items: center;
         }
