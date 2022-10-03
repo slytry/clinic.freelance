@@ -2,11 +2,21 @@
 
 .header {
     width: 100%;
-    background-image: url('/images/headerBackground.png');
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
 
-    border-bottom: 23px solid #0072ba29;
+    &--gradient {
+        background-image: url('/images/headerBackground.png');
+        border-bottom: 23px solid #0072ba29;
+    }
+
+    &--transparent {
+        background-image: url('/images/famaly.jpg');
+        @include respond-above('830px') {
+            border-bottom: 23px solid #0072ba29;
+        }
+    }
 
     &__content {
         display: flex;
@@ -65,7 +75,7 @@
 
         font-family: 'Roboto';
         font-weight: 800;
-        font-size: fluid(14, 28, 'vw', 420, 830);
+        font-size: fluid(13, 28, 'vw', 420, 830);
         letter-spacing: 0.03em;
         text-transform: capitalize;
 

@@ -12,9 +12,61 @@
         <title>Семья</title>
     </head>
     <body>
-        <header class="container">Семья</header>
-        <main class="container">
-            <a href="/pages/services/index.html">SERVICES</a>
+        <header class="header header--transparent">
+            <div class="header__content container">
+                <a href="/" class="header__logo-link">
+                    <img class="header__logo-picture" src="/images/headerLogo.svg" alt="logo" />
+
+                    <p class="header__logo-text">Медицинский центр</p>
+                    <p class="header__logo-text-mob">Диагностический медицинский центр</p>
+                </a>
+                <a href="#" class="header__news">Новости и акции</a>
+                <a href="#" class="header__contacts">Контакты</a>
+                <div class="header__number">
+                    <a href="tel:+79256553328" class="header__phone">+7-925-655-33-28 </a>
+                    <button class="button">Запись на прием</button>
+                </div>
+                <button class="burger__button">
+                    <svg
+                        class="burger"
+                        width="24"
+                        height="14"
+                        viewBox="0 0 24 14"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                    >
+                        <rect width="24" height="2.8" rx="1.4" fill="white" />
+                        <rect y="5.6001" width="24" height="2.8" rx="1.4" fill="white" />
+                        <rect y="11.2" width="24" height="2.8" rx="1.4" fill="white" />
+                    </svg>
+                </button>
+            </div>
+
+            <ui class="burger-menu menu">
+                <button class="close"></button>
+                <li class="menu__item"><a href="#">Новости и акции</a></li>
+                <li class="menu__item"><a href="#">Контакты</a></li>
+                <button class="button menu__item">Запись на прием</button>
+            </ui>
+            <section class="intro container">
+                <div class="circle">
+                    <a class="circle__item circle__dent" href="/pages/services/index.html"
+                        >Стоматология</a
+                    >
+                    <a class="circle__item circle__anal" href="/pages/services/index.html"
+                        >Анализы</a
+                    >
+                    <a class="circle__item circle__serv" href="/pages/services/index.html"
+                        >Медицинские услуги</a
+                    >
+                </div>
+                <a href="tel:+79256553328" class="intro__phone">+7-925-655-33-28 </a>
+                <button class="button button--home intro__button">Запись на прием</button>
+                <address class="intro__address">Домодедово, Мкр. Западный Ул. Зеленая 72/1</address>
+            </section>
+        </header>
+
+        <!-- <main class="container">
             <section class="slider">
                 <div class="swiper mySwiper">
                     <div class="swiper-wrapper">
@@ -133,8 +185,8 @@
                     referrerpolicy="no-referrer-when-downgrade"
                 ></iframe>
             </section>
-        </main>
-        <footer class="footer">
+        </main> -->
+        <!-- <footer class="footer">
             <img src="/images/footerBackground.png" alt="фон футера" class="footer__imgMin" />
             <img src="/images/backgroundMax.png" alt="фон футера" class="footer__imgMax" />
             <ul class="footer__list">
@@ -148,6 +200,6 @@
                     <a href="" class="footer__list-item-link"> Запись на прием </a>
                 </li>
             </ul>
-        </footer>
+        </footer> -->
     </body>
 </html>
