@@ -192,31 +192,31 @@ $burger: '830px';
 }
 
 .footer {
+    width: 90%;
     display: flex;
     justify-content: center;
     background: url(/images/footerBackground.png) no-repeat;
     background-position: center;
+    background-size: contain;
+    padding-bottom: 50px;
 
     @media screen and (min-width: 500px) {
         background: url(/images/footerBackgroundMax.png) no-repeat;
-        background-size: cover;
+        background-size: contain;
         background-position: center;
-        min-height: rem(800);
     }
 
     &__list {
         display: flex;
         justify-content: center;
         flex-wrap: wrap;
-        padding-top: rem(40);
-        margin-left: rem(67);
-        margin-right: rem(67);
-        padding-bottom: rem(70);
+        padding-top: fluid(40, 230);
+        padding-bottom: fluid(40, 490);
         list-style: none;
         gap: rem(30);
 
         @media screen and (min-width: 500px) {
-            padding-top: rem(200);
+            // padding-top: rem(230);
             gap: rem(100);
         }
     }
