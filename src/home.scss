@@ -87,6 +87,17 @@ $burger: '830px';
     }
 }
 
+.slider {
+    padding-top: rem(15);
+    width: fluid(360, 1264);
+    margin: 0 auto;
+}
+
+.swiper {
+    width: 100%;
+    height: 100%;
+}
+
 .swiper-slide img {
     display: block;
     width: 100%;
@@ -103,37 +114,15 @@ $burger: '830px';
     background-position: center;
     background-size: contain;
     min-height: rem(900);
-    padding: 0 15px 0 15px;
-
-    &__imgMin {
-        z-index: 0;
-        position: absolute;
-
-        @media screen and (min-width: 400px) {
-            display: none;
-        }
-    }
-
-    &__imgMax {
-        display: none;
-        position: absolute;
-
-        @media screen and (min-width: 400px) {
-            display: block;
-        }
-    }
-
-    &__img {
-        position: absolute;
-        z-index: 0;
-        width: fluid(400, 800);
-    }
+    padding: 15px 15px 0 15px;
 
     &__title {
         color: $aboutUsTitle;
         font-weight: 700;
+        font-family: 'IBM Plex Sans';
+        font-style: normal;
         font-size: fluid(16, 36);
-        line-height: 19px;
+        line-height: fluid(19, 47);
         margin-bottom: 15px;
         z-index: 2;
 
@@ -149,27 +138,24 @@ $burger: '830px';
 
     &__info-descr {
         margin-bottom: 15px;
+        font-family: 'IBM Plex Sans';
+        font-style: normal;
+        font-weight: 400;
         font-size: fluid(13, 24);
     }
 }
 
 .contacts {
-    background-image: url('/images/backgroundContacts.png');
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center;
     display: flex;
     flex-direction: column;
     align-items: center;
     min-height: rem(515);
-    position: relative;
-
-    @media screen and (min-width: 400px) {
-        background-image: url('/images/backgroundContactsMax.png');
-    }
 
     &__title {
         font-size: fluid(24, 32);
+        font-family: 'IBM Plex Sans';
+        font-style: normal;
+        font-weight: 700;
     }
 
     &__list {
@@ -182,6 +168,9 @@ $burger: '830px';
     &__list-item {
         color: $contactsList;
         font-size: fluid(15, 24);
+        font-family: 'IBM Plex Sans';
+        font-style: normal;
+        font-weight: 600;
     }
 
     &__list-item {
@@ -205,23 +194,14 @@ $burger: '830px';
 .footer {
     display: flex;
     justify-content: center;
+    background: url(/images/footerBackground.png) no-repeat;
+    background-position: center;
 
-    &__imgMin {
-        position: absolute;
-
-        @media screen and (min-width: 400px) {
-            display: none;
-        }
-    }
-
-    &__imgMax {
-        z-index: 0;
-        display: none;
-        position: absolute;
-
-        @media screen and (min-width: 400px) {
-            display: block;
-        }
+    @media screen and (min-width: 500px) {
+        background: url(/images/footerBackgroundMax.png) no-repeat;
+        background-size: cover;
+        background-position: center;
+        min-height: rem(800);
     }
 
     &__list {
@@ -237,13 +217,52 @@ $burger: '830px';
 
         @media screen and (min-width: 500px) {
             padding-top: rem(200);
+            gap: rem(100);
         }
     }
 
     &__list-item-link {
         color: $footerLink;
         font-size: fluid(15, 24);
-        font-weight: 600;
         text-decoration: none;
+        font-family: 'IBM Plex Sans';
+        font-style: normal;
+        font-weight: 600;
     }
 }
+
+//slider 2
+
+// .slider2 {
+//     &swiper {
+//         width: 100%;
+//         height: 100%;
+//     }
+
+//     &swiper-slide {
+//         text-align: center;
+//         font-size: 18px;
+//         background: #fff;
+
+//         /* Center slide text vertically */
+//         display: -webkit-box;
+//         display: -ms-flexbox;
+//         display: -webkit-flex;
+//         display: flex;
+//         -webkit-box-pack: center;
+//         -ms-flex-pack: center;
+//         -webkit-justify-content: center;
+//         justify-content: center;
+//         -webkit-box-align: center;
+//         -ms-flex-align: center;
+//         -webkit-align-items: center;
+//         align-items: center;
+//     }
+
+//     &swiper-slide img {
+//         display: block;
+//         width: 100%;
+//         height: 100%;
+//         object-fit: cover;
+//     }
+// }

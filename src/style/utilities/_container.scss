@@ -5,3 +5,16 @@
     max-width: var(--container-max);
     margin-inline: auto;
 }
+
+.container-background {
+    background: url(/images/backgroundMob.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: rem(418);
+
+    @media screen and (min-width: 500px) {
+        background: url(/images/mainBackgroundMax.png) no-repeat;
+        background-size: rem(600);
+        background-position: center;
+    }
+}
