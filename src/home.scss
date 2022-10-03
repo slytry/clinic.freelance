@@ -104,6 +104,19 @@ $burger: '830px';
     height: 100%;
     object-fit: cover;
 }
+.swiper-button-next {
+    width: fluid(15, 50);
+}
+.swiper-button-prev {
+    width: fluid(15, 50);
+}
+
+.swiper-button-prev-img {
+    width: 100%;
+}
+.swiper-button-next-img {
+    width: 100%;
+}
 
 .about-us {
     display: flex;
@@ -185,6 +198,7 @@ $burger: '830px';
 }
 
 .map {
+    width: fluid(360, 1440);
     &__ifhame {
         width: 100%;
         min-height: 300px;
