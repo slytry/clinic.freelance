@@ -40,7 +40,7 @@ $burger: '830px';
     height: rel(285, 360);
     margin-bottom: rem(26);
     position: relative;
-    background-image: url('/images/7.png');
+    background-image: url('/images/intro/7.png');
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
@@ -51,38 +51,50 @@ $burger: '830px';
     }
 
     &__item {
+        position: absolute;
+    }
+
+    &__text {
         font-family: $f-roboto;
         font-weight: 500;
         font-size: rem(16);
         color: white;
-        position: absolute;
+        max-width: 10ch;
+        text-align: center;
         @include respond-above($burger) {
             font-weight: 700;
             font-size: rem(24);
         }
     }
+
+    &__figure {
+        display: flex;
+        flex-direction: column;
+    }
+
     &__dent {
-        top: rel(203, 360);
-        right: rel(73, 360);
+        top: 72.388889%;
+        right: 33.277778%;
+
         @include respond-above($burger) {
-            top: rel(203, 360);
-            right: 10%;
+            top: 69.388889%;
+            right: 21.277778%;
         }
     }
     &__anal {
-        top: rel(165, 360);
-        right: rel(60, 360);
+        top: 58.833333%;
+        right: 21.666667%;
         @include respond-above($burger) {
-            top: rel(165, 360);
-            right: 6%;
+            top: 56.833333%;
+            right: -3.333333%;
         }
     }
     &__serv {
-        top: rel(106, 360);
-        right: rel(10, 360);
+        top: 24.444444%;
+        right: 6.777778%;
         @include respond-above($burger) {
-            top: rel(106, 360);
-            right: -16%;
+            top: 37.444444%;
+            right: -20.222222%;
         }
     }
 }
