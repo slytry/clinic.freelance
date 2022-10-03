@@ -9,18 +9,13 @@ const outDir = resolve(__dirname, 'dist');
 export default defineConfig({
     root,
     build: {
+        outDir,
+        emptyOutDir: true,
         rollupOptions: {
             input: {
-                main: resolve(__dirname, 'src/index.html'),
-                nested: resolve(__dirname, 'src/nested/index.html'),
-            },
-        },
-        build: {
-            outDir,
-            emptyOutDir: true,
-            rollupOptions: {
                 main: resolve(root, 'index.html'),
-                service: resolve(root, 'pages', 'services', 'index.html'),
+                services: resolve(root, 'pages', 'services', 'index.html'),
+                service: resolve(root, 'pages', 'service', 'index.html'),
             },
         },
     },
