@@ -126,7 +126,7 @@ $burger: '830px';
     background-position: center;
     background-size: contain;
     min-height: rem(900);
-    padding: 15px 15px 0 15px;
+    padding: 90px 15px 0 15px;
 
     &__title {
         color: $aboutUsTitle;
@@ -245,36 +245,54 @@ $burger: '830px';
 
 //slider 2
 
-// .slider2 {
-//     &swiper {
-//         width: 100%;
-//         height: 100%;
-//     }
+.slider2 {
+    height: 270px;
+    margin-bottom: 150px;
+    margin-top: 70px;
+    display: block;
+    width: fluid(360, 1440);
 
-//     &swiper-slide {
-//         text-align: center;
-//         font-size: 18px;
-//         background: #fff;
+    @media screen and (max-width: 500px) {
+        display: none;
+    }
 
-//         /* Center slide text vertically */
-//         display: -webkit-box;
-//         display: -ms-flexbox;
-//         display: -webkit-flex;
-//         display: flex;
-//         -webkit-box-pack: center;
-//         -ms-flex-pack: center;
-//         -webkit-justify-content: center;
-//         justify-content: center;
-//         -webkit-box-align: center;
-//         -ms-flex-align: center;
-//         -webkit-align-items: center;
-//         align-items: center;
-//     }
+    &__title {
+        font-family: 'IBM Plex Sans';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 32px;
+        line-height: 42px;
+        margin-bottom: 15px;
+    }
+}
+.swiper {
+    width: 100%;
+    height: 100%;
+}
 
-//     &swiper-slide img {
-//         display: block;
-//         width: 100%;
-//         height: 100%;
-//         object-fit: cover;
-//     }
-// }
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
