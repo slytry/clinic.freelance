@@ -237,6 +237,12 @@ $burger: '830px';
     height: 270px;
     margin-bottom: 150px;
     margin-top: 70px;
+    display: block;
+    width: fluid(360, 1440);
+
+    @media screen and (max-width: 500px) {
+        display: none;
+    }
 
     &__title {
         font-family: 'IBM Plex Sans';
