@@ -42,13 +42,13 @@ export const swiper = new Swiper('.mySwiper', {
     keyboard: true,
 });
 
-// export const swiper = new Swiper('.swiper2', {
-//     slidesPerView: 4,
-//     centeredSlides: true,
-//     spaceBetween: 30,
-//     grabCursor: true,
-//     pagination: {
-//         el: '.swiper-pagination',
-//         clickable: true,
-//     },
-// });
+export const swiper2 = new Swiper('.mySwiper2', {
+    slidesPerView: 4,
+    centeredSlides: true,
+    spaceBetween: 30,
+    grabCursor: true,
+    pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+    },
+});
