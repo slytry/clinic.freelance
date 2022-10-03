@@ -58,3 +58,9 @@
 
     @return $roundedValue;
 }
+
+@function rel($value, $size: 1440) {
+    $slope: math.div($value, $size);
+
+    @return $slope * 100%;
+}
