@@ -35,23 +35,34 @@ $burger: '830px';
     }
 }
 .circle {
-    min-height: 218px;
-    width: rel(250, 260);
-    height: rel(285, 360);
-    margin-bottom: rem(26);
+    width: rel(250, 360);
+    aspect-ratio: 1;
+
+    border-radius: 50%;
+    border: 1px solid red;
+    margin-inline: auto;
     position: relative;
-    background-image: url('/images/intro/7.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
+
+    margin-bottom: rem(26);
+
+    // background-image: url('/images/intro/7.png');
+    // background-size: contain;
+    // background-repeat: no-repeat;
+    // background-position: center;
 
     @include respond-above($burger) {
-        width: rel(880);
-        height: 705px;
+        // width: rel(880);
     }
 
     &__item {
+        display: block;
+        width: 50px;
+        height: 50px;
+        border: 1px solid blue;
         position: absolute;
+        top: -25px;
+        left: calc(50% - 25px);
+        transform-origin: 25px 175px;
     }
 
     &__text {
@@ -70,32 +81,32 @@ $burger: '830px';
     &__figure {
         display: flex;
         flex-direction: column;
+
+        &--dent {
+        }
+        &--anal {
+        }
+        &--serv {
+            transform: rotate(-90deg);
+        }
+
+        // & > img {
+        //     @include respond-above($burger) {
+        //         width: fluid(52, 150);
+        //         height: auto;
+        //         aspect-ratio: 1;
+        //     }
+        // }
     }
 
     &__dent {
-        top: 72.388889%;
-        right: 33.277778%;
-
-        @include respond-above($burger) {
-            top: 69.388889%;
-            right: 21.277778%;
-        }
+        transform: rotate(180deg);
     }
     &__anal {
-        top: 58.833333%;
-        right: 21.666667%;
-        @include respond-above($burger) {
-            top: 56.833333%;
-            right: -3.333333%;
-        }
+        transform: rotate(140deg);
     }
     &__serv {
-        top: 24.444444%;
-        right: 6.777778%;
-        @include respond-above($burger) {
-            top: 37.444444%;
-            right: -20.222222%;
-        }
+        transform: rotate(90deg);
     }
 }
 
