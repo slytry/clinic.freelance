@@ -10,21 +10,44 @@
         <title>Сервис</title>
     </head>
     <body>
-        <header class="header">
-            <div class="header__content container">
-                <div class="header__logo">
+        <header class="header header--gradient">
+            <header class="header header--gradient">
+                <div class="header__content container">
                     <a href="/" class="header__logo-link">
                         <img class="header__logo-picture" src="/images/headerLogo.svg" alt="logo" />
+
                         <p class="header__logo-text">Медицинский центр</p>
+                        <p class="header__logo-text-mob">Диагностический медицинский центр</p>
                     </a>
+                    <a href="/#sale" class="header__news">Новости и акции</a>
+                    <a href="/#contacts" class="header__contacts">Контакты</a>
+                    <div class="header__number">
+                        <a href="tel:+79256553328" class="header__phone">+7-925-655-33-28 </a>
+                        <button class="button">Запись на прием</button>
+                    </div>
+                    <button class="burger__button">
+                        <svg
+                            class="burger"
+                            width="24"
+                            height="14"
+                            viewBox="0 0 24 14"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                        >
+                            <rect width="24" height="2.8" rx="1.4" fill="white" />
+                            <rect y="5.6001" width="24" height="2.8" rx="1.4" fill="white" />
+                            <rect y="11.2" width="24" height="2.8" rx="1.4" fill="white" />
+                        </svg>
+                    </button>
                 </div>
-                <a href="/#sale" class="header__news">Новости и акции</a>
-                <a href="/#contacts" class="header__contacts">Контакты</a>
-                <div class="header__number">
-                    <a href="tel:+79256553328" class="header__phone">+7-925-655-33-28 </a>
-                    <button class="header__callToReception button">Запись на прием</button>
-                </div>
-            </div>
+
+                <ui class="burger-menu menu">
+                    <button class="close"></button>
+                    <li class="menu__item"><a href="#">Новости и акции</a></li>
+                    <li class="menu__item"><a href="#">Контакты</a></li>
+                    <button class="button menu__item">Запись на прием</button>
+                </ui>
+            </header>
         </header>
 
         <main class="main container">

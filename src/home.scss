@@ -101,7 +101,7 @@ $burger: '830px';
 
 .slider {
     padding-top: rem(15);
-    width: fluid(360, 1264);
+    width: 100%;
     margin: 0 auto;
 }
 
@@ -139,7 +139,6 @@ $burger: '830px';
     background-position: center;
     background-size: contain;
     min-height: rem(900);
-    padding: 90px 15px 0 15px;
 
     &__title {
         color: $aboutUsTitle;
@@ -185,8 +184,6 @@ $burger: '830px';
 
     &__list {
         margin-bottom: 20px;
-        padding-right: 15px;
-        padding-left: 15px;
     }
 
     &__list-link,
@@ -210,7 +207,7 @@ $burger: '830px';
 }
 
 .map {
-    width: fluid(360, 1440);
+    width: 100%;
     &__ifhame {
         width: 100%;
         min-height: 300px;
@@ -242,7 +239,6 @@ $burger: '830px';
         gap: rem(30);
 
         @media screen and (min-width: 500px) {
-            // padding-top: rem(230);
             gap: rem(100);
         }
     }
@@ -266,7 +262,7 @@ $burger: '830px';
     display: block;
     width: fluid(360, 1440);
 
-    @media screen and (max-width: 500px) {
+    @media screen and (max-width: 700px) {
         display: none;
     }
 
