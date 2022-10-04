@@ -3,12 +3,14 @@ lockfileVersion: 5.4
 specifiers:
   eslint: ^8.24.0
   eslint-config-prettier: ^8.5.0
+  pnpm: ^7.13.0
   sass: ^1.55.0
   swiper: ^8.4.2
   vite: ^3.1.0
   vite-plugin-html: ^3.2.0
 
 dependencies:
+  pnpm: 7.13.1
   swiper: 8.4.2
 
 devDependencies:
@@ -1231,6 +1233,12 @@ packages:
     resolution: {integrity: sha512-JU3teHTNjmE2VCGFzuY8EXzCDVwEqB2a8fsIvwaStHhAWJEeVd1o1QD80CU6+ZdEXXSLbSsuLwJjkCBWqRQUVA==}
     engines: {node: '>=8.6'}
     dev: true
+
+  /pnpm/7.13.1:
+    resolution: {integrity: sha512-Nu1LzxlH3qdIFe0DJ5SciqBl9i7t/eW+c0zKf9g8TXRo20EhXy/e9YwCLY2fEwbIYL/3gZ4zuys010PRpsbHFQ==}
+    engines: {node: '>=14.6'}
+    hasBin: true
+    dev: false
 
   /postcss/8.4.17:
     resolution: {integrity: sha512-UNxNOLQydcOFi41yHNMcKRZ39NeXlr8AxGuZJsdub8vIb12fHzcq37DTU/QtbI6WLxNg2gF9Z+8qtRwTj1UI1Q==}

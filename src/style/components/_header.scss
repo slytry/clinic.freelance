@@ -13,8 +13,10 @@
 
     &--transparent {
         background-image: url('/images/famaly.jpg');
+    }
+    &--transparent &__content {
         @include respond-above('830px') {
-            border-bottom: 23px solid #0072ba29;
+            border-bottom: min(2vw, 23px) solid #0072ba29;
         }
     }
 
@@ -39,7 +41,6 @@
 
         flex-direction: column;
         align-items: center;
-        gap: 2px;
 
         @include respond-below('829px') {
             flex-direction: row;

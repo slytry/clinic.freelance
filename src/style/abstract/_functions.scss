@@ -64,3 +64,9 @@
 
     @return $slope * 100%;
 }
+
+@function relv($value, $size: 1440) {
+    $slope: math.div($value, $size);
+
+    @return $slope * 100vw;
+}
