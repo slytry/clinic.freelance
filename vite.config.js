@@ -14,6 +14,7 @@ export default defineConfig({
                 main: resolve(root, 'index.html'),
                 services: resolve(root, 'pages', 'services', 'index.html'),
                 service: resolve(root, 'pages', 'service', 'index.html'),
+                reception: resolve(root, 'pages', 'reception', 'index.html'),
             },
         },
     },
