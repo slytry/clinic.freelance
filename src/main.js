@@ -1,5 +1,6 @@
 import '/style/main.scss';
 import './home.scss';
+import './main-intro.scss';
 
 const button = document.querySelector('.burger__button');
 const menu = document.querySelector('.menu');

@@ -12,6 +12,9 @@ export default defineConfig({
         rollupOptions: {
             input: {
                 main: resolve(root, 'index.html'),
+                analisys: resolve(root, 'pages', 'analisys', 'index.html'),
+                dent: resolve(root, 'pages', 'dent', 'index.html'),
+                med: resolve(root, 'pages', 'med', 'index.html'),
                 services: resolve(root, 'pages', 'services', 'index.html'),
                 service: resolve(root, 'pages', 'service', 'index.html'),
                 reception: resolve(root, 'pages', 'reception', 'index.html'),
