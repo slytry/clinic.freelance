@@ -137,6 +137,7 @@ $burger: '830px';
         background-size: contain;
         width: 28rem;
         height: 11rem;
+        border-radius: 100px;
 
         @media screen and (max-width: 1000px) {
             display: none;
@@ -240,6 +241,7 @@ $burger: '830px';
 
     &__list {
         margin-bottom: 20px;
+        margin-inline-start: -2rem;
     }
 
     &__list-link,
