@@ -1,7 +1,3 @@
-import '/style/main.scss';
-import './dent-intro.scss';
-import '../../home.scss';
-
 export const swiper = new Swiper('.mySwiper', {
     autoplay: {
         delay: 5000,
