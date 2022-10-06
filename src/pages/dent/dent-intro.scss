@@ -146,7 +146,6 @@ $burger: '830px';
             font-weight: 600;
             font-size: 14px;
             flex-shrink: 0;
-            color: black;
         }
         @include respond-below('1100px') {
             max-width: 20ch;
