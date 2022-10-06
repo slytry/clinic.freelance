@@ -60,7 +60,7 @@ $burger: '830px';
         --d: 8.2em;
     }
     @include respond-above('1230px') {
-        --tan: 0.3;
+        --tan: 0.5;
     }
 
     &__item {

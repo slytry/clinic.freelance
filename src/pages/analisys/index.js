@@ -1,2 +1,2 @@
 import '/style/main.scss';
-import './anal.scss';
+import './analisys.scss';
