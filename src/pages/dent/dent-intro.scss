@@ -144,7 +144,7 @@ $burger: '830px';
             @include center;
             position: absolute;
             font-weight: 600;
-            font-size: relv(24);
+            font-size: 14px;
             flex-shrink: 0;
             color: black;
         }
@@ -157,6 +157,7 @@ $burger: '830px';
         flex-shrink: 0;
         width: 24px;
         height: 24px;
+        overflow: visible;
 
         @include respond-above($burger) {
             width: 100%;
@@ -164,7 +165,7 @@ $burger: '830px';
         }
 
         & > circle:hover {
-            border: 4px solid #70b7dd;
+            // border: 4px solid #70b7dd;
             filter: blur(1px);
         }
     }
@@ -180,7 +181,7 @@ $burger: '830px';
 
         @include respond-above($burger) {
             font-weight: 700;
-            font-size: relv(84);
+            font-size: 50px;
         }
     }
 }
