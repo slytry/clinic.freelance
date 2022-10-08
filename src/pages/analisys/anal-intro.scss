@@ -9,42 +9,53 @@ $burger: '830px';
     transform: translate(-50%, -50%);
 }
 
-.med-intro {
+.anal-intro {
     display: flex;
     flex-direction: column;
     align-items: center;
     padding-block: rem(23) rem(10);
 
     &__phone {
+        margin-top: 16px;
+        display: block;
+        text-align: center;
         font-family: $f-roboto;
         font-weight: 700;
         font-size: rem(20);
-        color: white;
+        color: black;
         @include respond-above($burger) {
             display: none;
         }
     }
     &__button {
+        display: block;
+        margin: 0 auto;
         @include respond-above($burger) {
             display: none;
         }
     }
     &__address {
+        text-align: center;
         font-family: $f-ibm;
         font-weight: 600;
         font-size: rem(14);
         color: white;
         font-style: normal;
-        margin-top: rem(10);
+        margin-top: rem(8);
+        padding: 10px;
+        background: rgba(51, 28, 14, 0.61);
+
+        // transform: translateX(50%);
+        // filter: blur(2px);
         @include respond-above($burger) {
             display: none;
         }
     }
 }
-.med-circle {
-    --m: 12;
-    --tan: 0.7;
-    --d: 5.5em; /* image size */
+.anal-circle {
+    --m: 8;
+    --tan: 2;
+    --d: 9em;
     --rel: 1; /* how much extra space we want between images, 1 = one image size */
     --r: calc(0.5 * (1 + var(--rel)) * var(--d) / var(--tan)); /* circle radius */
     --s: calc(2 * var(--r) + var(--d)); /* container size */
@@ -64,10 +75,10 @@ $burger: '830px';
     }
 
     &__item {
-        --shift: 10px;
+        --shift: 49px;
         position: absolute;
-        top: 55%;
-        left: 50%;
+        top: 71%;
+        left: 53%;
         margin: calc(-0.5 * var(--d));
         width: var(--d);
         height: var(--d);
@@ -85,40 +96,36 @@ $burger: '830px';
         }
     }
 
-    &__ter {
-        --i: 6;
+    &__krov {
+        --i: 4;
+        max-width: 7em;
         @include respond-above($burger) {
             --i: 5;
         }
     }
-    &__imp {
-        --i: 5;
+    &__imun {
+        --i: 3;
         @include respond-above($burger) {
             --i: 4;
         }
     }
-    &__orto {
-        --i: 4;
+    &__sver {
+        --i: 2;
         @include respond-above($burger) {
             --i: 3;
         }
     }
-    &__prot {
-        --i: 2;
+    &__lek {
+        --i: 1;
         @include respond-above($burger) {
             --i: 1;
         }
     }
-    &__paro {
-        --i: 1;
-        @include respond-above($burger) {
-            --i: 0;
-        }
-    }
-    &__hir {
+    &__fact {
+        max-width: 8em;
         --i: 0;
         @include respond-above($burger) {
-            --i: -1;
+            --i: 0;
         }
     }
 
@@ -136,8 +143,8 @@ $burger: '830px';
 
     &__text {
         font-family: $f-roboto;
-        font-weight: 400;
-        font-size: rem(14);
+        font-weight: 700;
+        font-size: rem(12);
         color: white;
         text-align: center;
         @include respond-above($burger) {
@@ -182,4 +189,55 @@ $burger: '830px';
             font-size: 50px;
         }
     }
+}
+
+.analmob {
+    margin-top: 50px;
+    position: relative;
+    padding-top: 5px;
+    display: flex;
+    gap: 7px;
+    @include respond-above($burger) {
+        display: none;
+    }
+    &__item {
+        align-items: center;
+        display: flex;
+        gap: 3px;
+        font-family: $f-ibm;
+        font-weight: 700;
+        font-size: 12px;
+        color: #ffffff;
+        & a {
+            color: inherit;
+        }
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        z-index: 1;
+    }
+}
+
+.blurbg {
+    margin-bottom: -10px;
+    pointer-events: none;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    z-index: 0;
+    position: absolute;
+    inset: 0;
+    background: rgba(51, 28, 14, 0.61);
+    filter: blur(2px);
+}
+
+.full-width {
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
 }
