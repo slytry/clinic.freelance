@@ -1,11 +1,18 @@
 import { defineConfig } from 'vite';
 import { resolve } from 'path';
+import viteImagemin from 'vite-plugin-imagemin'
+import zipPack from "vite-plugin-zip-pack";
 
 const root = resolve(__dirname, 'src');
 const outDir = resolve(__dirname, 'dist');
 
 export default defineConfig({
     root,
+    resolve: {
+      alias: {
+        '@': root,
+      },
+    },
     build: {
         outDir,
         emptyOutDir: true,
@@ -21,4 +28,34 @@ export default defineConfig({
             },
         },
     },
+    plugins: [
+      zipPack(),
+        viteImagemin({
+          gifsicle: {
+            optimizationLevel: 7,
+            interlaced: false,
+          },
+          optipng: {
+            optimizationLevel: 7,
+          },
+          mozjpeg: {
+            quality: 20,
+          },
+          pngquant: {
+            quality: [0.8, 0.9],
+            speed: 4,
+          },
+          svgo: {
+            plugins: [
+              {
+                name: 'removeViewBox',
+              },
+              {
+                name: 'removeEmptyAttrs',
+                active: false,
+              },
+            ],
+          },
+        }),
+      ],
 });

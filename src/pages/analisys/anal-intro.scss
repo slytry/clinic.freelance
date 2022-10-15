@@ -69,10 +69,11 @@ $burger: '830px';
     @include respond-above($burger) {
         --m: 8;
         --d: 9.4em;
+        --rel: 1;
+        --d: 9em;
+        background-image: url('/images/intro/blue.png');
     }
-    @include respond-above('1230px') {
-        --tan: 0.5;
-    }
+   
 
     &__item {
         --shift: 49px;

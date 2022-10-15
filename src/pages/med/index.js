@@ -1,2 +1,2 @@
 import '/style/main.scss';
-import './med.scss';
+import './med-intro.scss';
