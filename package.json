@@ -1,9 +1,9 @@
 {
 	"name": "clinic",
-	"version": "0.1.0",
+	"version": "0.1.1",
 	"scripts": {
 		"commit": "git cz",
-		"log": "conventional-changelog -p angular -i CHANGELOG.md -s",
+		"log": "conventional-changelog -p conventionalcommits -i CHANGELOG.md -s",
 		"dev": "vite",
 		"build": "vite build",
 		"preview": "vite preview",
@@ -58,6 +58,6 @@
 			"eslint --fix",
 			"prettier --write"
 		],
-		"*.{json,scss,html}": "prettier --write"
+		"*.{json,scss,html,md}": "prettier --write"
 	}
 }
