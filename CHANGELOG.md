@@ -1,4 +1,4 @@
-# 0.0.0 (2022-10-16)
+# 0.1.0 (2022-10-16)
 
 
 ### Bug Fixes
@@ -16,6 +16,7 @@
 
 * add anal intro ([cc89f06](https://github.com/slytry/boilerplate.vanilla.vite/commit/cc89f06ee2420f1520252d35277151f087de1d79))
 * add button apteka ([205acfe](https://github.com/slytry/boilerplate.vanilla.vite/commit/205acfe4df9d439b2e07d3a83bcbe9242e8290d7))
+* add commit enviroment ([a278275](https://github.com/slytry/boilerplate.vanilla.vite/commit/a2782755891342fb7915ad5c461682079efd2c2e))
 * add container ([d67c5da](https://github.com/slytry/boilerplate.vanilla.vite/commit/d67c5da9207adfe79599f46dd0f27e78162d8eb9))
 * add docktor block ([0efcb6b](https://github.com/slytry/boilerplate.vanilla.vite/commit/0efcb6b2048a0a24b709872d1e715be9820164fd))
 * add doctor card without adaptive ([cc1e338](https://github.com/slytry/boilerplate.vanilla.vite/commit/cc1e3383efda9267f6892e905f59c0479ff864d8))
