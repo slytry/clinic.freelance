@@ -1,330 +1,437 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <script type="module" defer src="/main.js"></script>
-        <script type="module" defer src="./reception.js"></script>
-        <title>Прием</title>
-    </head>
-    <body>
-			<header class="header header--gradient">
-				<div class="header__content container">
-						<a href="/" class="header__logo-link">
-								<img class="header__logo-picture" src="/images/headerLogo.svg" alt="logo" />
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<script type="module" defer src="/main.js"></script>
+		<script type="module" defer src="./reception.js"></script>
+		<title>Прием</title>
+	</head>
+	<body>
+		<header class="header header--gradient">
+			<div class="header__content container">
+				<a href="/" class="header__logo-link">
+					<img class="header__logo-picture" src="/images/headerLogo.svg" alt="logo" />
 
-								<p class="header__logo-text">Медицинский центр</p>
-								<p class="header__logo-text-mob">Диагностический медицинский центр</p>
-						</a>
-						<a href="/#sale" class="header__news">Новости и акции</a>
-						<a href="/#contacts" class="header__contacts">Контакты</a>
-						<div class="header__number">
-								<a href="tel:+79256553328" class="header__phone">+7-925-655-33-28 </a>
-								<button class="button">Запись на прием</button>
-						</div>
-						<button class="burger__button">
-								<svg
-										class="burger"
-										width="24"
-										height="14"
-										viewBox="0 0 24 14"
-										fill="none"
-										xmlns="http://www.w3.org/2000/svg"
-								>
-										<rect width="24" height="2.8" rx="1.4" fill="white" />
-										<rect y="5.6001" width="24" height="2.8" rx="1.4" fill="white" />
-										<rect y="11.2" width="24" height="2.8" rx="1.4" fill="white" />
-								</svg>
-						</button>
+					<p class="header__logo-text">Медицинский центр</p>
+					<p class="header__logo-text-mob">Диагностический медицинский центр</p>
+				</a>
+				<a href="/#sale" class="header__news">Новости и акции</a>
+				<a href="/#contacts" class="header__contacts">Контакты</a>
+				<div class="header__number">
+					<a href="tel:+79256553328" class="header__phone">+7-925-655-33-28 </a>
+					<button class="button">Запись на прием</button>
 				</div>
+				<button class="burger__button">
+					<svg
+						class="burger"
+						width="24"
+						height="14"
+						viewBox="0 0 24 14"
+						fill="none"
+						xmlns="http://www.w3.org/2000/svg"
+					>
+						<rect width="24" height="2.8" rx="1.4" fill="white" />
+						<rect y="5.6001" width="24" height="2.8" rx="1.4" fill="white" />
+						<rect y="11.2" width="24" height="2.8" rx="1.4" fill="white" />
+					</svg>
+				</button>
+			</div>
 
-				<ui class="burger-menu menu">
-						<button class="close"></button>
-						<li class="menu__item"><a href="#">Новости и акции</a></li>
-						<li class="menu__item"><a href="#">Контакты</a></li>
-						<button class="button menu__item">Запись на прием</button>
-				</ui>
+			<ui class="burger-menu menu">
+				<button class="close"></button>
+				<li class="menu__item"><a href="#">Новости и акции</a></li>
+				<li class="menu__item"><a href="#">Контакты</a></li>
+				<button class="button menu__item">Запись на прием</button>
+			</ui>
 		</header>
 
-        <main class="main container">
-            <section class="title">
-                <h2 class="title__head">Гинекологический прием</h2>
-								<hr class="hr" />
-                <hr class="hr" />
-                <p class="title__desc">
-                    Гинекология — важнейшее направление медицинских услуг,
-                    которое включает </br> первичный осмотр </br> пациентки, консультацию,
-                    сдачу анализов и изучение анамнеза. Кроме того, данный вид
-                    услуг включает ультразвуковую диагностику, проведение
-                    квалифицированных лабораторных исследований, проведение
-                    гистероскопии и кольпоскопия. Важнейшая цель
-                    гинекологических процедур — предотвращение патологий, раннее
-                    лечение заболеваний, связанной с гормональными
-                    расстройствами и лечением бесплодия. Требуется прохождение
-                    исследования не реже 2 раз в год. Важнейшая цель
-                    гинекологических процедур — предотвращение патологий, раннее
-                    лечение заболеваний, связанной с гормональными
-                    расстройствами и лечением бесплодия. Требуется прохождение
-                    исследования не реже 2 раз в год
-                </p>
+		<main class="main container">
+			<section class="title">
+				<h2 class="title__head">Гинекологический прием</h2>
+				<hr class="hr" />
+				<hr class="hr" />
+				<p class="title__desc">
+					Гинекология — важнейшее направление медицинских услуг, которое включает <br />
+					первичный осмотр <br />
+					пациентки, консультацию, сдачу анализов и изучение анамнеза. Кроме того, данный вид услуг
+					включает ультразвуковую диагностику, проведение квалифицированных лабораторных
+					исследований, проведение гистероскопии и кольпоскопия. Важнейшая цель гинекологических
+					процедур — предотвращение патологий, раннее лечение заболеваний, связанной с гормональными
+					расстройствами и лечением бесплодия. Требуется прохождение исследования не реже 2 раз в
+					год. Важнейшая цель гинекологических процедур — предотвращение патологий, раннее лечение
+					заболеваний, связанной с гормональными расстройствами и лечением бесплодия. Требуется
+					прохождение исследования не реже 2 раз в год
+				</p>
 
-								<a href="/pages/service/index.html" class="title__btn button ">Прескурант <span class="title__btn-subtext">Подробнее...</span></a>
+				<a href="/pages/service/index.html" class="title__btn button"
+					>Прескурант <span class="title__btn-subtext">Подробнее...</span></a
+				>
+			</section>
 
-            </section>
+			<section class="specialists">
+				<h2 class="title__head specialists__head">Ведущие специалисты</h2>
 
-						<section class="specialists">
+				<div class="cards">
+					<div class="cards__item">
+						<div class="cards__picture">
+							<img src="/images/doctor.png" alt="doctor" />
+							<div class="cards__picture-overlay"></div>
+						</div>
+						<div class="cards__text">
+							<div class="cards__text-blur"></div>
+							<p class="cards__text-desc cards__text-desc--heading">
+								Врачебный <br class="cards__text-desc--br" />
+								стаж: <span class="whiteTextBold">19</span> лет
+							</p>
+							<p class="cards__text-desc cards__text-desc--subheading whiteText">
+								Врач акушер-гинеколог, врач ультразвуковой диагностики
+							</p>
+							<p class="cards__text-desc">
+								Владеет навыками диагностики и лечения патологии шейки матки, техникой малых
+								гинекологических операций, кольпоскопией, КТГ плода, УЗИ в гинекологии, УЗИ при
+								беременности.
+							</p>
+							<p class="cards__text-desc">
+								Использует современные методы клинического обследования и лечения в акушерстве и
+								гинекологии, занимается вопросами гинекологической эндокринологии.
+							</p>
+							<p class="cards__text-desc cards__text-desc--education whiteText">Образование:</p>
+							<ul class="cards__text-list">
+								<li class="cards__text-list-item">
+									В 2003 году окончила лечебный факультет Ташкентской медицинской академии.
+								</li>
 
-							<h2 class="title__head specialists__head">Ведущие специалисты</h2>
+								<li class="cards__text-list-item">
+									2003 – 2005г – работала м.н.с. в НИИ акушерства и гинекологии Минздрава Республики
+									Узбекистан.
+								</li>
 
-							<div class="cards">
-								<div class="cards__item">
-									<div class="cards__picture">
-											<img src="/images/doctor.png" alt="doctor">
-										<div class="cards__picture-overlay">
+								<li class="cards__text-list-item">
+									2005 – 2007гг – клиническая ординатура по специальности акушерство и гинекология
+									на базе Ташкентского института усовершенствования врачей (г. Ташкент)
+								</li>
 
-										</div>
-									</div>
-									<div class="cards__text">
-										<div class="cards__text-blur"></div>
-										<p class="cards__text-desc cards__text-desc--heading">
-											Врачебный  <br class="cards__text-desc--br"/> стаж: <span class="whiteTextBold">19</span> лет
-										</p>
-										<p class="cards__text-desc cards__text-desc--subheading whiteText">
-											Врач акушер-гинеколог, врач ультразвуковой диагностики
-										</p>
-										<p class="cards__text-desc">
-											Владеет навыками диагностики и лечения патологии шейки матки, техникой малых гинекологических операций, кольпоскопией, КТГ плода, УЗИ в гинекологии, УЗИ при беременности.
-										</p>
-										<p class="cards__text-desc">
-											Использует современные методы клинического обследования и лечения в акушерстве и гинекологии, занимается вопросами гинекологической эндокринологии.
-										</p>
-										<p class="cards__text-desc cards__text-desc--education whiteText">
-											Образование:
-										</p>
-										<ul class="cards__text-list">
-											<li class="cards__text-list-item"> В 2003 году окончила лечебный факультет Ташкентской медицинской академии.</li>
+								<li class="cards__text-list-item">
+									2007 – 2008гг – врач акушер-гинеколог 2-го городского перинатального центра (г.
+									Ташкент)
+								</li>
 
-											<li class="cards__text-list-item">	2003 – 2005г – работала м.н.с. в НИИ акушерства и гинекологии Минздрава Республики Узбекистан.</li>	
-												
-											<li class="cards__text-list-item">	2005 – 2007гг – клиническая ординатура по специальности акушерство и гинекология на базе Ташкентского института усовершенствования врачей (г. Ташкент)</li>	
-												
-											<li class="cards__text-list-item">	2007 – 2008гг – врач акушер-гинеколог 2-го городского перинатального центра (г. Ташкент)</li>	
-												
-											<li class="cards__text-list-item">	2008 – 2013гг – врач акушер гинеколог Республиканского перинатального центра (г. Ташкент)</li>	
-												
-											<li class="cards__text-list-item">	2014г – по наст. время – врач акушер-гинеколог ГБУЗ МО Домодедовская ЦГБ</li>	
-												
-											<li class="cards__text-list-item">	2011г – цикл тематического усовершенствования по кольпоскопии.</li>	
-												
-											<li class="cards__text-list-item">	2012г – цикл тематического усовершенствования по гинекологической эндокринологии.</li>	
-												
-											<li class="cards__text-list-item">	2012г – курсы профессиональной переподготовки по специальности. «Физиотерапевтические методы лечения и реабилитации в акушерстве и гинекологии»</li>	
-												
-											<li class="cards__text-list-item">	2014г — курсы профессиональной переподготовки по специальности «Ультразвуковая диагностика» при РНИМУ им Н.И. Пирогова (Москва).</li>	
-												
-											<li class="cards__text-list-item">2018г – цикл тематического усовершенствования «Лазерная терапия» при ФГБУ Государственный научный центр лазерной медицины им О.К. Скобелкина. </li>	
-										</ul>
+								<li class="cards__text-list-item">
+									2008 – 2013гг – врач акушер гинеколог Республиканского перинатального центра (г.
+									Ташкент)
+								</li>
 
-									</div>
-								</div>
-								<div class="cards__item">
-									<div class="cards__picture">
-											<img src="/images/doctor.png" alt="doctor">
-										<div class="cards__picture-overlay">
+								<li class="cards__text-list-item">
+									2014г – по наст. время – врач акушер-гинеколог ГБУЗ МО Домодедовская ЦГБ
+								</li>
 
-										</div>
-									</div>
-									<div class="cards__text">
-										<div class="cards__text-blur"></div>
-										<p class="cards__text-desc cards__text-desc--heading">
-											Врачебный  <br class="cards__text-desc--br"/> стаж: <span class="whiteTextBold">19</span> лет
-										</p>
-										<p class="cards__text-desc cards__text-desc--subheading whiteText">
-											Врач акушер-гинеколог, врач ультразвуковой диагностики
-										</p>
-										<p class="cards__text-desc">
-											Владеет навыками диагностики и лечения патологии шейки матки, техникой малых гинекологических операций, кольпоскопией, КТГ плода, УЗИ в гинекологии, УЗИ при беременности.
-										</p>
-										<p class="cards__text-desc">
-											Использует современные методы клинического обследования и лечения в акушерстве и гинекологии, занимается вопросами гинекологической эндокринологии.
-										</p>
-										<p class="cards__text-desc cards__text-desc--education whiteText">
-											Образование:
-										</p>
-										<ul class="cards__text-list">
-											<li class="cards__text-list-item"> В 2003 году окончила лечебный факультет Ташкентской медицинской академии.</li>
+								<li class="cards__text-list-item">
+									2011г – цикл тематического усовершенствования по кольпоскопии.
+								</li>
 
-											<li class="cards__text-list-item">	2003 – 2005г – работала м.н.с. в НИИ акушерства и гинекологии Минздрава Республики Узбекистан.</li>	
-												
-											<li class="cards__text-list-item">	2005 – 2007гг – клиническая ординатура по специальности акушерство и гинекология на базе Ташкентского института усовершенствования врачей (г. Ташкент)</li>	
-												
-											<li class="cards__text-list-item">	2007 – 2008гг – врач акушер-гинеколог 2-го городского перинатального центра (г. Ташкент)</li>	
-												
-											<li class="cards__text-list-item">	2008 – 2013гг – врач акушер гинеколог Республиканского перинатального центра (г. Ташкент)</li>	
-												
-											<li class="cards__text-list-item">	2014г – по наст. время – врач акушер-гинеколог ГБУЗ МО Домодедовская ЦГБ</li>	
-												
-											<li class="cards__text-list-item">	2011г – цикл тематического усовершенствования по кольпоскопии.</li>	
-												
-											<li class="cards__text-list-item">	2012г – цикл тематического усовершенствования по гинекологической эндокринологии.</li>	
-												
-											<li class="cards__text-list-item">	2012г – курсы профессиональной переподготовки по специальности. «Физиотерапевтические методы лечения и реабилитации в акушерстве и гинекологии»</li>	
-												
-											<li class="cards__text-list-item">	2014г — курсы профессиональной переподготовки по специальности «Ультразвуковая диагностика» при РНИМУ им Н.И. Пирогова (Москва).</li>	
-												
-											<li class="cards__text-list-item">2018г – цикл тематического усовершенствования «Лазерная терапия» при ФГБУ Государственный научный центр лазерной медицины им О.К. Скобелкина. </li>	
-										</ul>
+								<li class="cards__text-list-item">
+									2012г – цикл тематического усовершенствования по гинекологической эндокринологии.
+								</li>
 
-									</div>
-								</div>
-								<div class="cards__item">
-									<div class="cards__picture">
-											<img src="/images/doctor.png" alt="doctor">
-										<div class="cards__picture-overlay">
+								<li class="cards__text-list-item">
+									2012г – курсы профессиональной переподготовки по специальности.
+									«Физиотерапевтические методы лечения и реабилитации в акушерстве и гинекологии»
+								</li>
 
-										</div>
-									</div>
-									<div class="cards__text">
-										<div class="cards__text-blur"></div>
-										<p class="cards__text-desc cards__text-desc--heading">
-											Врачебный  <br class="cards__text-desc--br"/> стаж: <span class="whiteTextBold">19</span> лет
-										</p>
-										<p class="cards__text-desc cards__text-desc--subheading whiteText">
-											Врач акушер-гинеколог, врач ультразвуковой диагностики
-										</p>
-										<p class="cards__text-desc">
-											Владеет навыками диагностики и лечения патологии шейки матки, техникой малых гинекологических операций, кольпоскопией, КТГ плода, УЗИ в гинекологии, УЗИ при беременности.
-										</p>
-										<p class="cards__text-desc">
-											Использует современные методы клинического обследования и лечения в акушерстве и гинекологии, занимается вопросами гинекологической эндокринологии.
-										</p>
-										<p class="cards__text-desc cards__text-desc--education whiteText">
-											Образование:
-										</p>
-										<ul class="cards__text-list">
-											<li class="cards__text-list-item"> В 2003 году окончила лечебный факультет Ташкентской медицинской академии.</li>
+								<li class="cards__text-list-item">
+									2014г — курсы профессиональной переподготовки по специальности «Ультразвуковая
+									диагностика» при РНИМУ им Н.И. Пирогова (Москва).
+								</li>
 
-											<li class="cards__text-list-item">	2003 – 2005г – работала м.н.с. в НИИ акушерства и гинекологии Минздрава Республики Узбекистан.</li>	
-												
-											<li class="cards__text-list-item">	2005 – 2007гг – клиническая ординатура по специальности акушерство и гинекология на базе Ташкентского института усовершенствования врачей (г. Ташкент)</li>	
-												
-											<li class="cards__text-list-item">	2007 – 2008гг – врач акушер-гинеколог 2-го городского перинатального центра (г. Ташкент)</li>	
-												
-											<li class="cards__text-list-item">	2008 – 2013гг – врач акушер гинеколог Республиканского перинатального центра (г. Ташкент)</li>	
-												
-											<li class="cards__text-list-item">	2014г – по наст. время – врач акушер-гинеколог ГБУЗ МО Домодедовская ЦГБ</li>	
-												
-											<li class="cards__text-list-item">	2011г – цикл тематического усовершенствования по кольпоскопии.</li>	
-												
-											<li class="cards__text-list-item">	2012г – цикл тематического усовершенствования по гинекологической эндокринологии.</li>	
-												
-											<li class="cards__text-list-item">	2012г – курсы профессиональной переподготовки по специальности. «Физиотерапевтические методы лечения и реабилитации в акушерстве и гинекологии»</li>	
-												
-											<li class="cards__text-list-item">	2014г — курсы профессиональной переподготовки по специальности «Ультразвуковая диагностика» при РНИМУ им Н.И. Пирогова (Москва).</li>	
-												
-											<li class="cards__text-list-item">2018г – цикл тематического усовершенствования «Лазерная терапия» при ФГБУ Государственный научный центр лазерной медицины им О.К. Скобелкина. </li>	
-										</ul>
+								<li class="cards__text-list-item">
+									2018г – цикл тематического усовершенствования «Лазерная терапия» при ФГБУ
+									Государственный научный центр лазерной медицины им О.К. Скобелкина.
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="cards__item">
+						<div class="cards__picture">
+							<img src="/images/doctor.png" alt="doctor" />
+							<div class="cards__picture-overlay"></div>
+						</div>
+						<div class="cards__text">
+							<div class="cards__text-blur"></div>
+							<p class="cards__text-desc cards__text-desc--heading">
+								Врачебный <br class="cards__text-desc--br" />
+								стаж: <span class="whiteTextBold">19</span> лет
+							</p>
+							<p class="cards__text-desc cards__text-desc--subheading whiteText">
+								Врач акушер-гинеколог, врач ультразвуковой диагностики
+							</p>
+							<p class="cards__text-desc">
+								Владеет навыками диагностики и лечения патологии шейки матки, техникой малых
+								гинекологических операций, кольпоскопией, КТГ плода, УЗИ в гинекологии, УЗИ при
+								беременности.
+							</p>
+							<p class="cards__text-desc">
+								Использует современные методы клинического обследования и лечения в акушерстве и
+								гинекологии, занимается вопросами гинекологической эндокринологии.
+							</p>
+							<p class="cards__text-desc cards__text-desc--education whiteText">Образование:</p>
+							<ul class="cards__text-list">
+								<li class="cards__text-list-item">
+									В 2003 году окончила лечебный факультет Ташкентской медицинской академии.
+								</li>
 
-									</div>
-								</div>
-								<div class="cards__item">
-									<div class="cards__picture">
-											<img src="/images/doctor.png" alt="doctor">
-										<div class="cards__picture-overlay">
+								<li class="cards__text-list-item">
+									2003 – 2005г – работала м.н.с. в НИИ акушерства и гинекологии Минздрава Республики
+									Узбекистан.
+								</li>
 
-										</div>
-									</div>
-									<div class="cards__text">
-										<div class="cards__text-blur"></div>
-										<p class="cards__text-desc cards__text-desc--heading">
-											Врачебный  <br class="cards__text-desc--br"/> стаж: <span class="whiteTextBold">19</span> лет
-										</p>
-										<p class="cards__text-desc cards__text-desc--subheading whiteText">
-											Врач акушер-гинеколог, врач ультразвуковой диагностики
-										</p>
-										<p class="cards__text-desc">
-											Владеет навыками диагностики и лечения патологии шейки матки, техникой малых гинекологических операций, кольпоскопией, КТГ плода, УЗИ в гинекологии, УЗИ при беременности.
-										</p>
-										<p class="cards__text-desc">
-											Использует современные методы клинического обследования и лечения в акушерстве и гинекологии, занимается вопросами гинекологической эндокринологии.
-										</p>
-										<p class="cards__text-desc cards__text-desc--education whiteText">
-											Образование:
-										</p>
-										<ul class="cards__text-list">
-											<li class="cards__text-list-item"> В 2003 году окончила лечебный факультет Ташкентской медицинской академии.</li>
+								<li class="cards__text-list-item">
+									2005 – 2007гг – клиническая ординатура по специальности акушерство и гинекология
+									на базе Ташкентского института усовершенствования врачей (г. Ташкент)
+								</li>
 
-											<li class="cards__text-list-item">	2003 – 2005г – работала м.н.с. в НИИ акушерства и гинекологии Минздрава Республики Узбекистан.</li>	
-												
-											<li class="cards__text-list-item">	2005 – 2007гг – клиническая ординатура по специальности акушерство и гинекология на базе Ташкентского института усовершенствования врачей (г. Ташкент)</li>	
-												
-											<li class="cards__text-list-item">	2007 – 2008гг – врач акушер-гинеколог 2-го городского перинатального центра (г. Ташкент)</li>	
-												
-											<li class="cards__text-list-item">	2008 – 2013гг – врач акушер гинеколог Республиканского перинатального центра (г. Ташкент)</li>	
-												
-											<li class="cards__text-list-item">	2014г – по наст. время – врач акушер-гинеколог ГБУЗ МО Домодедовская ЦГБ</li>	
-												
-											<li class="cards__text-list-item">	2011г – цикл тематического усовершенствования по кольпоскопии.</li>	
-												
-											<li class="cards__text-list-item">	2012г – цикл тематического усовершенствования по гинекологической эндокринологии.</li>	
-												
-											<li class="cards__text-list-item">	2012г – курсы профессиональной переподготовки по специальности. «Физиотерапевтические методы лечения и реабилитации в акушерстве и гинекологии»</li>	
-												
-											<li class="cards__text-list-item">	2014г — курсы профессиональной переподготовки по специальности «Ультразвуковая диагностика» при РНИМУ им Н.И. Пирогова (Москва).</li>	
-												
-											<li class="cards__text-list-item">2018г – цикл тематического усовершенствования «Лазерная терапия» при ФГБУ Государственный научный центр лазерной медицины им О.К. Скобелкина. </li>	
-										</ul>
+								<li class="cards__text-list-item">
+									2007 – 2008гг – врач акушер-гинеколог 2-го городского перинатального центра (г.
+									Ташкент)
+								</li>
 
-									</div>
-								</div>
-							</div>
+								<li class="cards__text-list-item">
+									2008 – 2013гг – врач акушер гинеколог Республиканского перинатального центра (г.
+									Ташкент)
+								</li>
 
-						</section>
+								<li class="cards__text-list-item">
+									2014г – по наст. время – врач акушер-гинеколог ГБУЗ МО Домодедовская ЦГБ
+								</li>
 
-						<section class="services">
-							<h2 class="title__head">Услуги гинекологии</h2>
+								<li class="cards__text-list-item">
+									2011г – цикл тематического усовершенствования по кольпоскопии.
+								</li>
 
-							<div class="services__list">
-									<a href="/pages/service/index.html" class="services__item services__link">
-											Гинекологический прием
-									</a>
-									<a href="/pages/service/index.html" class="services__item services__link">
-											Повторный гинекологический прием
-									</a>
-									<a href="/pages/service/index.html" class="services__item services__link">
-											Гинекологический прием
-									</a>
-									<a href="/pages/service/index.html" class="services__item services__link">
-											Консультация гинеколога эндо-кринолога повторная
-									</a>
-									<a href="/pages/service/index.html" class="services__item services__link">
-											Гинекологический прием
-									</a>
-									<a href="/pages/service/index.html" class="services__item services__link">
-											Гинекологический прием
-									</a>
-									<a href="/pages/service/index.html" class="services__item services__link">
-											Гинекологический прием
-									</a>
-									<a href="/pages/service/index.html" class="services__item services__link">
-											Гинекологический прием
-									</a>
-									<a href="/pages/service/index.html" class="services__item services__link">
-											Гинекологический прием
-									</a>
-									<a href="/pages/service/index.html" class="services__item services__link">
-											Гинекологический прием
-									</a>
-									<a href="/pages/service/index.html" class="services__item services__link">
-											Гинекологический прием
-									</a>
-									<a href="/pages/service/index.html" class="services__item services__link">
-											Гинекологический прием
-									</a>
-							</div>
-					</section>
-        </main>
-        <footer class="footer"></footer>
-    </body>
+								<li class="cards__text-list-item">
+									2012г – цикл тематического усовершенствования по гинекологической эндокринологии.
+								</li>
+
+								<li class="cards__text-list-item">
+									2012г – курсы профессиональной переподготовки по специальности.
+									«Физиотерапевтические методы лечения и реабилитации в акушерстве и гинекологии»
+								</li>
+
+								<li class="cards__text-list-item">
+									2014г — курсы профессиональной переподготовки по специальности «Ультразвуковая
+									диагностика» при РНИМУ им Н.И. Пирогова (Москва).
+								</li>
+
+								<li class="cards__text-list-item">
+									2018г – цикл тематического усовершенствования «Лазерная терапия» при ФГБУ
+									Государственный научный центр лазерной медицины им О.К. Скобелкина.
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="cards__item">
+						<div class="cards__picture">
+							<img src="/images/doctor.png" alt="doctor" />
+							<div class="cards__picture-overlay"></div>
+						</div>
+						<div class="cards__text">
+							<div class="cards__text-blur"></div>
+							<p class="cards__text-desc cards__text-desc--heading">
+								Врачебный <br class="cards__text-desc--br" />
+								стаж: <span class="whiteTextBold">19</span> лет
+							</p>
+							<p class="cards__text-desc cards__text-desc--subheading whiteText">
+								Врач акушер-гинеколог, врач ультразвуковой диагностики
+							</p>
+							<p class="cards__text-desc">
+								Владеет навыками диагностики и лечения патологии шейки матки, техникой малых
+								гинекологических операций, кольпоскопией, КТГ плода, УЗИ в гинекологии, УЗИ при
+								беременности.
+							</p>
+							<p class="cards__text-desc">
+								Использует современные методы клинического обследования и лечения в акушерстве и
+								гинекологии, занимается вопросами гинекологической эндокринологии.
+							</p>
+							<p class="cards__text-desc cards__text-desc--education whiteText">Образование:</p>
+							<ul class="cards__text-list">
+								<li class="cards__text-list-item">
+									В 2003 году окончила лечебный факультет Ташкентской медицинской академии.
+								</li>
+
+								<li class="cards__text-list-item">
+									2003 – 2005г – работала м.н.с. в НИИ акушерства и гинекологии Минздрава Республики
+									Узбекистан.
+								</li>
+
+								<li class="cards__text-list-item">
+									2005 – 2007гг – клиническая ординатура по специальности акушерство и гинекология
+									на базе Ташкентского института усовершенствования врачей (г. Ташкент)
+								</li>
+
+								<li class="cards__text-list-item">
+									2007 – 2008гг – врач акушер-гинеколог 2-го городского перинатального центра (г.
+									Ташкент)
+								</li>
+
+								<li class="cards__text-list-item">
+									2008 – 2013гг – врач акушер гинеколог Республиканского перинатального центра (г.
+									Ташкент)
+								</li>
+
+								<li class="cards__text-list-item">
+									2014г – по наст. время – врач акушер-гинеколог ГБУЗ МО Домодедовская ЦГБ
+								</li>
+
+								<li class="cards__text-list-item">
+									2011г – цикл тематического усовершенствования по кольпоскопии.
+								</li>
+
+								<li class="cards__text-list-item">
+									2012г – цикл тематического усовершенствования по гинекологической эндокринологии.
+								</li>
+
+								<li class="cards__text-list-item">
+									2012г – курсы профессиональной переподготовки по специальности.
+									«Физиотерапевтические методы лечения и реабилитации в акушерстве и гинекологии»
+								</li>
+
+								<li class="cards__text-list-item">
+									2014г — курсы профессиональной переподготовки по специальности «Ультразвуковая
+									диагностика» при РНИМУ им Н.И. Пирогова (Москва).
+								</li>
+
+								<li class="cards__text-list-item">
+									2018г – цикл тематического усовершенствования «Лазерная терапия» при ФГБУ
+									Государственный научный центр лазерной медицины им О.К. Скобелкина.
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="cards__item">
+						<div class="cards__picture">
+							<img src="/images/doctor.png" alt="doctor" />
+							<div class="cards__picture-overlay"></div>
+						</div>
+						<div class="cards__text">
+							<div class="cards__text-blur"></div>
+							<p class="cards__text-desc cards__text-desc--heading">
+								Врачебный <br class="cards__text-desc--br" />
+								стаж: <span class="whiteTextBold">19</span> лет
+							</p>
+							<p class="cards__text-desc cards__text-desc--subheading whiteText">
+								Врач акушер-гинеколог, врач ультразвуковой диагностики
+							</p>
+							<p class="cards__text-desc">
+								Владеет навыками диагностики и лечения патологии шейки матки, техникой малых
+								гинекологических операций, кольпоскопией, КТГ плода, УЗИ в гинекологии, УЗИ при
+								беременности.
+							</p>
+							<p class="cards__text-desc">
+								Использует современные методы клинического обследования и лечения в акушерстве и
+								гинекологии, занимается вопросами гинекологической эндокринологии.
+							</p>
+							<p class="cards__text-desc cards__text-desc--education whiteText">Образование:</p>
+							<ul class="cards__text-list">
+								<li class="cards__text-list-item">
+									В 2003 году окончила лечебный факультет Ташкентской медицинской академии.
+								</li>
+
+								<li class="cards__text-list-item">
+									2003 – 2005г – работала м.н.с. в НИИ акушерства и гинекологии Минздрава Республики
+									Узбекистан.
+								</li>
+
+								<li class="cards__text-list-item">
+									2005 – 2007гг – клиническая ординатура по специальности акушерство и гинекология
+									на базе Ташкентского института усовершенствования врачей (г. Ташкент)
+								</li>
+
+								<li class="cards__text-list-item">
+									2007 – 2008гг – врач акушер-гинеколог 2-го городского перинатального центра (г.
+									Ташкент)
+								</li>
+
+								<li class="cards__text-list-item">
+									2008 – 2013гг – врач акушер гинеколог Республиканского перинатального центра (г.
+									Ташкент)
+								</li>
+
+								<li class="cards__text-list-item">
+									2014г – по наст. время – врач акушер-гинеколог ГБУЗ МО Домодедовская ЦГБ
+								</li>
+
+								<li class="cards__text-list-item">
+									2011г – цикл тематического усовершенствования по кольпоскопии.
+								</li>
+
+								<li class="cards__text-list-item">
+									2012г – цикл тематического усовершенствования по гинекологической эндокринологии.
+								</li>
+
+								<li class="cards__text-list-item">
+									2012г – курсы профессиональной переподготовки по специальности.
+									«Физиотерапевтические методы лечения и реабилитации в акушерстве и гинекологии»
+								</li>
+
+								<li class="cards__text-list-item">
+									2014г — курсы профессиональной переподготовки по специальности «Ультразвуковая
+									диагностика» при РНИМУ им Н.И. Пирогова (Москва).
+								</li>
+
+								<li class="cards__text-list-item">
+									2018г – цикл тематического усовершенствования «Лазерная терапия» при ФГБУ
+									Государственный научный центр лазерной медицины им О.К. Скобелкина.
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="services">
+				<h2 class="title__head">Услуги гинекологии</h2>
+
+				<div class="services__list">
+					<a href="/pages/service/index.html" class="services__item services__link">
+						Гинекологический прием
+					</a>
+					<a href="/pages/service/index.html" class="services__item services__link">
+						Повторный гинекологический прием
+					</a>
+					<a href="/pages/service/index.html" class="services__item services__link">
+						Гинекологический прием
+					</a>
+					<a href="/pages/service/index.html" class="services__item services__link">
+						Консультация гинеколога эндо-кринолога повторная
+					</a>
+					<a href="/pages/service/index.html" class="services__item services__link">
+						Гинекологический прием
+					</a>
+					<a href="/pages/service/index.html" class="services__item services__link">
+						Гинекологический прием
+					</a>
+					<a href="/pages/service/index.html" class="services__item services__link">
+						Гинекологический прием
+					</a>
+					<a href="/pages/service/index.html" class="services__item services__link">
+						Гинекологический прием
+					</a>
+					<a href="/pages/service/index.html" class="services__item services__link">
+						Гинекологический прием
+					</a>
+					<a href="/pages/service/index.html" class="services__item services__link">
+						Гинекологический прием
+					</a>
+					<a href="/pages/service/index.html" class="services__item services__link">
+						Гинекологический прием
+					</a>
+					<a href="/pages/service/index.html" class="services__item services__link">
+						Гинекологический прием
+					</a>
+				</div>
+			</section>
+		</main>
+		<footer class="footer"></footer>
+	</body>
 </html>

@@ -3,126 +3,126 @@
 $burger: '830px';
 
 .med-intro {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-block: rem(23) rem(10);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding-block: rem(23) rem(10);
 
-    &__phone {
-        font-family: $f-roboto;
-        font-weight: 700;
-        font-size: rem(20);
-        color: white;
-        @include respond-above($burger) {
-            display: none;
-        }
-    }
-    &__button {
-        @include respond-above($burger) {
-            display: none;
-        }
-    }
-    &__address {
-        font-family: $f-ibm;
-        font-weight: 600;
-        font-size: rem(14);
-        color: white;
-        font-style: normal;
-        margin-top: rem(10);
-        @include respond-above($burger) {
-            display: none;
-        }
-    }
+	&__phone {
+		font-family: $f-roboto;
+		font-weight: 700;
+		font-size: rem(20);
+		color: white;
+		@include respond-above($burger) {
+			display: none;
+		}
+	}
+	&__button {
+		@include respond-above($burger) {
+			display: none;
+		}
+	}
+	&__address {
+		font-family: $f-ibm;
+		font-weight: 600;
+		font-size: rem(14);
+		color: white;
+		font-style: normal;
+		margin-top: rem(10);
+		@include respond-above($burger) {
+			display: none;
+		}
+	}
 }
 .circle {
-    --m: 7;
-    --tan: 1;
-    --d: 5.5em; /* image size */
-    --rel: 1; /* how much extra space we want between images, 1 = one image size */
-    --r: calc(0.5 * (1 + var(--rel)) * var(--d) / var(--tan)); /* circle radius */
-    --s: calc(2 * var(--r) + var(--d)); /* container size */
-    position: relative;
-    width: var(--s);
-    height: var(--s);
-    background-image: url('/images/intro/7.png');
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center 50%;
-    @include respond-above($burger) {
-        --tan: 0.5;
-        --m: 9;
-    }
-    @include respond-above('1230px') {
-        --tan: 0.3;
-        --m: 9;
-    }
+	--m: 7;
+	--tan: 1;
+	--d: 5.5em; /* image size */
+	--rel: 1; /* how much extra space we want between images, 1 = one image size */
+	--r: calc(0.5 * (1 + var(--rel)) * var(--d) / var(--tan)); /* circle radius */
+	--s: calc(2 * var(--r) + var(--d)); /* container size */
+	position: relative;
+	width: var(--s);
+	height: var(--s);
+	background-image: url('/images/intro/7.png');
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: center 50%;
+	@include respond-above($burger) {
+		--tan: 0.5;
+		--m: 9;
+	}
+	@include respond-above('1230px') {
+		--tan: 0.3;
+		--m: 9;
+	}
 
-    &__item {
-        position: absolute;
-        top: 47%;
-        left: 58%;
-        margin: calc(-0.5 * var(--d));
-        width: var(--d);
-        height: var(--d);
-        --az: calc(var(--i) * 1turn / var(--m));
-        transform: rotate(var(--az)) translate(var(--r)) rotate(calc(-1 * var(--az)));
+	&__item {
+		position: absolute;
+		top: 47%;
+		left: 58%;
+		margin: calc(-0.5 * var(--d));
+		width: var(--d);
+		height: var(--d);
+		--az: calc(var(--i) * 1turn / var(--m));
+		transform: rotate(var(--az)) translate(var(--r)) rotate(calc(-1 * var(--az)));
 
-        @include respond-above($burger) {
-            top: 44%;
-            left: 49%;
-        }
-        @include respond-above('1230px') {
-            top: 32%;
-            left: 41%;
-        }
-    }
+		@include respond-above($burger) {
+			top: 44%;
+			left: 49%;
+		}
+		@include respond-above('1230px') {
+			top: 32%;
+			left: 41%;
+		}
+	}
 
-    &__dent {
-        --i: 2;
-    }
-    &__anal {
-        --i: 1;
-    }
-    &__serv {
-        --i: 0;
-    }
+	&__dent {
+		--i: 2;
+	}
+	&__anal {
+		--i: 1;
+	}
+	&__serv {
+		--i: 0;
+	}
 
-    &__text {
-        font-family: $f-roboto;
-        font-weight: 600;
-        font-size: rem(16);
-        color: white;
-        text-align: center;
-        @include respond-above($burger) {
-            font-weight: 700;
-            font-size: rem(24);
-            flex-shrink: 0;
-        }
-        @include respond-below('1100px') {
-            max-width: 10ch;
-        }
-    }
+	&__text {
+		font-family: $f-roboto;
+		font-weight: 600;
+		font-size: rem(16);
+		color: white;
+		text-align: center;
+		@include respond-above($burger) {
+			font-weight: 700;
+			font-size: rem(24);
+			flex-shrink: 0;
+		}
+		@include respond-below('1100px') {
+			max-width: 10ch;
+		}
+	}
 
-    &__figure {
-        display: flex;
-        flex-direction: column;
-        @include respond-above($burger) {
-            flex-direction: row;
-            align-items: center;
-            gap: 5px;
-        }
-        & > img {
-            @include respond-above($burger) {
-                --w: 100px;
-                width: var(--w);
-                height: var(--w);
-                max-width: none;
-            }
-            @include respond-above('1230px') {
-                --w: 130px;
-                width: var(--w);
-                height: var(--w);
-            }
-        }
-    }
+	&__figure {
+		display: flex;
+		flex-direction: column;
+		@include respond-above($burger) {
+			flex-direction: row;
+			align-items: center;
+			gap: 5px;
+		}
+		& > img {
+			@include respond-above($burger) {
+				--w: 100px;
+				width: var(--w);
+				height: var(--w);
+				max-width: none;
+			}
+			@include respond-above('1230px') {
+				--w: 130px;
+				width: var(--w);
+				height: var(--w);
+			}
+		}
+	}
 }

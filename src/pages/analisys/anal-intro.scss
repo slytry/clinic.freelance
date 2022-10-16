@@ -3,242 +3,241 @@
 $burger: '830px';
 
 @mixin center {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
 }
 
 .anal-intro {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-block: rem(23) rem(10);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding-block: rem(23) rem(10);
 
-    &__phone {
-        margin-top: 16px;
-        display: block;
-        text-align: center;
-        font-family: $f-roboto;
-        font-weight: 700;
-        font-size: rem(20);
-        color: black;
-        @include respond-above($burger) {
-            display: none;
-        }
-    }
-    &__button {
-        display: block;
-        margin: 0 auto;
-        @include respond-above($burger) {
-            display: none;
-        }
-    }
-    &__address {
-        text-align: center;
-        font-family: $f-ibm;
-        font-weight: 600;
-        font-size: rem(14);
-        color: white;
-        font-style: normal;
-        margin-top: rem(8);
-        padding: 10px;
-        background: rgba(51, 28, 14, 0.61);
+	&__phone {
+		margin-top: 16px;
+		display: block;
+		text-align: center;
+		font-family: $f-roboto;
+		font-weight: 700;
+		font-size: rem(20);
+		color: black;
+		@include respond-above($burger) {
+			display: none;
+		}
+	}
+	&__button {
+		display: block;
+		margin: 0 auto;
+		@include respond-above($burger) {
+			display: none;
+		}
+	}
+	&__address {
+		text-align: center;
+		font-family: $f-ibm;
+		font-weight: 600;
+		font-size: rem(14);
+		color: white;
+		font-style: normal;
+		margin-top: rem(8);
+		padding: 10px;
+		background: rgba(51, 28, 14, 0.61);
 
-        // transform: translateX(50%);
-        // filter: blur(2px);
-        @include respond-above($burger) {
-            display: none;
-        }
-    }
+		// transform: translateX(50%);
+		// filter: blur(2px);
+		@include respond-above($burger) {
+			display: none;
+		}
+	}
 }
 .anal-circle {
-    --m: 8;
-    --tan: 2;
-    --d: 9em;
-    --rel: 1; /* how much extra space we want between images, 1 = one image size */
-    --r: calc(0.5 * (1 + var(--rel)) * var(--d) / var(--tan)); /* circle radius */
-    --s: calc(2 * var(--r) + var(--d)); /* container size */
-    position: relative;
-    width: var(--s);
-    height: var(--s);
-    background-image: url('/images/intro/7.png');
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center 50%;
-    @include respond-above($burger) {
-        --m: 8;
-        --d: 9.4em;
-        --rel: 1;
-        --d: 9em;
-        background-image: url('/images/intro/blue.png');
-    }
-   
+	--m: 8;
+	--tan: 2;
+	--d: 9em;
+	--rel: 1; /* how much extra space we want between images, 1 = one image size */
+	--r: calc(0.5 * (1 + var(--rel)) * var(--d) / var(--tan)); /* circle radius */
+	--s: calc(2 * var(--r) + var(--d)); /* container size */
+	position: relative;
+	width: var(--s);
+	height: var(--s);
+	background-image: url('/images/intro/7.png');
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: center 50%;
+	@include respond-above($burger) {
+		--m: 8;
+		--d: 9.4em;
+		--rel: 1;
+		--d: 9em;
+		background-image: url('/images/intro/blue.png');
+	}
 
-    &__item {
-        --shift: 49px;
-        position: absolute;
-        top: 71%;
-        left: 53%;
-        margin: calc(-0.5 * var(--d));
-        width: var(--d);
-        height: var(--d);
-        --az: calc(var(--i) * 1turn / var(--m));
-        transform: rotate(var(--az)) translate(calc(var(--r) + var(--shift)))
-            rotate(calc(-1 * var(--az)));
+	&__item {
+		--shift: 49px;
+		position: absolute;
+		top: 71%;
+		left: 53%;
+		margin: calc(-0.5 * var(--d));
+		width: var(--d);
+		height: var(--d);
+		--az: calc(var(--i) * 1turn / var(--m));
+		transform: rotate(var(--az)) translate(calc(var(--r) + var(--shift)))
+			rotate(calc(-1 * var(--az)));
 
-        @include respond-above($burger) {
-            top: 48%;
-            --shift: 50%;
-        }
-        @include respond-above('1230px') {
-            // top: 32%;
-            // left: 41%;
-        }
-    }
+		@include respond-above($burger) {
+			top: 48%;
+			--shift: 50%;
+		}
+		@include respond-above('1230px') {
+			// top: 32%;
+			// left: 41%;
+		}
+	}
 
-    &__krov {
-        --i: 4;
-        max-width: 7em;
-        @include respond-above($burger) {
-            --i: 5;
-        }
-    }
-    &__imun {
-        --i: 3;
-        @include respond-above($burger) {
-            --i: 4;
-        }
-    }
-    &__sver {
-        --i: 2;
-        @include respond-above($burger) {
-            --i: 3;
-        }
-    }
-    &__lek {
-        --i: 1;
-        @include respond-above($burger) {
-            --i: 1;
-        }
-    }
-    &__fact {
-        max-width: 8em;
-        --i: 0;
-        @include respond-above($burger) {
-            --i: 0;
-        }
-    }
+	&__krov {
+		--i: 4;
+		max-width: 7em;
+		@include respond-above($burger) {
+			--i: 5;
+		}
+	}
+	&__imun {
+		--i: 3;
+		@include respond-above($burger) {
+			--i: 4;
+		}
+	}
+	&__sver {
+		--i: 2;
+		@include respond-above($burger) {
+			--i: 3;
+		}
+	}
+	&__lek {
+		--i: 1;
+		@include respond-above($burger) {
+			--i: 1;
+		}
+	}
+	&__fact {
+		max-width: 8em;
+		--i: 0;
+		@include respond-above($burger) {
+			--i: 0;
+		}
+	}
 
-    &__figure {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        @include respond-above($burger) {
-            display: block;
-            position: relative;
-            width: var(--d);
-            height: var(--d);
-        }
-    }
+	&__figure {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		@include respond-above($burger) {
+			display: block;
+			position: relative;
+			width: var(--d);
+			height: var(--d);
+		}
+	}
 
-    &__text {
-        font-family: $f-roboto;
-        font-weight: 700;
-        font-size: rem(12);
-        color: white;
-        text-align: center;
-        @include respond-above($burger) {
-            @include center;
-            position: absolute;
-            font-weight: 600;
-            font-size: 1rem;
-            flex-shrink: 0;
-        }
-        @include respond-below('1100px') {
-            max-width: 20ch;
-        }
-    }
+	&__text {
+		font-family: $f-roboto;
+		font-weight: 700;
+		font-size: rem(12);
+		color: white;
+		text-align: center;
+		@include respond-above($burger) {
+			@include center;
+			position: absolute;
+			font-weight: 600;
+			font-size: 1rem;
+			flex-shrink: 0;
+		}
+		@include respond-below('1100px') {
+			max-width: 20ch;
+		}
+	}
 
-    &__buble {
-        flex-shrink: 0;
-        width: 24px;
-        height: 24px;
-        overflow: visible;
+	&__buble {
+		flex-shrink: 0;
+		width: 24px;
+		height: 24px;
+		overflow: visible;
 
-        @include respond-above($burger) {
-            width: 100%;
-            height: 100%;
-        }
+		@include respond-above($burger) {
+			width: 100%;
+			height: 100%;
+		}
 
-        & > circle:hover {
-            filter: blur(1px);
-        }
-    }
-    &__center-text {
-        @include center;
-        top: 40%;
-        font-family: 'Roboto';
-        font-weight: 500;
-        font-size: 24px;
-        line-height: 28px;
-        text-align: center;
-        color: #ffffff;
+		& > circle:hover {
+			filter: blur(1px);
+		}
+	}
+	&__center-text {
+		@include center;
+		top: 40%;
+		font-family: 'Roboto';
+		font-weight: 500;
+		font-size: 24px;
+		line-height: 28px;
+		text-align: center;
+		color: #ffffff;
 
-        @include respond-above($burger) {
-            font-weight: 700;
-            font-size: 50px;
-        }
-    }
+		@include respond-above($burger) {
+			font-weight: 700;
+			font-size: 50px;
+		}
+	}
 }
 
 .analmob {
-    margin-top: 50px;
-    position: relative;
-    padding-top: 5px;
-    display: flex;
-    gap: 7px;
-    @include respond-above($burger) {
-        display: none;
-    }
-    &__item {
-        align-items: center;
-        display: flex;
-        gap: 3px;
-        font-family: $f-ibm;
-        font-weight: 700;
-        font-size: 12px;
-        color: #ffffff;
-        & a {
-            color: inherit;
-        }
-    }
+	margin-top: 50px;
+	position: relative;
+	padding-top: 5px;
+	display: flex;
+	gap: 7px;
+	@include respond-above($burger) {
+		display: none;
+	}
+	&__item {
+		align-items: center;
+		display: flex;
+		gap: 3px;
+		font-family: $f-ibm;
+		font-weight: 700;
+		font-size: 12px;
+		color: #ffffff;
+		& a {
+			color: inherit;
+		}
+	}
 
-    &__list {
-        display: flex;
-        flex-direction: column;
-        gap: 5px;
-        z-index: 1;
-    }
+	&__list {
+		display: flex;
+		flex-direction: column;
+		gap: 5px;
+		z-index: 1;
+	}
 }
 
 .blurbg {
-    margin-bottom: -10px;
-    pointer-events: none;
-    margin-left: -50vw;
-    margin-right: -50vw;
-    z-index: 0;
-    position: absolute;
-    inset: 0;
-    background: rgba(51, 28, 14, 0.61);
-    filter: blur(2px);
+	margin-bottom: -10px;
+	pointer-events: none;
+	margin-left: -50vw;
+	margin-right: -50vw;
+	z-index: 0;
+	position: absolute;
+	inset: 0;
+	background: rgba(51, 28, 14, 0.61);
+	filter: blur(2px);
 }
 
 .full-width {
-    width: 100vw;
-    position: relative;
-    left: 50%;
-    right: 50%;
-    margin-left: -50vw;
-    margin-right: -50vw;
+	width: 100vw;
+	position: relative;
+	left: 50%;
+	right: 50%;
+	margin-left: -50vw;
+	margin-right: -50vw;
 }

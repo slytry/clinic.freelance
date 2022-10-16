@@ -3,363 +3,372 @@
 $burger: '830px';
 
 .intro {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-block: rem(23) rem(10);
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+	padding-block: rem(23) rem(10);
 
-    &__phone {
-        font-family: $f-roboto;
-        font-weight: 700;
-        font-size: rem(20);
-        color: white;
-        @include respond-above($burger) {
-            display: none;
-        }
-    }
-    &__button {
-        @include respond-above($burger) {
-            display: none;
-        }
-    }
-    &__address {
-        font-family: $f-ibm;
-        font-weight: 600;
-        font-size: rem(14);
-        color: white;
-        font-style: normal;
-        margin-top: rem(10);
-        @include respond-above($burger) {
-            display: none;
-        }
-    }
+	&__phone {
+		color: #fff;
+		font-family: $f-roboto;
+		font-size: rem(20);
+		font-weight: 700;
+		@include respond-above($burger) {
+			display: none;
+		}
+	}
+
+	&__button {
+		@include respond-above($burger) {
+			display: none;
+		}
+	}
+
+	&__address {
+		color: #fff;
+		font-family: $f-ibm;
+		font-size: rem(14);
+		font-style: normal;
+		font-weight: 600;
+		margin-top: rem(10);
+		@include respond-above($burger) {
+			display: none;
+		}
+	}
 }
+
 .circle {
-    --m: 7;
-    --tan: 1;
-    --d: 5.5em; /* image size */
-    --rel: 1; /* how much extra space we want between images, 1 = one image size */
-    --r: calc(0.5 * (1 + var(--rel)) * var(--d) / var(--tan)); /* circle radius */
-    --s: calc(2 * var(--r) + var(--d)); /* container size */
-    position: relative;
-    width: var(--s);
-    height: var(--s);
-    background-image: url('/images/intro/7.png');
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center 50%;
-    @include respond-above($burger) {
-        --tan: 0.5;
-        --m: 9;
-    }
-    @include respond-above('1230px') {
-        --tan: 0.3;
-        --m: 9;
-    }
+	--m: 7;
+	--tan: 1;
+	--d: 5.5em; /* image size */
+	--rel: 1; /* how much extra space we want between images, 1 = one image size */
+	--r: calc(0.5 * (1 + var(--rel)) * var(--d) / var(--tan)); /* circle radius */
+	--s: calc(2 * var(--r) + var(--d)); /* container size */
+	background-image: url('/images/intro/7.png');
+	background-position: center 50%;
+	background-repeat: no-repeat;
+	background-size: contain;
+	height: var(--s);
+	position: relative;
+	width: var(--s);
+	@include respond-above($burger) {
+		--tan: 0.5;
+		--m: 9;
+	}
+	@include respond-above('1230px') {
+		--tan: 0.3;
+		--m: 9;
+	}
 
-    &__item {
-        position: absolute;
-        top: 47%;
-        left: 58%;
-        margin: calc(-0.5 * var(--d));
-        width: var(--d);
-        height: var(--d);
-        --az: calc(var(--i) * 1turn / var(--m));
-        transform: rotate(var(--az)) translate(var(--r)) rotate(calc(-1 * var(--az)));
+	&__item {
+		--az: calc(var(--i) * 1turn / var(--m));
+		height: var(--d);
+		left: 58%;
+		margin: calc(-0.5 * var(--d));
+		position: absolute;
+		top: 47%;
+		transform: rotate(var(--az)) translate(var(--r)) rotate(calc(-1 * var(--az)));
+		width: var(--d);
 
-        @include respond-above($burger) {
-            top: 44%;
-            left: 49%;
-        }
-        @include respond-above('1230px') {
-            top: 32%;
-            left: 41%;
-        }
-    }
+		@include respond-above($burger) {
+			left: 49%;
+			top: 44%;
+		}
+		@include respond-above('1230px') {
+			left: 41%;
+			top: 32%;
+		}
+	}
 
-    &__dent {
-        --i: 2;
-    }
-    &__anal {
-        --i: 1;
-    }
-    &__serv {
-        --i: 0;
-    }
+	&__dent {
+		--i: 2;
+	}
 
-    &__text {
-        font-family: $f-roboto;
-        font-weight: 600;
-        font-size: rem(16);
-        color: white;
-        text-align: center;
-        @include respond-above($burger) {
-            font-weight: 700;
-            font-size: rem(24);
-            flex-shrink: 0;
-        }
-        @include respond-below('1100px') {
-            max-width: 10ch;
-        }
-    }
+	&__anal {
+		--i: 1;
+	}
 
-    &__figure {
-        display: flex;
-        flex-direction: column;
-        @include respond-above($burger) {
-            flex-direction: row;
-            align-items: center;
-            gap: 5px;
-        }
-        & > img {
-            @include respond-above($burger) {
-                --w: 100px;
-                width: var(--w);
-                height: var(--w);
-                max-width: none;
-            }
-            @include respond-above('1230px') {
-                --w: 130px;
-                width: var(--w);
-                height: var(--w);
-            }
-        }
-    }
+	&__serv {
+		--i: 0;
+	}
+
+	&__text {
+		color: #fff;
+		font-family: $f-roboto;
+		font-size: rem(16);
+		font-weight: 600;
+		text-align: center;
+		@include respond-above($burger) {
+			flex-shrink: 0;
+			font-size: rem(24);
+			font-weight: 700;
+		}
+		@include respond-below('1100px') {
+			max-width: 10ch;
+		}
+	}
+
+	&__figure {
+		display: flex;
+		flex-direction: column;
+		@include respond-above($burger) {
+			align-items: center;
+			flex-direction: row;
+			gap: 5px;
+		}
+	}
+
+	&__figure > img {
+		@include respond-above($burger) {
+			--w: 100px;
+			height: var(--w);
+			max-width: none;
+			width: var(--w);
+		}
+		@include respond-above('1230px') {
+			--w: 130px;
+			height: var(--w);
+			width: var(--w);
+		}
+	}
 }
 
 .slider {
-    padding-top: rem(15);
-    width: 100%;
-    margin: 0 auto;
+	margin: 0 auto;
+	padding-top: rem(15);
+	width: 100%;
 
-    &__btn-apteka {
-        background: url(/images/btn.png) no-repeat;
-        background-size: contain;
-        width: 28rem;
-        height: 11rem;
-        border-radius: 100px;
+	&__btn-apteka {
+		background: url('/images/btn.png') no-repeat;
+		background-size: contain;
+		border-radius: 100px;
+		height: 11rem;
+		width: 28rem;
 
-        @media screen and (max-width: 1000px) {
-            display: none;
-        }
-    }
-    &__btn-apteka:active {
-    }
+		@media screen and (max-width: 1000px) {
+			display: none;
+		}
+	}
 
-    &__list {
-        display: flex;
-        justify-content: space-between;
-        align-items: flex-end;
-    }
+	&__list {
+		align-items: flex-end;
+		display: flex;
+		justify-content: space-between;
+	}
 
-    &__button-text {
-        font-family: 'IBM Plex Sans';
-        font-style: normal;
-        font-weight: 600;
-        font-size: 40px;
-        line-height: 52px;
-        padding-left: 109px;
-    }
+	&__button-text {
+		font-family: 'IBM Plex Sans';
+		font-size: 40px;
+		font-style: normal;
+		font-weight: 600;
+		line-height: 52px;
+		padding-left: 109px;
+	}
 }
 
 .swiper {
-    width: 100%;
-    height: 100%;
+	height: 100%;
+	width: 100%;
 }
 
 .swiper-slide img {
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+	display: block;
+	height: 100%;
+	object-fit: cover;
+	width: 100%;
 }
+
 .swiper-button-next {
-    width: fluid(15, 50);
+	width: fluid(15, 50);
 }
+
 .swiper-button-prev {
-    width: fluid(15, 50);
+	width: fluid(15, 50);
 }
 
 .swiper-button-prev-img {
-    width: 100%;
+	width: 100%;
 }
+
 .swiper-button-next-img {
-    width: 100%;
+	width: 100%;
 }
 
 .about-us {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
-    min-height: rem(900);
+	align-items: center;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: contain;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	min-height: rem(900);
 
-    &__title {
-        color: $aboutUsTitle;
-        font-weight: 700;
-        font-family: 'IBM Plex Sans';
-        font-style: normal;
-        font-size: fluid(16, 36);
-        line-height: fluid(19, 47);
-        margin-bottom: 15px;
-        z-index: 2;
+	&__title {
+		color: $aboutUsTitle;
+		font-family: 'IBM Plex Sans';
+		font-size: fluid(16, 36);
+		font-style: normal;
+		font-weight: 700;
+		line-height: fluid(19, 47);
+		margin-bottom: 15px;
+		z-index: 2;
 
-        @media screen and (min-width: 1000px) {
-            color: $aboutUsTitleMax;
-        }
-    }
+		@media screen and (min-width: 1000px) {
+			color: $aboutUsTitleMax;
+		}
+	}
 
-    &__info {
-        text-align: center;
-        z-index: 2;
-    }
+	&__info {
+		text-align: center;
+		z-index: 2;
+	}
 
-    &__info-descr {
-        margin-bottom: 15px;
-        font-family: 'IBM Plex Sans';
-        font-style: normal;
-        font-weight: 400;
-        font-size: fluid(13, 24);
-    }
+	&__info-descr {
+		font-family: 'IBM Plex Sans';
+		font-size: fluid(13, 24);
+		font-style: normal;
+		font-weight: 400;
+		margin-bottom: 15px;
+	}
 }
 
 .contacts {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    min-height: rem(515);
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+	min-height: rem(515);
 
-    &__title {
-        font-size: fluid(24, 32);
-        font-family: 'IBM Plex Sans';
-        font-style: normal;
-        font-weight: 700;
-    }
+	&__title {
+		font-family: 'IBM Plex Sans';
+		font-size: fluid(24, 32);
+		font-style: normal;
+		font-weight: 700;
+	}
 
-    &__list {
-        margin-bottom: 20px;
-    }
+	&__list {
+		margin-bottom: 20px;
+	}
 
-    &__list-link,
-    &__list-item {
-        color: $contactsList;
-        font-size: fluid(15, 24);
-        font-family: 'IBM Plex Sans';
-        font-style: normal;
-        font-weight: 600;
-    }
+	&__list-link,
+	&__list-item {
+		color: $contactsList;
+		font-family: 'IBM Plex Sans';
+		font-size: fluid(15, 24);
+		font-style: normal;
+		font-weight: 600;
+	}
 
-    &__list-item {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        margin-bottom: 15px;
+	&__list-item {
+		align-items: center;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		margin-bottom: 15px;
 
-        text-align: center;
-    }
+		text-align: center;
+	}
 }
 
 .map {
-    width: 100%;
-    &__ifhame {
-        width: 100%;
-        min-height: 300px;
-    }
+	width: 100%;
+
+	&__ifhame {
+		min-height: 300px;
+		width: 100%;
+	}
 }
 
 .footer {
-    width: 90%;
-    display: flex;
-    justify-content: center;
-    background: url(/images/footerBackground.png) no-repeat;
-    background-position: center;
-    background-size: contain;
-    padding-bottom: 50px;
+	background: url('/images/footerBackground.png') no-repeat;
+	background-position: center;
+	background-size: contain;
+	display: flex;
+	justify-content: center;
+	padding-bottom: 50px;
+	width: 90%;
 
-    @media screen and (min-width: 500px) {
-        background: url(/images/footerBackgroundMax.png) no-repeat;
-        background-size: contain;
-        background-position: center;
-    }
+	@media screen and (min-width: 500px) {
+		background: url('/images/footerBackgroundMax.png') no-repeat;
+		background-position: center;
+		background-size: contain;
+	}
 
-    &__list {
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-        padding-top: fluid(40, 230);
-        padding-bottom: fluid(40, 490);
-        list-style: none;
-        gap: rem(30);
+	&__list {
+		display: flex;
+		flex-wrap: wrap;
+		gap: rem(30);
+		justify-content: center;
+		list-style: none;
+		padding-bottom: fluid(40, 490);
+		padding-top: fluid(40, 230);
 
-        @media screen and (min-width: 500px) {
-            gap: rem(100);
-        }
-    }
+		@media screen and (min-width: 500px) {
+			gap: rem(100);
+		}
+	}
 
-    &__list-item-link {
-        color: $footerLink;
-        font-size: fluid(15, 24);
-        text-decoration: none;
-        font-family: 'IBM Plex Sans';
-        font-style: normal;
-        font-weight: 600;
-    }
+	&__list-item-link {
+		color: $footerLink;
+		font-family: 'IBM Plex Sans';
+		font-size: fluid(15, 24);
+		font-style: normal;
+		font-weight: 600;
+		text-decoration: none;
+	}
 }
 
 //slider 2
 
 .slider2 {
-    height: 270px;
-    margin-bottom: 150px;
-    margin-top: 70px;
-    display: block;
-    width: fluid(360, 1440);
+	display: block;
+	height: 270px;
+	margin-bottom: 150px;
+	margin-top: 70px;
+	width: fluid(360, 1440);
 
-    @media screen and (max-width: 700px) {
-        display: none;
-    }
+	@media screen and (max-width: 700px) {
+		display: none;
+	}
 
-    &__title {
-        font-family: 'IBM Plex Sans';
-        font-style: normal;
-        font-weight: 700;
-        font-size: fluid(13, 32);
-        line-height: 42px;
-        margin-bottom: 15px;
-    }
+	&__title {
+		font-family: 'IBM Plex Sans';
+		font-size: fluid(13, 32);
+		font-style: normal;
+		font-weight: 700;
+		line-height: 42px;
+		margin-bottom: 15px;
+	}
 }
+
 .swiper {
-    width: 100%;
-    height: 100%;
+	height: 100%;
+	width: 100%;
 }
 
 .swiper-slide {
-    text-align: center;
-    font-size: 18px;
-    background: #fff;
+	align-items: center;
+	align-items: center;
+	background: #fff;
+	-webkit-box-align: center;
+	-webkit-box-pack: center;
 
-    /* Center slide text vertically */
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    -webkit-justify-content: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    -webkit-align-items: center;
-    align-items: center;
+	/* Center slide text vertically */
+	display: box;
+	display: flexbox;
+	display: flex;
+	display: flex;
+	-ms-flex-align: center;
+	-ms-flex-pack: center;
+	font-size: 18px;
+	justify-content: center;
+	justify-content: center;
+	text-align: center;
 }
 
 .swiper-slide img {
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+	display: block;
+	height: 100%;
+	object-fit: cover;
+	width: 100%;
 }
