@@ -1,0 +1,115 @@
+{
+	//===========================================
+	//============= Editor ======================
+	//===========================================
+	"editor.formatOnSave": true,
+	"editor.codeActionsOnSave": {
+		"source.fixAll.stylelint": true
+	},
+	"explorer.openEditors.visible": 0,
+	"editor.tabSize": 2,
+	"editor.defaultFormatter": "esbenp.prettier-vscode",
+	"diffEditor.ignoreTrimWhitespace": false,
+	"editor.wordSeparators": "`~!@#$%^&*()-=+[{]}\\|;:'\",.<>/?_",
+	"editor.linkedEditing": false,
+	//===========================================
+	//============= Other =======================
+	//===========================================
+	"breadcrumbs.enabled": true,
+	"liveServer.settings.donotShowInfoMsg": true,
+	"workbench.settings.enableNaturalLanguageSearch": false,
+	//===========================================
+	//============= files =======================
+	//===========================================
+	"files.eol": "\n",
+	"search.exclude": {
+		"**/node_modules": true,
+		"**/*.log": true,
+		"**/*.log*": true,
+		"**/bower_components": true,
+		"**/dist": true,
+		"**/elehukouben": true,
+		"**/.git": true,
+		"**/.gitignore": true,
+		"**/.svn": true,
+		"**/.DS_Store": true,
+		"**/.idea": true,
+		"**/.vscode": false,
+		"**/yarn.lock": true,
+		"**/tmp": true,
+		"out": true,
+		"dist": true,
+		"node_modules": true,
+		"CHANGELOG.md": true,
+		"examples": true,
+		"res": true,
+		"screenshots": true,
+		"yarn-error.log": true,
+		"**/pnpm-lock.yaml": true,
+		"**/.yarn": true
+	},
+	"files.exclude": {
+		"**/.cache": true,
+		"**/.editorconfig": true,
+		"**/.eslintcache": true,
+		"**/bower_components": true,
+		"**/.idea": true,
+		"**/tmp": true,
+		"**/.git": true,
+		"**/.svn": true,
+		"**/.hg": true,
+		"**/CVS": true,
+		"**/.DS_Store": true
+	},
+	"files.watcherExclude": {
+		"**/.git/objects/**": true,
+		"**/.git/subtree-cache/**": true,
+		"**/.vscode/**": true,
+		"**/node_modules/**": true,
+		"**/tmp/**": true,
+		"**/bower_components/**": true,
+		"**/dist/**": true,
+		"**/yarn.lock": true
+	},
+	//===========================================
+	//============= Linters =====================
+	//===========================================
+
+	"stylelint.enable": true,
+	"stylelint.validate": ["css", "scss"],
+	"prettier.requireConfig": true,
+	"cSpell.language": "en,ru",
+	"cSpell.words": [
+		"vben",
+		"windi",
+		"browserslist",
+		"tailwindcss",
+		"esnext",
+		"antv",
+		"tinymce",
+		"qrcode",
+		"sider",
+		"pinia",
+		"sider",
+		"nprogress",
+		"INTLIFY",
+		"stylelint",
+		"esno",
+		"vitejs",
+		"sortablejs",
+		"mockjs",
+		"codemirror",
+		"iconify",
+		"commitlint",
+		"vditor",
+		"echarts",
+		"cropperjs",
+		"logicflow",
+		"vueuse",
+		"zxcvbn",
+		"lintstagedrc",
+		"brotli",
+		"tailwindcss",
+		"sider"
+	]
+}
