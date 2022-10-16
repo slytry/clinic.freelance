@@ -74,7 +74,6 @@
 	//===========================================
 	//============= Linters =====================
 	//===========================================
-
 	"stylelint.enable": true,
 	"stylelint.validate": ["css", "scss"],
 	"prettier.requireConfig": true,

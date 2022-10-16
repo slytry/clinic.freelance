@@ -1,6 +1,7 @@
 {
 	"name": "clinic",
 	"version": "0.1.1",
+	"type": "module",
 	"scripts": {
 		"commit": "git cz",
 		"log": "conventional-changelog -p conventionalcommits -i CHANGELOG.md -s",
