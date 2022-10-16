@@ -1,5 +1,5 @@
 {
-  "name": "boilerplate.vanilla.vite",
+  "name": "clinic",
   "private": true,
   "version": "0.0.0",
   "description": "",
@@ -9,14 +9,14 @@
     "log": "conventional-changelog -p angular -i CHANGELOG.md -s",
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "preinstall": "npx only-allow pnpm"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/slytry/boilerplate.vanilla.vite.git"
   },
-  "keywords": [],
-  "author": "",
+  "author": "naumov99.rst@gmail.com",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/slytry/boilerplate.vanilla.vite/issues"
