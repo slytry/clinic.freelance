@@ -14,14 +14,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/slytry/boilerplate.vanilla.vite.git"
+    "url": "git+https://github.com/slytry/clinic.freelance.git"
   },
   "author": "naumov99.rst@gmail.com",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/slytry/boilerplate.vanilla.vite/issues"
+    "url": "https://github.com/slytry/clinic.freelance/issues"
   },
-  "homepage": "https://github.com/slytry/boilerplate.vanilla.vite#readme",
+  "homepage": "https://github.com/slytry/clinic.freelance#readme",
   "devDependencies": {
     "@commitlint/cli": "^17.1.2",
     "@commitlint/config-conventional": "^17.1.0",
