@@ -1,5 +1,3 @@
-'use strict';
-
 module.exports = {
     extends: ['@commitlint/config-conventional'],
     rules: {
@@ -13,4 +11,4 @@ module.exports = {
         'subject-case': [0, 'never'],
         'scope-empty': [0, 'never'],
     },
-};
+};2
