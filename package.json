@@ -6,7 +6,7 @@
 		"commit": "git cz",
 		"log": "conventional-changelog -p conventionalcommits -i CHANGELOG.md -s",
 		"dev": "vite",
-		"build": "vite build",
+		"build": "tsc && vite build",
 		"preview": "vite preview",
 		"preinstall": "npx only-allow pnpm",
 		"prepare": "husky install"
@@ -37,14 +37,14 @@
 		"sass": "^1.55.0",
 		"stylelint": "^14.14.0",
 		"stylelint-config-sass-guidelines": "^9.0.1",
+		"typescript": "^4.8.4",
 		"vite": "^3.1.8",
 		"vite-plugin-html": "^3.2.0",
 		"vite-plugin-imagemin": "^0.6.1",
 		"vite-plugin-zip-pack": "^1.0.4"
 	},
 	"dependencies": {
-		"swiper": "^8.4.4",
-		"vite-plugin-pug-transformer": "^1.0.2"
+		"swiper": "^8.4.4"
 	},
 	"config": {
 		"commitizen": {

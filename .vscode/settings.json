@@ -2,13 +2,19 @@
 	//===========================================
 	//============= Editor ======================
 	//===========================================
+	"editor.defaultFormatter": "esbenp.prettier-vscode",
+	"editor.formatOnPaste": true,
 	"editor.formatOnSave": true,
+	"editor.formatOnSaveMode": "file",
+	"editor.quickSuggestions": {
+		"strings": true
+	},
 	"editor.codeActionsOnSave": {
 		"source.fixAll.stylelint": true
 	},
 	"explorer.openEditors.visible": 0,
 	"editor.tabSize": 2,
-	"editor.defaultFormatter": "esbenp.prettier-vscode",
+
 	"diffEditor.ignoreTrimWhitespace": false,
 	"editor.wordSeparators": "`~!@#$%^&*()-=+[{]}\\|;:'\",.<>/?_",
 	"editor.linkedEditing": false,
