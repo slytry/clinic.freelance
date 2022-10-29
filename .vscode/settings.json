@@ -10,7 +10,7 @@
 		"strings": true
 	},
 	"editor.codeActionsOnSave": {
-		"source.fixAll.stylelint": true
+		"source.fixAll": true
 	},
 	"explorer.openEditors.visible": 0,
 	"editor.tabSize": 2,
