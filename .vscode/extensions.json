@@ -3,7 +3,7 @@
 		"dbaeumer.vscode-eslint",
 		"stylelint.vscode-stylelint",
 		"esbenp.prettier-vscode",
-		"antfu.iconify",
+		"eamodio.gitlens",
 		"formulahendry.auto-rename-tag",
 		"htmlhint.vscode-htmlhint",
 		"streetsidesoftware.code-spell-checker",
