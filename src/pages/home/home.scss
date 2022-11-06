@@ -1,0 +1,374 @@
+@use '/style/abstract' as *;
+
+$burger: '830px';
+
+.intro {
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+	padding-block: rem(23) rem(10);
+
+	&__phone {
+		color: #fff;
+		font-family: $f-roboto;
+		font-size: rem(20);
+		font-weight: 700;
+		@include respond-above($burger) {
+			display: none;
+		}
+	}
+
+	&__button {
+		@include respond-above($burger) {
+			display: none;
+		}
+	}
+
+	&__address {
+		color: #fff;
+		font-family: $f-ibm;
+		font-size: rem(14);
+		font-style: normal;
+		font-weight: 600;
+		margin-top: rem(10);
+		@include respond-above($burger) {
+			display: none;
+		}
+	}
+}
+
+.circle {
+	--m: 7;
+	--tan: 1;
+	--d: 5.5em; /* image size */
+	--rel: 1; /* how much extra space we want between images, 1 = one image size */
+	--r: calc(0.5 * (1 + var(--rel)) * var(--d) / var(--tan)); /* circle radius */
+	--s: calc(2 * var(--r) + var(--d)); /* container size */
+	background-image: url('/images/intro/7.png');
+	background-position: center 50%;
+	background-repeat: no-repeat;
+	background-size: contain;
+	height: var(--s);
+	position: relative;
+	width: var(--s);
+	@include respond-above($burger) {
+		--tan: 0.5;
+		--m: 9;
+	}
+	@include respond-above('1230px') {
+		--tan: 0.3;
+		--m: 9;
+	}
+
+	&__item {
+		--az: calc(var(--i) * 1turn / var(--m));
+		height: var(--d);
+		left: 58%;
+		margin: calc(-0.5 * var(--d));
+		position: absolute;
+		top: 47%;
+		transform: rotate(var(--az)) translate(var(--r)) rotate(calc(-1 * var(--az)));
+		width: var(--d);
+
+		@include respond-above($burger) {
+			left: 49%;
+			top: 44%;
+		}
+		@include respond-above('1230px') {
+			left: 41%;
+			top: 32%;
+		}
+	}
+
+	&__dent {
+		--i: 2;
+	}
+
+	&__anal {
+		--i: 1;
+	}
+
+	&__serv {
+		--i: 0;
+	}
+
+	&__text {
+		color: #fff;
+		font-family: $f-roboto;
+		font-size: rem(16);
+		font-weight: 600;
+		text-align: center;
+		@include respond-above($burger) {
+			flex-shrink: 0;
+			font-size: rem(24);
+			font-weight: 700;
+		}
+		@include respond-below('1100px') {
+			max-width: 10ch;
+		}
+	}
+
+	&__figure {
+		display: flex;
+		flex-direction: column;
+		@include respond-above($burger) {
+			align-items: center;
+			flex-direction: row;
+			gap: 5px;
+		}
+	}
+
+	&__figure > img {
+		@include respond-above($burger) {
+			--w: 100px;
+			height: var(--w);
+			max-width: none;
+			width: var(--w);
+		}
+		@include respond-above('1230px') {
+			--w: 130px;
+			height: var(--w);
+			width: var(--w);
+		}
+	}
+}
+
+.slider {
+	margin: 0 auto;
+	padding-top: rem(15);
+	width: 100%;
+
+	&__btn-apteka {
+		background: url('/images/btn.png') no-repeat;
+		background-size: contain;
+		border-radius: 100px;
+		height: 11rem;
+		width: 28rem;
+
+		@media screen and (max-width: 1000px) {
+			display: none;
+		}
+	}
+
+	&__list {
+		align-items: flex-end;
+		display: flex;
+		justify-content: space-between;
+	}
+
+	&__button-text {
+		font-family: 'IBM Plex Sans';
+		font-size: 40px;
+		font-style: normal;
+		font-weight: 600;
+		line-height: 52px;
+		padding-left: 109px;
+	}
+}
+
+.swiper {
+	height: 100%;
+	width: 100%;
+}
+
+.swiper-slide img {
+	display: block;
+	height: 100%;
+	object-fit: cover;
+	width: 100%;
+}
+
+.swiper-button-next {
+	width: fluid(15, 50);
+}
+
+.swiper-button-prev {
+	width: fluid(15, 50);
+}
+
+.swiper-button-prev-img {
+	width: 100%;
+}
+
+.swiper-button-next-img {
+	width: 100%;
+}
+
+.about-us {
+	align-items: center;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: contain;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	min-height: rem(900);
+
+	&__title {
+		color: $aboutUsTitle;
+		font-family: 'IBM Plex Sans';
+		font-size: fluid(16, 36);
+		font-style: normal;
+		font-weight: 700;
+		line-height: fluid(19, 47);
+		margin-bottom: 15px;
+		z-index: 2;
+
+		@media screen and (min-width: 1000px) {
+			color: $aboutUsTitleMax;
+		}
+	}
+
+	&__info {
+		text-align: center;
+		z-index: 2;
+	}
+
+	&__info-descr {
+		font-family: 'IBM Plex Sans';
+		font-size: fluid(13, 24);
+		font-style: normal;
+		font-weight: 400;
+		margin-bottom: 15px;
+	}
+}
+
+.contacts {
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+	min-height: rem(515);
+
+	&__title {
+		font-family: 'IBM Plex Sans';
+		font-size: fluid(24, 32);
+		font-style: normal;
+		font-weight: 700;
+	}
+
+	&__list {
+		margin-bottom: 20px;
+	}
+
+	&__list-link,
+	&__list-item {
+		color: $contactsList;
+		font-family: 'IBM Plex Sans';
+		font-size: fluid(15, 24);
+		font-style: normal;
+		font-weight: 600;
+	}
+
+	&__list-item {
+		align-items: center;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		margin-bottom: 15px;
+
+		text-align: center;
+	}
+}
+
+.map {
+	width: 100%;
+
+	&__ifhame {
+		min-height: 300px;
+		width: 100%;
+	}
+}
+
+.footer {
+	background: url('/images/footerBackground.png') no-repeat;
+	background-position: center;
+	background-size: contain;
+	display: flex;
+	justify-content: center;
+	padding-bottom: 50px;
+	width: 90%;
+
+	@media screen and (min-width: 500px) {
+		background: url('/images/footerBackgroundMax.png') no-repeat;
+		background-position: center;
+		background-size: contain;
+	}
+
+	&__list {
+		display: flex;
+		flex-wrap: wrap;
+		gap: rem(30);
+		justify-content: center;
+		list-style: none;
+		padding-bottom: fluid(40, 490);
+		padding-top: fluid(40, 230);
+
+		@media screen and (min-width: 500px) {
+			gap: rem(100);
+		}
+	}
+
+	&__list-item-link {
+		color: $footerLink;
+		font-family: 'IBM Plex Sans';
+		font-size: fluid(15, 24);
+		font-style: normal;
+		font-weight: 600;
+		text-decoration: none;
+	}
+}
+
+//slider 2
+
+.slider2 {
+	display: block;
+	height: 270px;
+	margin-bottom: 150px;
+	margin-top: 70px;
+	width: fluid(360, 1440);
+
+	@media screen and (max-width: 700px) {
+		display: none;
+	}
+
+	&__title {
+		font-family: 'IBM Plex Sans';
+		font-size: fluid(13, 32);
+		font-style: normal;
+		font-weight: 700;
+		line-height: 42px;
+		margin-bottom: 15px;
+	}
+}
+
+.swiper {
+	height: 100%;
+	width: 100%;
+}
+
+.swiper-slide {
+	align-items: center;
+	align-items: center;
+	background: #fff;
+	-webkit-box-align: center;
+	-webkit-box-pack: center;
+
+	/* Center slide text vertically */
+	display: box;
+	display: flexbox;
+	display: flex;
+	display: flex;
+	-ms-flex-align: center;
+	-ms-flex-pack: center;
+	font-size: 18px;
+	justify-content: center;
+	justify-content: center;
+	text-align: center;
+}
+
+.swiper-slide img {
+	display: block;
+	height: 100%;
+	object-fit: cover;
+	width: 100%;
+}
