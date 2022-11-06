@@ -1,9 +1,8 @@
 /* eslint-disable no-undef */
 import '/style/main.scss';
-import './anal-intro.scss';
-import '../../home.scss';
-import '../../scripts/burger-menu';
-import '../../scripts/swiper';
+import './analisys.scss';
+import '/home.scss';
+import '/scripts/burger-menu';
 
 export const swiper = new Swiper('.mySwiper', {
 	autoplay: {
@@ -19,7 +18,6 @@ export const swiper = new Swiper('.mySwiper', {
 	pagination: {
 		el: '.swiper-pagination',
 	},
-	// mousewheel: true,
 	keyboard: true,
 });
 

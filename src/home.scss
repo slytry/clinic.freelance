@@ -44,7 +44,7 @@ $burger: '830px';
 	--rel: 1; /* how much extra space we want between images, 1 = one image size */
 	--r: calc(0.5 * (1 + var(--rel)) * var(--d) / var(--tan)); /* circle radius */
 	--s: calc(2 * var(--r) + var(--d)); /* container size */
-	background-image: url('/images/intro/7.png');
+	background-image: url('/assets/intro/7.png');
 	background-position: center 50%;
 	background-repeat: no-repeat;
 	background-size: contain;
@@ -139,7 +139,7 @@ $burger: '830px';
 	width: 100%;
 
 	&__btn-apteka {
-		background: url('/images/btn.png') no-repeat;
+		background: url('/assets/btn.png') no-repeat;
 		background-size: contain;
 		border-radius: 100px;
 		height: 11rem;
@@ -280,7 +280,7 @@ $burger: '830px';
 }
 
 .footer {
-	background: url('/images/footerBackground.png') no-repeat;
+	background: url('/assets/footerBackground.png') no-repeat;
 	background-position: center;
 	background-size: contain;
 	display: flex;
@@ -289,7 +289,7 @@ $burger: '830px';
 	width: 90%;
 
 	@media screen and (min-width: 500px) {
-		background: url('/images/footerBackgroundMax.png') no-repeat;
+		background: url('/assets/footerBackgroundMax.png') no-repeat;
 		background-position: center;
 		background-size: contain;
 	}

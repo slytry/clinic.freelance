@@ -1,19 +1,20 @@
 @use '/style/abstract' as *;
 
 .header {
-	width: 100%;
+	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
-	background-position: center;
+	width: 100%;
 
 	&--gradient {
-		background-image: url('/images/headerBackground.png');
+		background-image: url('/assets/headerBackground.png');
 		border-bottom: 23px solid #0072ba29;
 	}
 
 	&--transparent {
-		background-image: url('/images/famaly.jpg');
+		background-image: url('/assets/famaly.jpg');
 	}
+
 	&--transparent &__content {
 		@include respond-above('830px') {
 			border-bottom: min(2vw, 23px) solid #0072ba29;
@@ -21,10 +22,10 @@
 	}
 
 	&__content {
+		align-items: center;
 		display: flex;
 		gap: 4%;
 		justify-content: space-between;
-		align-items: center;
 		padding-top: rem(9);
 		@include respond-below('829px') {
 			gap: 2px;
@@ -37,10 +38,10 @@
 	}
 
 	&__logo-link {
+		align-items: center;
 		display: flex;
 
 		flex-direction: column;
-		align-items: center;
 
 		@include respond-below('829px') {
 			flex-direction: row;
@@ -48,9 +49,9 @@
 	}
 
 	&__logo-picture {
-		width: rem(115);
 		background-color: $c-white;
 		border-radius: 4px;
+		width: rem(115);
 		@include respond-below('829px') {
 			background-color: transparent;
 			width: fluid(40, 115, 'vw', 420, 830);
@@ -58,11 +59,11 @@
 	}
 
 	&__logo-text {
-		font-weight: 600;
-		font-size: rem(15);
-		font-family: $f-kanit;
 		background-color: $c-white;
 		border-radius: 4px;
+		font-family: $f-kanit;
+		font-size: rem(15);
+		font-weight: 600;
 		padding: rem(4);
 
 		@include respond-below('829px') {
@@ -71,21 +72,20 @@
 	}
 
 	&__logo-text-mob {
+		background: linear-gradient(180deg, #0d8fe2 0%, #35b6ef 100%);
+		background-clip: text;
+		background-clip: text;
 		background-color: transparent;
-		padding: 0;
 
 		font-family: 'Roboto';
-		font-weight: 800;
 		font-size: fluid(13, 28, 'vw', 420, 830);
+		font-weight: 800;
 		letter-spacing: 0.03em;
-		text-transform: capitalize;
-
-		background: linear-gradient(180deg, #0d8fe2 0%, #35b6ef 100%);
-		-webkit-background-clip: text;
+		padding: 0;
 		-webkit-text-fill-color: transparent;
-		background-clip: text;
 		text-fill-color: transparent;
 		-webkit-text-stroke: 1px rgba(255, 255, 255, 0.59);
+		text-transform: capitalize;
 		// @include stroke(1, rgba(255, 255, 255, 0.59));
 		@include respond-above('830px') {
 			display: none;
@@ -94,15 +94,15 @@
 
 	&__contacts,
 	&__news {
-		font-weight: 400;
-		font-size: fluid(15, 32);
 		font-family: $f-kanit;
+		font-size: fluid(15, 32);
+		font-weight: 400;
 	}
 
 	&__phone {
-		font-size: fluid(20, 36);
-		font-family: $f-kanit;
 		color: white;
+		font-family: $f-kanit;
+		font-size: fluid(20, 36);
 	}
 
 	&__number,
@@ -127,61 +127,66 @@
 }
 
 .burger {
-	width: fluid(24, 48, 'vw', 420, 830);
 	height: fluid(14, 38, 'vw', 420, 830);
+	width: fluid(24, 48, 'vw', 420, 830);
 }
 
 .menu {
-	position: fixed;
-	top: 0;
-	right: 0;
-	width: min(100%, 60ch);
-	min-height: 100vh;
-	transform: translateX(100%);
-	transition: transform 200ms ease-in;
 	background-color: $pageBackground;
 	list-style: none;
+	min-height: 100vh;
 	padding: 40px;
+	position: fixed;
+	right: 0;
+	top: 0;
+	transform: translateX(100%);
+	transition: transform 200ms ease-in;
+	width: min(100%, 60ch);
 	z-index: 3;
-	&--open {
-		transform: translateX(0);
-	}
 
 	@include respond-above('830px') {
 		display: none;
 	}
 
+	&--open {
+		transform: translateX(0);
+	}
+
 	&__item {
-		font-weight: 400;
-		font-size: fluid(15, 32);
 		font-family: $f-kanit;
+		font-size: fluid(15, 32);
+		font-weight: 400;
 		margin-bottom: 1em;
 	}
 }
 
 .close {
+	height: 32px;
+	opacity: 0.3;
 	position: absolute;
 	right: 32px;
 	top: 32px;
 	width: 32px;
-	height: 32px;
-	opacity: 0.3;
 }
+
 .close:hover {
 	opacity: 1;
 }
-.close:before,
-.close:after {
-	position: absolute;
-	left: 15px;
+
+.close::before,
+.close::after {
+	background-color: #333;
 	content: ' ';
 	height: 33px;
+	left: 15px;
+	position: absolute;
 	width: 2px;
-	background-color: #333;
 }
-.close:before {
+
+.close::before {
 	transform: rotate(45deg);
 }
-.close:after {
+
+.close::after {
 	transform: rotate(-45deg);
 }
