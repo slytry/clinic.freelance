@@ -4,6 +4,8 @@ $burger: '830px';
 
 .intro {
 	align-items: center;
+	background-image: url('/assets/famaly.jpg');
+	background-size: cover;
 	display: flex;
 	flex-direction: column;
 	padding-block: rem(23) rem(10);
@@ -38,13 +40,13 @@ $burger: '830px';
 }
 
 .circle {
-	--m: 7;
+	--m: 10;
 	--tan: 1;
 	--d: 5.5em; /* image size */
 	--rel: 1; /* how much extra space we want between images, 1 = one image size */
 	--r: calc(0.5 * (1 + var(--rel)) * var(--d) / var(--tan)); /* circle radius */
 	--s: calc(2 * var(--r) + var(--d)); /* container size */
-	background-image: url('/assets/intro/7.png');
+	background-image: url('/assets/intro/7ya.svg');
 	background-position: center 50%;
 	background-repeat: no-repeat;
 	background-size: contain;
@@ -52,12 +54,10 @@ $burger: '830px';
 	position: relative;
 	width: var(--s);
 	@include respond-above($burger) {
-		--tan: 0.5;
-		--m: 9;
+		--tan: 0.47;
 	}
 	@include respond-above('1230px') {
 		--tan: 0.3;
-		--m: 9;
 	}
 
 	&__item {
@@ -80,16 +80,52 @@ $burger: '830px';
 		}
 	}
 
-	&__dent {
-		--i: 2;
+	.circle__item:nth-child(6) {
+		--i: 0;
 	}
 
-	&__anal {
+	.circle__item:nth-child(5) {
 		--i: 1;
 	}
 
-	&__serv {
-		--i: 0;
+	.circle__item:nth-child(4) {
+		--i: 2;
+	}
+
+	.circle__item:nth-child(3) {
+		--i: 3;
+
+		& .circle__text {
+			@include respond-above($burger) {
+				left: -110%;
+				position: absolute;
+			}
+		}
+	}
+
+	.circle__item:nth-child(2) {
+		--i: 4;
+
+		& .circle__text {
+			@include respond-above($burger) {
+				left: -220%;
+				position: absolute;
+			}
+		}
+	}
+
+	.circle__item:nth-child(1) {
+		--i: 5;
+
+		& .circle__text {
+			@include respond-above($burger) {
+				left: -220%;
+				position: absolute;
+			}
+			@include respond-above('1107px') {
+				left: -360%;
+			}
+		}
 	}
 
 	&__text {
@@ -119,6 +155,7 @@ $burger: '830px';
 	}
 
 	&__figure > img {
+		object-fit: contain;
 		@include respond-above($burger) {
 			--w: 100px;
 			height: var(--w);

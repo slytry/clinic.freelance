@@ -1,20 +1,20 @@
 @use '/style/abstract' as *;
 
 .container {
-	padding-inline: fluid(15, 50, 'vw', 420);
-	max-width: var(--container-max);
 	margin-inline: auto;
+	max-width: var(--container-max);
+	padding-inline: fluid(15, 50, 'vw', 420);
 }
 
 .container-background {
-	background: url(/images/backgroundMob.png);
-	background-repeat: no-repeat;
+	background: url('/ssets/backgroundMob.png');
 	background-position: center;
+	background-repeat: no-repeat;
 	background-size: rem(418);
 
 	@media screen and (min-width: 500px) {
-		background: url(/images/mainBackgroundMax.png) no-repeat;
-		background-size: rem(600);
+		background: url('/assets//mainBackgroundMax.png') no-repeat;
 		background-position: center;
+		background-size: rem(600);
 	}
 }

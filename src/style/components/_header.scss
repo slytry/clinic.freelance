@@ -1,32 +1,40 @@
 @use '/style/abstract' as *;
 
+.bg {
+	background: rgba(238, 235, 235, 0.47);
+	filter: blur(2px);
+	height: calc(80%);
+	position: absolute;
+	top: 13%;
+	width: 100vw;
+
+	@include respond-above($burger) {
+		display: none;
+	}
+}
+
 .header {
+	background-image: url('/assets/headerBackground.png');
 	background-position: center;
-	background-repeat: no-repeat;
 	background-size: cover;
+	border-bottom: 16px solid #0072ba29;
+	position: relative;
 	width: 100%;
 
-	&--gradient {
-		background-image: url('/assets/headerBackground.png');
-		border-bottom: 23px solid #0072ba29;
-	}
-
-	&--transparent {
-		background-image: url('/assets/famaly.jpg');
-	}
-
-	&--transparent &__content {
-		@include respond-above('830px') {
-			border-bottom: min(2vw, 23px) solid #0072ba29;
-		}
-	}
+	// &--transparent &__content {
+	// 	@include respond-above('830px') {
+	// 		border-bottom: min(2vw, 23px) solid #0072ba29;
+	// 	}
+	// }
 
 	&__content {
 		align-items: center;
 		display: flex;
 		gap: 4%;
 		justify-content: space-between;
-		padding-top: rem(9);
+		padding-top: rem(10);
+		position: relative;
+		z-index: 2;
 		@include respond-below('829px') {
 			gap: 2px;
 		}
@@ -59,7 +67,6 @@
 	}
 
 	&__logo-text {
-		background-color: $c-white;
 		border-radius: 4px;
 		font-family: $f-kanit;
 		font-size: rem(15);
@@ -73,20 +80,18 @@
 
 	&__logo-text-mob {
 		background: linear-gradient(180deg, #0d8fe2 0%, #35b6ef 100%);
+		-webkit-background-clip: text;
 		background-clip: text;
-		background-clip: text;
-		background-color: transparent;
+		color: transparent;
 
 		font-family: 'Roboto';
-		font-size: fluid(13, 28, 'vw', 420, 830);
+		font-size: fluid(14, 28, 'vw', 420, 830);
 		font-weight: 800;
 		letter-spacing: 0.03em;
 		padding: 0;
-		-webkit-text-fill-color: transparent;
-		text-fill-color: transparent;
+		// -webkit-text-fill-color: transparent;
 		-webkit-text-stroke: 1px rgba(255, 255, 255, 0.59);
 		text-transform: capitalize;
-		// @include stroke(1, rgba(255, 255, 255, 0.59));
 		@include respond-above('830px') {
 			display: none;
 		}
@@ -100,7 +105,6 @@
 	}
 
 	&__phone {
-		color: white;
 		font-family: $f-kanit;
 		font-size: fluid(20, 36);
 	}

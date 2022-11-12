@@ -2,137 +2,6 @@
 
 $burger: '830px';
 
-.intro {
-	align-items: center;
-	display: flex;
-	flex-direction: column;
-	padding-block: rem(23) rem(10);
-
-	&__phone {
-		color: #fff;
-		font-family: $f-roboto;
-		font-size: rem(20);
-		font-weight: 700;
-		@include respond-above($burger) {
-			display: none;
-		}
-	}
-
-	&__button {
-		@include respond-above($burger) {
-			display: none;
-		}
-	}
-
-	&__address {
-		color: #fff;
-		font-family: $f-ibm;
-		font-size: rem(14);
-		font-style: normal;
-		font-weight: 600;
-		margin-top: rem(10);
-		@include respond-above($burger) {
-			display: none;
-		}
-	}
-}
-
-.circle {
-	--m: 7;
-	--tan: 1;
-	--d: 5.5em; /* image size */
-	--rel: 1; /* how much extra space we want between images, 1 = one image size */
-	--r: calc(0.5 * (1 + var(--rel)) * var(--d) / var(--tan)); /* circle radius */
-	--s: calc(2 * var(--r) + var(--d)); /* container size */
-	background-image: url('/assets/intro/7.png');
-	background-position: center 50%;
-	background-repeat: no-repeat;
-	background-size: contain;
-	height: var(--s);
-	position: relative;
-	width: var(--s);
-	@include respond-above($burger) {
-		--tan: 0.5;
-		--m: 9;
-	}
-	@include respond-above('1230px') {
-		--tan: 0.3;
-		--m: 9;
-	}
-
-	&__item {
-		--az: calc(var(--i) * 1turn / var(--m));
-		height: var(--d);
-		left: 58%;
-		margin: calc(-0.5 * var(--d));
-		position: absolute;
-		top: 47%;
-		transform: rotate(var(--az)) translate(var(--r)) rotate(calc(-1 * var(--az)));
-		width: var(--d);
-
-		@include respond-above($burger) {
-			left: 49%;
-			top: 44%;
-		}
-		@include respond-above('1230px') {
-			left: 41%;
-			top: 32%;
-		}
-	}
-
-	&__dent {
-		--i: 2;
-	}
-
-	&__anal {
-		--i: 1;
-	}
-
-	&__serv {
-		--i: 0;
-	}
-
-	&__text {
-		color: #fff;
-		font-family: $f-roboto;
-		font-size: rem(16);
-		font-weight: 600;
-		text-align: center;
-		@include respond-above($burger) {
-			flex-shrink: 0;
-			font-size: rem(24);
-			font-weight: 700;
-		}
-		@include respond-below('1100px') {
-			max-width: 10ch;
-		}
-	}
-
-	&__figure {
-		display: flex;
-		flex-direction: column;
-		@include respond-above($burger) {
-			align-items: center;
-			flex-direction: row;
-			gap: 5px;
-		}
-	}
-
-	&__figure > img {
-		@include respond-above($burger) {
-			--w: 100px;
-			height: var(--w);
-			max-width: none;
-			width: var(--w);
-		}
-		@include respond-above('1230px') {
-			--w: 130px;
-			height: var(--w);
-			width: var(--w);
-		}
-	}
-}
-
 .slider {
 	margin: 0 auto;
 	padding-top: rem(15);
@@ -273,7 +142,7 @@ $burger: '830px';
 .map {
 	width: 100%;
 
-	&__ifhame {
+	&__iframe {
 		min-height: 300px;
 		width: 100%;
 	}

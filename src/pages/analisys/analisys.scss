@@ -16,7 +16,7 @@ $burger: '830px';
 	padding-block: rem(23) rem(10);
 
 	&__phone {
-		color: black;
+		color: #000;
 		display: block;
 		font-family: $f-roboto;
 		font-size: rem(20);
@@ -38,7 +38,7 @@ $burger: '830px';
 
 	&__address {
 		background: rgba(51, 28, 14, 0.61);
-		color: white;
+		color: #fff;
 		font-family: $f-ibm;
 		font-size: rem(14);
 		font-style: normal;
@@ -62,7 +62,7 @@ $burger: '830px';
 	--rel: 1; /* how much extra space we want between images, 1 = one image size */
 	--r: calc(0.5 * (1 + var(--rel)) * var(--d) / var(--tan)); /* circle radius */
 	--s: calc(2 * var(--r) + var(--d)); /* container size */
-	background-image: url('/assets/intro/7.png');
+	background-image: url('/assets/intro/7ya.svg');
 	background-position: center 50%;
 	background-repeat: no-repeat;
 	background-size: contain;
@@ -149,7 +149,7 @@ $burger: '830px';
 	}
 
 	&__text {
-		color: white;
+		color: #fff;
 		font-family: $f-roboto;
 		font-size: rem(12);
 		font-weight: 700;
@@ -176,10 +176,10 @@ $burger: '830px';
 			height: 100%;
 			width: 100%;
 		}
+	}
 
-		& > circle:hover {
-			filter: blur(1px);
-		}
+	&__buble > circle:hover {
+		filter: blur(1px);
 	}
 
 	&__center-text {
@@ -217,10 +217,10 @@ $burger: '830px';
 		font-size: 12px;
 		font-weight: 700;
 		gap: 3px;
+	}
 
-		& a {
-			color: inherit;
-		}
+	&__item a {
+		color: inherit;
 	}
 
 	&__list {
@@ -241,13 +241,4 @@ $burger: '830px';
 	pointer-events: none;
 	position: absolute;
 	z-index: 0;
-}
-
-.full-width {
-	left: 50%;
-	margin-left: -50vw;
-	margin-right: -50vw;
-	position: relative;
-	right: 50%;
-	width: 100vw;
 }

@@ -11,8 +11,11 @@
 
 		<title>Семья</title>
 	</head>
+
 	<body>
-		<header class="header header--transparent">
+		<header class="header">
+			<div class="bg"></div>
+
 			<div class="header__content container">
 				<a href="/" class="header__logo-link">
 					<img class="header__logo-picture" src="/assets/headerLogo.svg" alt="logo" />
@@ -48,22 +51,52 @@
 				<li class="menu__item"><a href="#">Контакты</a></li>
 				<button class="button menu__item">Запись на прием</button>
 			</ui>
-			<section class="intro container">
+		</header>
+		<main class="container container-background">
+			<section class="intro full-width">
 				<div class="circle">
+					<a class="circle__item" href="/pages/services/index.html">
+						<figure class="circle__figure rel">
+							<img src="/assets/intro/netradi.png" alt="Чашка чая" width="52" height="52" />
+							<figcaption class="circle__text order abs">Нетрадиционная Медицина</figcaption>
+						</figure>
+					</a>
+					<a class="circle__item" href="/pages/services/index.html">
+						<figure class="circle__figure">
+							<img
+								src="/assets/intro/rengen.png"
+								alt="Доктор смотрит ренген"
+								width="52"
+								height="52"
+							/>
+							<figcaption class="circle__text">Ренгенология</figcaption>
+						</figure>
+					</a>
+					<a class="circle__item" href="/pages/services/index.html">
+						<figure class="circle__figure">
+							<img
+								src="/assets/intro/pills.png"
+								alt="Разноцветный таблетки"
+								width="52"
+								height="52"
+							/>
+							<figcaption class="circle__text order">Аптека</figcaption>
+						</figure>
+					</a>
 					<a class="circle__item circle__dent" href="/pages/dent/index.html">
 						<figure class="circle__figure circle__figure--dent">
-							<img src="/assets/intro/dentist.png" alt="Зубы белые" width="52" height="52" />
+							<img src="/assets/intro/stoma.png" alt="Зубы белые" width="52" height="52" />
 							<figcaption class="circle__text">Стоматология</figcaption>
 						</figure>
 					</a>
 					<a class="circle__item circle__anal" href="/pages/analisys/index.html">
 						<figure class="circle__figure circle__figure--anal">
-							<img src="/assets/intro/analyses.png" alt="Шприц пять кубов" width="52" height="52" />
+							<img src="/assets/intro/anal.png" alt="Шприц пять кубов" width="52" height="52" />
 							<figcaption class="circle__text">Анализы</figcaption>
 						</figure>
 					</a>
 					<a class="circle__item circle__serv" href="/pages/med/index.html">
-						<figure class="circle__figure circle__figure--serv">
+						<figure class="circle__figure">
 							<img src="/assets/intro/med.png" alt="Доктор в белом халате" width="52" height="52" />
 							<figcaption class="circle__text">Медицинские услуги</figcaption>
 						</figure>
@@ -73,15 +106,13 @@
 				<button class="button button--home intro__button">Запись на прием</button>
 				<address class="intro__address">Домодедово, Мкр. Западный Ул. Зеленая 72/1</address>
 			</section>
-		</header>
-
-		<main class="container container-background">
 			<section class="slider">
 				<div class="slider__list">
-					<a name="sale"><h2 class="slider2__title">Новости и акции</h2></a>
+					<a name="sale">
+						<h2 class="slider2__title">Новости и акции</h2>
+					</a>
 					<a href="#" class="slider__button-link"
 						><button class="slider__btn-apteka">
-							<!-- <img src="/assets/btn.png" alt="" /> -->
 							<span class="slider__button-text">+ Aптека</span>
 						</button></a
 					>
@@ -199,7 +230,7 @@
 			</section>
 			<section class="map">
 				<iframe
-					class="map__ifhame"
+					class="map__iframe"
 					src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2264.20558595797!2d37.76912981612451!3d55.4242079804667!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x414aa6a0d4d23bc1%3A0x7de8d81efb52de69!2z0KHQtdC80LXQudC90YvQuSDQnNC10LTQuNGG0LjQvdGB0LrQuNC5INCm0LXQvdGC0YAg0KHQu9Cw0LnQtA!5e0!3m2!1sru!2sfr!4v1664563364726!5m2!1sru!2sfr"
 					style="border: 0"
 					allowfullscreen=""
