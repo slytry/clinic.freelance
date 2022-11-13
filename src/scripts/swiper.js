@@ -19,8 +19,8 @@ export const swiper = new Swiper('.mySwiper', {
 });
 
 export const swiper2 = new Swiper('.mySwiper2', {
-	slidesPerView: 4,
-	centeredSlides: true,
+	slidesPerView: 5,
+	centeredSlides: false,
 	spaceBetween: 30,
 	grabCursor: true,
 	pagination: {
