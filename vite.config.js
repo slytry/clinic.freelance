@@ -23,9 +23,9 @@ export default defineConfig({
 		rollupOptions: {
 			input: {
 				main: resolve(src, 'index.html'),
-				analisys: resolve(_pages, 'analisys', 'index.html'),
-				dent: resolve(_pages, 'dent', 'index.html'),
-				med: resolve(_pages, 'med', 'index.html'),
+				// analisys: resolve(_pages, 'analisys', 'index.html'),
+				// dent: resolve(_pages, 'dent', 'index.html'),
+				// med: resolve(_pages, 'med', 'index.html'),
 				services: resolve(_pages, 'services', 'index.html'),
 				service: resolve(_pages, 'service', 'index.html'),
 				reception: resolve(_pages, 'reception', 'index.html'),
@@ -42,7 +42,7 @@ export default defineConfig({
 				optimizationLevel: 7,
 			},
 			mozjpeg: {
-				quality: 20,
+				quality: 80,
 			},
 			pngquant: {
 				quality: [0.8, 0.9],
