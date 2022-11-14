@@ -41,8 +41,8 @@ $burger: '830px';
 
 .circle {
 	--m: 10;
-	--tan: 1;
-	--d: 5.5em; /* image size */
+	--tan: 0.9;
+	--d: 7.5em; /* image size */
 	--rel: 1; /* how much extra space we want between images, 1 = one image size */
 	--r: calc(0.5 * (1 + var(--rel)) * var(--d) / var(--tan)); /* circle radius */
 	--s: calc(2 * var(--r) + var(--d)); /* container size */
@@ -54,6 +54,7 @@ $burger: '830px';
 	position: relative;
 	width: var(--s);
 	@include respond-above($burger) {
+		--d: 5.5em;
 		--tan: 0.47;
 	}
 	@include respond-above('1230px') {

@@ -8,8 +8,8 @@
 		"dev": "vite",
 		"build": "vite build",
 		"preview": "vite preview",
-		"preinstall": "npx only-allow pnpm",
-		"prepare": "husky install"
+		"preinstall": "npx only-allow pnpm"
+
 	},
 	"repository": {
 		"type": "git",

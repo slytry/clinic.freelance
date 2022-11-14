@@ -2,7 +2,7 @@
 	//===========================================
 	//============= Theme =======================
 	//===========================================
-	"workbench.colorTheme": "Nord",
+	"workbench.colorTheme": "Bearded Theme Monokai Metallian",
 	"workbench.productIconTheme": "fluent-icons",
 	"workbench.iconTheme": "material-icon-theme",
 	//===========================================
@@ -43,11 +43,19 @@
 	//============= Linters =====================
 	//===========================================
 	"eslint.alwaysShowStatus": true,
-	"eslint.validate": ["javascript", "javascriptreact", "typescript", "typescriptreact"],
+	"eslint.validate": [
+		"javascript",
+		"javascriptreact",
+		"typescript",
+		"typescriptreact"
+	],
 	"css.validate": false,
 	"scss.validate": false,
 	"stylelint.enable": true,
-	"stylelint.validate": ["css", "scss"],
+	"stylelint.validate": [
+		"css",
+		"scss"
+	],
 	"prettier.requireConfig": true,
 	"cSpell.language": "en,ru",
 	"cSpell.words": [

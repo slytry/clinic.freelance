@@ -1,0 +1,51 @@
+.full-width {
+	left: 50%;
+	margin-left: -50vw;
+	position: relative;
+	width: 100vw;
+}
+
+.rel {
+	position: relative;
+}
+
+.hide {
+	display: none !important;
+}
+
+.svg {
+	border-radius: 50%;
+	background: radial-gradient(
+			99.48% 36.54% at 49.99% 49.94%,
+			rgba(235, 238, 235, 0.36) 53.72%,
+			rgba(0, 134, 207, 0.36) 100%
+		)
+		/* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+	border: 1px solid #ffffff;
+	transform: matrix(0.97, -0.23, 0.23, 0.97, 0, 0);
+}
+
+// .dent-circle__figure:hover .svg,
+// .medmob__item:hover .svg {
+// 	background: radial-gradient(
+// 			99.48% 36.54% at 49.99% 49.94%,
+// 			rgba(235, 238, 235, 0.36) 53.72%,
+// 			rgba(0, 134, 207, 0.36) 100%
+// 		)
+// 		/* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+// 	border: 6px solid #70b7dd;
+// 	filter: blur(2px);
+// 	transform: matrix(0.97, -0.23, 0.23, 0.97, 0, 0);
+// }
+
+:is(.dent-circle__figure:hover, .medmob__item:hover) .svg {
+	background: radial-gradient(
+			99.48% 36.54% at 49.99% 49.94%,
+			rgba(235, 238, 235, 0.36) 53.72%,
+			rgba(0, 134, 207, 0.36) 100%
+		)
+		/* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+	border: 6px solid #70b7dd;
+	filter: blur(2px);
+	transform: matrix(0.97, -0.23, 0.23, 0.97, 0, 0);
+}

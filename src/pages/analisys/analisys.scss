@@ -11,6 +11,8 @@ $burger: '830px';
 
 .anal-intro {
 	align-items: center;
+	background-image: url('/assets/famaly.jpg');
+	background-size: cover;
 	display: flex;
 	flex-direction: column;
 	padding-block: rem(23) rem(10);
@@ -47,8 +49,6 @@ $burger: '830px';
 		padding: 10px;
 		text-align: center;
 
-		// transform: translateX(50%);
-		// filter: blur(2px);
 		@include respond-above($burger) {
 			display: none;
 		}
@@ -62,7 +62,7 @@ $burger: '830px';
 	--rel: 1; /* how much extra space we want between images, 1 = one image size */
 	--r: calc(0.5 * (1 + var(--rel)) * var(--d) / var(--tan)); /* circle radius */
 	--s: calc(2 * var(--r) + var(--d)); /* container size */
-	background-image: url('/assets/intro/7ya.svg');
+	background-image: url('/assets/intro/blue.svg');
 	background-position: center 50%;
 	background-repeat: no-repeat;
 	background-size: contain;
@@ -70,81 +70,105 @@ $burger: '830px';
 	position: relative;
 	width: var(--s);
 	@include respond-above($burger) {
-		--m: 8;
-		--d: 9.4em;
-		--rel: 1;
-		--d: 9em;
-		background-image: url('/assets/intro/blue.png');
+		--m: 24;
+		--d: 12em;
+		--tan: 1;
 	}
 
 	&__item {
-		--shift: 49px;
+		--shift: 58px;
 		--az: calc(var(--i) * 1turn / var(--m));
 		height: var(--d);
 		left: 53%;
 		margin: calc(-0.5 * var(--d));
 		position: absolute;
-		top: 71%;
+		top: 64%;
 		transform: rotate(var(--az)) translate(calc(var(--r) + var(--shift)))
 			rotate(calc(-1 * var(--az)));
 		width: var(--d);
 
 		@include respond-above($burger) {
-			--shift: 50%;
+			--shift: 151px;
+
 			top: 48%;
 		}
-		@include respond-above('1230px') {
-			// top: 32%;
-			// left: 41%;
+	}
+
+	&__item--left::before {
+		--size: 25px;
+		background-image: url('/assets/intro/buble.svg');
+		background-repeat: no-repeat;
+		background-size: cover;
+		content: '';
+		height: var(--size);
+		left: calc(50% - var(--size) / 2);
+		object-fit: cover;
+		position: absolute;
+		top: calc(var(--size) * -1);
+		width: var(--size);
+		@include respond-above($burger) {
+			--size: 75px;
+			left: auto;
+			right: 0;
+			top: -7%;
 		}
 	}
 
-	&__krov {
-		--i: 4;
-		max-width: 7em;
+	&__item--right::before {
+		--size: 25px;
+		background-image: url('/assets/intro/buble.svg');
+		background-repeat: no-repeat;
+		background-size: cover;
+		content: '';
+		height: var(--size);
+		left: calc(50% - var(--size) / 2);
+		object-fit: cover;
+		position: absolute;
+		top: calc(var(--size) * -1);
+		width: var(--size);
 		@include respond-above($burger) {
-			--i: 5;
+			--size: 75px;
+			left: -17%;
+			right: auto;
+			top: -7%;
 		}
 	}
 
-	&__imun {
-		--i: 3;
-		@include respond-above($burger) {
+	@for $i from 1 through 24 {
+		$t: 16 - $i;
+
+		&__item:nth-child(#{$i}) {
+			--i: #{$t};
+		}
+	}
+
+	& &__krov {
+		@include respond-below($burger) {
 			--i: 4;
 		}
 	}
 
-	&__sver {
-		--i: 2;
-		@include respond-above($burger) {
+	& &__imun {
+		@include respond-below($burger) {
 			--i: 3;
 		}
 	}
 
-	&__lek {
-		--i: 1;
-		@include respond-above($burger) {
+	& &__sver {
+		@include respond-below($burger) {
+			--i: 2;
+		}
+	}
+
+	& &__lek {
+		@include respond-below($burger) {
 			--i: 1;
 		}
 	}
 
-	&__fact {
-		--i: 0;
-		max-width: 8em;
-		@include respond-above($burger) {
+	& &__fact {
+		@include respond-below($burger) {
 			--i: 0;
-		}
-	}
-
-	&__figure {
-		align-items: center;
-		display: flex;
-		flex-direction: column;
-		@include respond-above($burger) {
-			display: block;
-			height: var(--d);
-			position: relative;
-			width: var(--d);
 		}
 	}
 
@@ -155,14 +179,12 @@ $burger: '830px';
 		font-weight: 700;
 		text-align: center;
 		@include respond-above($burger) {
-			@include center;
+			// @include center;
+			color: #000;
 			flex-shrink: 0;
 			font-size: 1rem;
 			font-weight: 600;
 			position: absolute;
-		}
-		@include respond-below('1100px') {
-			max-width: 20ch;
 		}
 	}
 
@@ -196,6 +218,12 @@ $burger: '830px';
 			font-size: 50px;
 			font-weight: 700;
 		}
+	}
+}
+
+.hideMob {
+	@include respond-below($burger) {
+		display: none;
 	}
 }
 

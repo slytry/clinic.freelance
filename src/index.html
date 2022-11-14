@@ -1,257 +1,601 @@
 <!DOCTYPE html>
 <html lang="ru">
-	<head>
-		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="icon" type="image/x-icon" href="/vite.svg" />
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
-		<script type="module" defer src="./main.js"></script>
-		<script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
 
-		<title>Семья</title>
-	</head>
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="icon" type="image/x-icon" href="/vite.svg" />
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+	<script type="module" defer src="./home.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
 
-	<body>
-		<header class="header">
-			<div class="bg"></div>
+	<title>Семья</title>
+</head>
 
-			<div class="header__content container">
-				<a href="/" class="header__logo-link">
-					<img class="header__logo-picture" src="/assets/headerLogo.svg" alt="logo" />
+<body>
+	<header class="header">
+		<div class="bg"></div>
 
-					<p class="header__logo-text">Медицинский центр</p>
-					<p class="header__logo-text-mob">Диагностический медицинский центр</p>
+		<div class="header__content container">
+			<a href="/" class="header__logo-link">
+				<img class="header__logo-picture" src="/assets/headerLogo.svg" alt="logo" />
+
+				<p class="header__logo-text">Медицинский центр</p>
+				<p class="header__logo-text-mob">Диагностический медицинский центр</p>
+			</a>
+			<a href="#sale" class="header__news">Новости и акции</a>
+			<a href="#contacts" class="header__contacts">Контакты</a>
+			<div class="header__number">
+				<a href="tel:+79256553328" class="header__phone">+7-925-655-33-28 </a>
+				<button class="button">Запись на прием</button>
+			</div>
+			<button class="burger__button">
+				<svg class="burger" width="24" height="14" viewBox="0 0 24 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<rect width="24" height="2.8" rx="1.4" fill="white" />
+					<rect y="5.6001" width="24" height="2.8" rx="1.4" fill="white" />
+					<rect y="11.2" width="24" height="2.8" rx="1.4" fill="white" />
+				</svg>
+			</button>
+		</div>
+
+		<ui class="burger-menu menu">
+			<button class="close"></button>
+			<li class="menu__item"><a href="#">Новости и акции</a></li>
+			<li class="menu__item"><a href="#">Контакты</a></li>
+			<button class="button menu__item">Запись на прием</button>
+		</ui>
+	</header>
+	<main class="container container-background">
+		<section id="home" class="intro full-width">
+			<div class="circle">
+				<a class="circle__item" href="/pages/services/index.html">
+					<figure class="circle__figure rel">
+						<img src="/assets/intro/netradi.png" alt="Чашка чая" width="52" height="52" />
+						<figcaption class="circle__text order abs">Нетрадиционная Медицина</figcaption>
+					</figure>
 				</a>
-				<a href="#sale" class="header__news">Новости и акции</a>
-				<a href="#contacts" class="header__contacts">Контакты</a>
-				<div class="header__number">
-					<a href="tel:+79256553328" class="header__phone">+7-925-655-33-28 </a>
-					<button class="button">Запись на прием</button>
+				<a class="circle__item" href="/pages/services/index.html">
+					<figure class="circle__figure">
+						<img src="/assets/intro/rengen.png" alt="Доктор смотрит ренген" width="52" height="52" />
+						<figcaption class="circle__text">Ренгенология</figcaption>
+					</figure>
+				</a>
+				<a class="circle__item" href="/pages/services/index.html">
+					<figure class="circle__figure">
+						<img src="/assets/intro/pills.png" alt="Разноцветный таблетки" width="52" height="52" />
+						<figcaption class="circle__text order">Аптека</figcaption>
+					</figure>
+				</a>
+				<a class="circle__item circle__dent" href="/pages/dent/index.html">
+					<figure class="circle__figure circle__figure--dent">
+						<img src="/assets/intro/stoma.png" alt="Зубы белые" width="52" height="52" />
+						<figcaption class="circle__text">Стоматология</figcaption>
+					</figure>
+				</a>
+				<a class="circle__item circle__anal" href="/pages/analisys/index.html">
+					<figure class="circle__figure circle__figure--anal">
+						<img src="/assets/intro/anal.png" alt="Шприц пять кубов" width="52" height="52" />
+						<figcaption class="circle__text">Анализы</figcaption>
+					</figure>
+				</a>
+				<a class="circle__item circle__serv" href="/pages/med/index.html">
+					<figure class="circle__figure">
+						<img src="/assets/intro/med.png" alt="Доктор в белом халате" width="52" height="52" />
+						<figcaption class="circle__text">Медицинские услуги</figcaption>
+					</figure>
+				</a>
+			</div>
+			<a href="tel:+79256553328" class="intro__phone">+7-925-655-33-28 </a>
+			<button class="button button--home intro__button">Запись на прием</button>
+			<address class="intro__address">Домодедово, Мкр. Западный Ул. Зеленая 72/1</address>
+		</section>
+		<section class="hide" id="anal">
+			<div class="anal-intro full-width container">
+				<div class="anal-circle">
+					<p class="anal-circle__center-text">Анализы</p>
+					<a class="anal-circle__item anal-circle__item--left  anal-circle__krov" href="/pages/services/index.html">
+
+						<p class="anal-circle__text">Общеклинические исследования Крови</p>
+					</a>
+					<a class="anal-circle__item anal-circle__item--left anal-circle__imun" href="/pages/services/index.html">
+
+						<p class="anal-circle__text">Иммуногематология</p>
+					</a>
+					<a class="anal-circle__item anal-circle__item--left anal-circle__sver" href="/pages/services/index.html">
+						<p class="anal-circle__text">Оценка Свертывающей Системы</p>
+					</a>
+					<a class="anal-circle__item anal-circle__item--left anal-circle__lek" href="/pages/services/index.html">
+						<p class="anal-circle__text">Лекарственный Мониторинг</p>
+					</a>
+					<a class="anal-circle__item anal-circle__fact anal-circle__item--left" href="/pages/services/index.html">
+						<p class="anal-circle__text">Лекарственный Мониторинг</p>
+					</a>
+					<a class="anal-circle__item hideMob anal-circle__item--left" href="/pages/services/index.html">
+						<p class="anal-circle__text">Иммуногематология</p>
+					</a>
+					<a class="anal-circle__item hideMob anal-circle__item--left" href="/pages/services/index.html">
+						<p class="anal-circle__text">Лекарственный Мониторинг</p>
+					</a>
+					<a class="anal-circle__item hideMob anal-circle__item--left" href="/pages/services/index.html">
+						<p class="anal-circle__text"></p>
+					</a>
+
+					<a class="anal-circle__item hideMob" href="/pages/services/index.html">
+						<p class="anal-circle__text">Иммуногематология</p>
+					</a>
+					<a class="anal-circle__item hideMob " href="/pages/services/index.html">
+						<p class="anal-circle__text"></p>
+					</a>
+
+					<a class="anal-circle__item hideMob anal-circle__item--right" href="/pages/services/index.html">
+						<p class="anal-circle__text">Лекарственный Мониторинг</p>
+					</a>
+					<a class="anal-circle__item hideMob anal-circle__item--right" href="/pages/services/index.html">
+						<p class="anal-circle__text">Иммуногематология</p>
+					</a>
+					<a class="anal-circle__item hideMob anal-circle__item--right" href="/pages/services/index.html">
+						<p class="anal-circle__text">Исследования Кала</p>
+					</a>
+					<a class="anal-circle__item hideMob anal-circle__item--right" href="/pages/services/index.html">
+						<p class="anal-circle__text">Исследования Кала</p>
+					</a>
+					<a class="anal-circle__item hideMob anal-circle__item--right" href="/pages/services/index.html">
+						<p class="anal-circle__text">Исследования Кала</p>
+					</a>
+					<a class="anal-circle__item hideMob anal-circle__item--right" href="/pages/services/index.html">
+						<p class="anal-circle__text">Исследования Кала</p>
+					</a>
+					<a class="anal-circle__item hideMob anal-circle__item--right" href="/pages/services/index.html">
+						<p class="anal-circle__text">Исследования Кала</p>
+					</a>
+
 				</div>
-				<button class="burger__button">
-					<svg
-						class="burger"
-						width="24"
-						height="14"
-						viewBox="0 0 24 14"
-						fill="none"
-						xmlns="http://www.w3.org/2000/svg"
-					>
-						<rect width="24" height="2.8" rx="1.4" fill="white" />
-						<rect y="5.6001" width="24" height="2.8" rx="1.4" fill="white" />
-						<rect y="11.2" width="24" height="2.8" rx="1.4" fill="white" />
-					</svg>
-				</button>
+
+				<div class="analmob">
+					<ul class="analmob__list">
+						<li class="analmob__item">
+							<svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg"
+								class="anal-circle__buble">
+								<circle r="11.5" transform="matrix(0.97385 -0.227193 0.226649 0.973977 12.406 12.4135)"
+									fill="url(#paint0_radial_1_1200)" fill-opacity="0.36" stroke="white" />
+								<defs>
+									<radialGradient id="paint0_radial_1_1200" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse"
+										gradientTransform="translate(11.9974 11.985) rotate(-175.095) scale(23.962 8.80113)">
+										<stop offset="0.537154" stop-color="#EBEEEB" />
+										<stop offset="1" stop-color="#0086CF" />
+									</radialGradient>
+								</defs>
+							</svg><a href="#">Исследования Мочи</a>
+						</li>
+						<li class="analmob__item">
+							<svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg"
+								class="anal-circle__buble">
+								<circle r="11.5" transform="matrix(0.97385 -0.227193 0.226649 0.973977 12.406 12.4135)"
+									fill="url(#paint0_radial_1_1200)" fill-opacity="0.36" stroke="white" />
+								<defs>
+									<radialGradient id="paint0_radial_1_1200" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse"
+										gradientTransform="translate(11.9974 11.985) rotate(-175.095) scale(23.962 8.80113)">
+										<stop offset="0.537154" stop-color="#EBEEEB" />
+										<stop offset="1" stop-color="#0086CF" />
+									</radialGradient>
+								</defs>
+							</svg><a href="#">Исследования Кала</a>
+						</li>
+						<li class="analmob__item">
+							<svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg"
+								class="anal-circle__buble">
+								<circle r="11.5" transform="matrix(0.97385 -0.227193 0.226649 0.973977 12.406 12.4135)"
+									fill="url(#paint0_radial_1_1200)" fill-opacity="0.36" stroke="white" />
+								<defs>
+									<radialGradient id="paint0_radial_1_1200" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse"
+										gradientTransform="translate(11.9974 11.985) rotate(-175.095) scale(23.962 8.80113)">
+										<stop offset="0.537154" stop-color="#EBEEEB" />
+										<stop offset="1" stop-color="#0086CF" />
+									</radialGradient>
+								</defs>
+							</svg><a href="#">Тесты Рпга</a>
+						</li>
+						<li class="analmob__item">
+							<svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg"
+								class="anal-circle__buble">
+								<circle r="11.5" transform="matrix(0.97385 -0.227193 0.226649 0.973977 12.406 12.4135)"
+									fill="url(#paint0_radial_1_1200)" fill-opacity="0.36" stroke="white" />
+								<defs>
+									<radialGradient id="paint0_radial_1_1200" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse"
+										gradientTransform="translate(11.9974 11.985) rotate(-175.095) scale(23.962 8.80113)">
+										<stop offset="0.537154" stop-color="#EBEEEB" />
+										<stop offset="1" stop-color="#0086CF" />
+									</radialGradient>
+								</defs>
+							</svg><a href="#">Пцр — Диагностика</a>
+						</li>
+						<li class="analmob__item">
+							<svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg"
+								class="anal-circle__buble">
+								<circle r="11.5" transform="matrix(0.97385 -0.227193 0.226649 0.973977 12.406 12.4135)"
+									fill="url(#paint0_radial_1_1200)" fill-opacity="0.36" stroke="white" />
+								<defs>
+									<radialGradient id="paint0_radial_1_1200" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse"
+										gradientTransform="translate(11.9974 11.985) rotate(-175.095) scale(23.962 8.80113)">
+										<stop offset="0.537154" stop-color="#EBEEEB" />
+										<stop offset="1" stop-color="#0086CF" />
+									</radialGradient>
+								</defs>
+							</svg>
+							<a href="#">Диагностика Инфекционных Заболеваний</a>
+						</li>
+					</ul>
+					<ul class="analmob__list">
+						<li class="analmob__item">
+							<svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg"
+								class="anal-circle__buble">
+								<circle r="11.5" transform="matrix(0.97385 -0.227193 0.226649 0.973977 12.406 12.4135)"
+									fill="url(#paint0_radial_1_1200)" fill-opacity="0.36" stroke="white" />
+								<defs>
+									<radialGradient id="paint0_radial_1_1200" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse"
+										gradientTransform="translate(11.9974 11.985) rotate(-175.095) scale(23.962 8.80113)">
+										<stop offset="0.537154" stop-color="#EBEEEB" />
+										<stop offset="1" stop-color="#0086CF" />
+									</radialGradient>
+								</defs>
+							</svg><a href="#">Гельминты И Простейшие</a>
+						</li>
+						<li class="analmob__item">
+							<svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg"
+								class="anal-circle__buble">
+								<circle r="11.5" transform="matrix(0.97385 -0.227193 0.226649 0.973977 12.406 12.4135)"
+									fill="url(#paint0_radial_1_1200)" fill-opacity="0.36" stroke="white" />
+								<defs>
+									<radialGradient id="paint0_radial_1_1200" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse"
+										gradientTransform="translate(11.9974 11.985) rotate(-175.095) scale(23.962 8.80113)">
+										<stop offset="0.537154" stop-color="#EBEEEB" />
+										<stop offset="1" stop-color="#0086CF" />
+									</radialGradient>
+								</defs>
+							</svg><a href="#">Микозы Кожи И Ногтей</a>
+						</li>
+						<li class="analmob__item">
+							<svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg"
+								class="anal-circle__buble">
+								<circle r="11.5" transform="matrix(0.97385 -0.227193 0.226649 0.973977 12.406 12.4135)"
+									fill="url(#paint0_radial_1_1200)" fill-opacity="0.36" stroke="white" />
+								<defs>
+									<radialGradient id="paint0_radial_1_1200" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse"
+										gradientTransform="translate(11.9974 11.985) rotate(-175.095) scale(23.962 8.80113)">
+										<stop offset="0.537154" stop-color="#EBEEEB" />
+										<stop offset="1" stop-color="#0086CF" />
+									</radialGradient>
+								</defs>
+							</svg><a href="#">Макро И Микроэлементы</a>
+						</li>
+						<li class="analmob__item">
+							<svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg"
+								class="anal-circle__buble">
+								<circle r="11.5" transform="matrix(0.97385 -0.227193 0.226649 0.973977 12.406 12.4135)"
+									fill="url(#paint0_radial_1_1200)" fill-opacity="0.36" stroke="white" />
+								<defs>
+									<radialGradient id="paint0_radial_1_1200" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse"
+										gradientTransform="translate(11.9974 11.985) rotate(-175.095) scale(23.962 8.80113)">
+										<stop offset="0.537154" stop-color="#EBEEEB" />
+										<stop offset="1" stop-color="#0086CF" />
+									</radialGradient>
+								</defs>
+							</svg><a href="#">Иммунологические Исследования</a>
+						</li>
+						<li class="analmob__item">
+							<svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg"
+								class="anal-circle__buble">
+								<circle r="11.5" transform="matrix(0.97385 -0.227193 0.226649 0.973977 12.406 12.4135)"
+									fill="url(#paint0_radial_1_1200)" fill-opacity="0.36" stroke="white" />
+								<defs>
+									<radialGradient id="paint0_radial_1_1200" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse"
+										gradientTransform="translate(11.9974 11.985) rotate(-175.095) scale(23.962 8.80113)">
+										<stop offset="0.537154" stop-color="#EBEEEB" />
+										<stop offset="1" stop-color="#0086CF" />
+									</radialGradient>
+								</defs>
+							</svg>
+							<a href="#">Аллергологические Исследования</a>
+						</li>
+					</ul>
+					<div class="blurbg"></div>
+				</div>
+			</div>
+			<a href="tel:+79256553328" class="anal-intro__phone">+7-925-655-33-28 </a>
+			<button class="button button--home anal-intro__button">Запись на прием</button>
+			<address class="anal-intro__address full-width">
+				Домодедово, Мкр. Западный Ул. Зеленая 72/1
+			</address>
+		</section>
+		<section class="hide" id="med">
+			<div class="med-intro full-width container">
+
+				<div class="med-circle">
+					<p class="med-circle__center-text">Медицинские услуги</p>
+					<a class="med-circle__item med-circle__item--left  med-circle__krov" href="/pages/services/index.html">
+
+						<p class="med-circle__text">Гинекология</p>
+					</a>
+					<a class="med-circle__item med-circle__item--left med-circle__imun" href="/pages/services/index.html">
+
+						<p class="med-circle__text">Мамология</p>
+					</a>
+					<a class="med-circle__item med-circle__item--left med-circle__sver" href="/pages/services/index.html">
+						<p class="med-circle__text">УЗИ</p>
+					</a>
+					<a class="med-circle__item med-circle__item--left med-circle__lek" href="/pages/services/index.html">
+						<p class="med-circle__text">Эндокринология</p>
+					</a>
+					<a class="med-circle__item med-circle__fact med-circle__item--left" href="/pages/services/index.html">
+						<p class="med-circle__text">Терапия</p>
+					</a>
+					<a class="med-circle__item med-circle__card med-circle__item--left" href="/pages/services/index.html">
+						<p class="med-circle__text">Кардиология</p>
+					</a>
+					<a class="med-circle__item hideMob med-circle__item--left" href="/pages/services/index.html">
+						<p class="med-circle__text">Офтальмология</p>
+					</a>
+
+					<a class="med-circle__item hideMob" href="/pages/services/index.html">
+						<p class="med-circle__text"></p>
+					</a>
+
+					<a class="med-circle__item hideMob  med-circle__item--right" href="/pages/services/index.html">
+						<p class="med-circle__text">Оториноларингология(ЛОР) </p>
+					</a>
+
+
+
+					<a class="med-circle__item hideMob med-circle__item--right" href="/pages/services/index.html">
+						<p class="med-circle__text">Неврология</p>
+					</a>
+					<a class="med-circle__item hideMob med-circle__item--right" href="/pages/services/index.html">
+						<p class="med-circle__text">Дерматология</p>
+					</a>
+					<a class="med-circle__item hideMob med-circle__item--right" href="/pages/services/index.html">
+						<p class="med-circle__text">Общая хирургия</p>
+					</a>
+					<a class="med-circle__item hideMob med-circle__item--right" href="/pages/services/index.html">
+						<p class="med-circle__text">Флебология</p>
+					</a>
+					<a class="med-circle__item hideMob med-circle__item--right" href="/pages/services/index.html">
+						<p class="med-circle__text">Процедурный кабинет</p>
+					</a>
+				</div>
+
+				<div class="medmob">
+					<ul class="medmob__list">
+						<li class="medmob__item">
+							<div class="dent-circle__buble svg"></div><a href="#">Урология</a>
+						</li>
+						<li class="medmob__item">
+							<div class="dent-circle__buble svg"></div><a href="#">Неврология</a>
+						</li>
+						<li class="medmob__item">
+							<div class="dent-circle__buble svg"></div><a href="#">Флебология</a>
+						</li>
+						<li class="medmob__item">
+							<div class="dent-circle__buble svg"></div><a href="#">Оториноларингология (ЛОР) </a>
+						</li>
+						<li class="medmob__item">
+							<div class="dent-circle__buble svg"></div>
+							<a href="#">Процедурный Кабинет</a>
+						</li>
+					</ul>
+					<ul class="medmob__list">
+						<li class="medmob__item">
+							<div class="dent-circle__buble svg"></div><a href="#">Офтальмология</a>
+						</li>
+						<li class="medmob__item">
+							<div class="dent-circle__buble svg"></div>
+
+							</svg><a href="#">Дерматология</a>
+						</li>
+						<li class="medmob__item">
+							<div class="dent-circle__buble svg"></div>
+							<a href="#">Общая хирургия</a>
+						</li>
+
+					</ul>
+					<div class="blurbg"></div>
+				</div>
+			</div>
+			<a href="tel:+79256553328" class="med-intro__phone">+7-925-655-33-28 </a>
+			<button class="button button--home med-intro__button">Запись на прием</button>
+			<address class="med-intro__address full-width">
+				Домодедово, Мкр. Западный Ул. Зеленая 72/1
+			</address>
+		</section>
+		<section id="dent" class="hide dent-intro container full-width">
+			<div class="dent-circle">
+				<p class="dent-circle__center-text">Стоматология</p>
+				<a class="dent-circle__item dent-circle__ter" href="/pages/services/index.html">
+					<div class="dent-circle__figure">
+						<div class="dent-circle__buble svg"></div>
+
+						<p class="dent-circle__text">Терапия</p>
+					</div>
+				</a>
+				<a class="dent-circle__item dent-circle__imp" href="/pages/services/index.html">
+					<div class="dent-circle__figure">
+						<div class="dent-circle__buble svg"></div>
+
+						<p class="dent-circle__text">Имплантология</p>
+					</div>
+				</a>
+				<a class="dent-circle__item dent-circle__orto" href="/pages/services/index.html">
+					<div class="dent-circle__figure">
+						<div class="dent-circle__buble svg"></div>
+
+						<p class="dent-circle__text">Ортопедия</p>
+					</div>
+				</a>
+				<a class="dent-circle__item dent-circle__prot" href="/pages/services/index.html">
+					<div class="dent-circle__figure">
+						<div class="dent-circle__buble svg"></div>
+
+						<p class="dent-circle__text">Протезирование</p>
+					</div>
+				</a>
+				<a class="dent-circle__item dent-circle__paro" href="/pages/services/index.html">
+					<div class="dent-circle__figure">
+						<div class="dent-circle__buble svg"></div>
+
+						<p class="dent-circle__text">Пародонтология</p>
+					</div>
+				</a>
+				<a class="dent-circle__item dent-circle__hir" href="/pages/services/index.html">
+					<div class="dent-circle__figure">
+						<div class="dent-circle__buble svg"></div>
+						<p class="dent-circle__text">Хирургия</p>
+					</div>
+				</a>
+			</div>
+			<a href="tel:+79256553328" class="dent-intro__phone">+7-925-655-33-28 </a>
+			<button class="button button--home dent-intro__button">Запись на прием</button>
+			<address class="dent-intro__address">Домодедово, Мкр. Западный Ул. Зеленая 72/1</address>
+		</section>
+		<section class="slider">
+			<div class="slider__list">
+				<a name="sale">
+					<h2 class="slider2__title">Новости и акции</h2>
+				</a>
+				<a href="#" class="slider__button-link"><button class="slider__btn-apteka">
+						<span class="slider__button-text">+ Aптека</span>
+					</button></a>
 			</div>
 
-			<ui class="burger-menu menu">
-				<button class="close"></button>
-				<li class="menu__item"><a href="#">Новости и акции</a></li>
-				<li class="menu__item"><a href="#">Контакты</a></li>
-				<button class="button menu__item">Запись на прием</button>
-			</ui>
-		</header>
-		<main class="container container-background">
-			<section class="intro full-width">
-				<div class="circle">
-					<a class="circle__item" href="/pages/services/index.html">
-						<figure class="circle__figure rel">
-							<img src="/assets/intro/netradi.png" alt="Чашка чая" width="52" height="52" />
-							<figcaption class="circle__text order abs">Нетрадиционная Медицина</figcaption>
-						</figure>
-					</a>
-					<a class="circle__item" href="/pages/services/index.html">
-						<figure class="circle__figure">
-							<img
-								src="/assets/intro/rengen.png"
-								alt="Доктор смотрит ренген"
-								width="52"
-								height="52"
-							/>
-							<figcaption class="circle__text">Ренгенология</figcaption>
-						</figure>
-					</a>
-					<a class="circle__item" href="/pages/services/index.html">
-						<figure class="circle__figure">
-							<img
-								src="/assets/intro/pills.png"
-								alt="Разноцветный таблетки"
-								width="52"
-								height="52"
-							/>
-							<figcaption class="circle__text order">Аптека</figcaption>
-						</figure>
-					</a>
-					<a class="circle__item circle__dent" href="/pages/dent/index.html">
-						<figure class="circle__figure circle__figure--dent">
-							<img src="/assets/intro/stoma.png" alt="Зубы белые" width="52" height="52" />
-							<figcaption class="circle__text">Стоматология</figcaption>
-						</figure>
-					</a>
-					<a class="circle__item circle__anal" href="/pages/analisys/index.html">
-						<figure class="circle__figure circle__figure--anal">
-							<img src="/assets/intro/anal.png" alt="Шприц пять кубов" width="52" height="52" />
-							<figcaption class="circle__text">Анализы</figcaption>
-						</figure>
-					</a>
-					<a class="circle__item circle__serv" href="/pages/med/index.html">
-						<figure class="circle__figure">
-							<img src="/assets/intro/med.png" alt="Доктор в белом халате" width="52" height="52" />
-							<figcaption class="circle__text">Медицинские услуги</figcaption>
-						</figure>
-					</a>
-				</div>
-				<a href="tel:+79256553328" class="intro__phone">+7-925-655-33-28 </a>
-				<button class="button button--home intro__button">Запись на прием</button>
-				<address class="intro__address">Домодедово, Мкр. Западный Ул. Зеленая 72/1</address>
-			</section>
-			<section class="slider">
-				<div class="slider__list">
-					<a name="sale">
-						<h2 class="slider2__title">Новости и акции</h2>
-					</a>
-					<a href="#" class="slider__button-link"
-						><button class="slider__btn-apteka">
-							<span class="slider__button-text">+ Aптека</span>
-						</button></a
-					>
-				</div>
-
-				<div class="swiper mySwiper">
-					<div class="swiper-wrapper">
-						<div class="swiper-slide">
-							<img src="/assets/sales.jpg" alt="" />
-						</div>
-						<div class="swiper-slide">
-							<img src="/assets/sales.jpg" alt="" />
-						</div>
-						<div class="swiper-slide">
-							<img src="/assets/sales.jpg" alt="" />
-						</div>
+			<div class="swiper mySwiper">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide">
+						<img src="/assets/sales.jpg" alt="" />
 					</div>
-					<div class="swiper-button-next">
-						<img class="swiper-button-prev-img" src="/assets/arrowNext.png" alt="arrow next" />
+					<div class="swiper-slide">
+						<img src="/assets/sales.jpg" alt="" />
 					</div>
-					<div class="swiper-button-prev">
-						<img class="swiper-button-prev-img" src="/assets/arrowPrev.png" alt="arrow prev" />
+					<div class="swiper-slide">
+						<img src="/assets/sales.jpg" alt="" />
 					</div>
-					<div class="swiper-pagination"></div>
 				</div>
-			</section>
-
-			<section class="about-us">
-				<h3 class="about-us__title">О нас</h3>
-				<div class="about-us__info">
-					<p class="about-us__info-descr">
-						В наших центрах работают опытные специалисты, которые с вниманием относятся к каждому
-						пациенту. Это профессионалы, которые станут вашими партнёрами в сохранении здоровья.
-					</p>
-					<p class="about-us__info-descr">
-						Наша команда – более 3000 врачей различных специальностей. Среди них 197 кандидатов
-						медицинских наук, 29 докторов медицинских наук, 8 профессоров, 2 академика РАМН, 7
-						доцентов и старших научных сотрудников, Заслуженный врач России.
-					</p>
-					<p class="about-us__info-descr">
-						В наших медицинских центрах работают врачи как самых востребованных медицинских
-						специальностей: терапевты, кардиологи, урологи, гинекологи, офтальмологи,
-						оториноларингологи, хирурги и другие, так и редких: генетики, репродуктологи,
-						эмбриологи, гепатологи и другие.
-					</p>
-					<p class="about-us__info-descr">
-						В детских отделениях ведут приём доктора, специализирующиеся на лечении детей с первых
-						дней жизни до совершеннолетия.В наших центрах работают опытные специалисты, которые с
-						вниманием относятся к каждому пациенту. Это профессионалы, которые станут вашими
-						партнёрами в сохранении здоровья.
-					</p>
-					<p class="about-us__info-descr">
-						Наша команда – более 3000 врачей различных специальностей. Среди них 197 кандидатов
-						медицинских наук, 29 докторов медицинских наук, 8 профессоров, 2 академика РАМН, 7
-						доцентов и старших научных сотрудников, Заслуженный врач России.
-					</p>
-					<p class="about-us__info-descr">
-						В наших медицинских центрах работают врачи как самых востребованных медицинских специаль
-					</p>
-					<p class="about-us__info-descr">
-						В детских отделениях ведут приём доктора, специализирующиеся на лечении детей с первых
-						дней жизни до совершеннолетия.В наших центрах работают опытные специалисты, которые с
-						вниманием относятся к каждому пациенту. Это профессионалы, которые станут вашими
-						партнёрами в сохранении здоровья.
-					</p>
-					<p class="about-us__info-descr">
-						Наша команда – более 3000 врачей различных специальностей. Среди них 197 кандидатов
-						медицинских наук, 29 докторов медицинских наук, 8 профессоров, 2 академика РАМН, 7
-						доцентов и старших научных сотрудников, Заслуженный врач
-					</p>
+				<div class="swiper-button-next">
+					<img class="swiper-button-prev-img" src="/assets/arrowNext.png" alt="arrow next" />
 				</div>
-			</section>
-			<section class="slider2">
-				<h2 class="slider2__title">Лицензии</h2>
-				<div class="swiper mySwiper2">
-					<div class="swiper-wrapper">
-						<div class="swiper-slide">Slide 1</div>
-						<div class="swiper-slide">Slide 2</div>
-						<div class="swiper-slide">Slide 3</div>
-						<div class="swiper-slide">Slide 4</div>
-						<div class="swiper-slide">Slide 5</div>
-					</div>
-					<div class="swiper-pagination"></div>
+				<div class="swiper-button-prev">
+					<img class="swiper-button-prev-img" src="/assets/arrowPrev.png" alt="arrow prev" />
 				</div>
-			</section>
+				<div class="swiper-pagination"></div>
+			</div>
+		</section>
 
-			<section class="contacts">
-				<a name="contacts"></a>
-				<h2 class="contacts__title">Контакты</h2>
-				<ol class="contacts__list">
-					<li class="contacts__list-item">
-						Наш адрес: <br />
-						г.Домодедово, Мкр. Западный Ул. Зеленая 72/1
-					</li>
-					<li class="contacts__list-item">
-						Телефоны: <br />
-						<a class="contacts__list-link" href="tel:+74967976375">+7 (496-79) 7-63-75 </a><br />
-						<a class="contacts__list-link" href="tel:+74967940427">+7 (496-79) 4-04-27</a>
-					</li>
-					<li class="contacts__list-item">
-						Режим работы: <br />
-						Пн — Сб: с 8 до 20 часов <br />
-						Вс: с 9 до 17 часов
-					</li>
-					<li class="contacts__list-item">
-						Работа процедурного кабинета: с 8:00 до 17:30 (в воскресение с 9:00 до 16:00)
-					</li>
-					<li class="contacts__list-item">
-						Анализы принимаются до 13.00, капельницы и уколы до 17:00.
-					</li>
-					<li class="contacts__list-item">
-						Возможен вызовы на дом медсестры (уколы и забор анализов)
-					</li>
-				</ol>
-			</section>
-			<section class="map">
-				<iframe
-					class="map__iframe"
-					src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2264.20558595797!2d37.76912981612451!3d55.4242079804667!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x414aa6a0d4d23bc1%3A0x7de8d81efb52de69!2z0KHQtdC80LXQudC90YvQuSDQnNC10LTQuNGG0LjQvdGB0LrQuNC5INCm0LXQvdGC0YAg0KHQu9Cw0LnQtA!5e0!3m2!1sru!2sfr!4v1664563364726!5m2!1sru!2sfr"
-					style="border: 0"
-					allowfullscreen=""
-					loading="lazy"
-					referrerpolicy="no-referrer-when-downgrade"
-				></iframe>
-			</section>
-		</main>
+		<section class="about-us">
+			<h3 class="about-us__title">О нас</h3>
+			<div class="about-us__info">
+				<p class="about-us__info-descr">
+					В наших центрах работают опытные специалисты, которые с вниманием относятся к каждому
+					пациенту. Это профессионалы, которые станут вашими партнёрами в сохранении здоровья.
+				</p>
+				<p class="about-us__info-descr">
+					Наша команда – более 3000 врачей различных специальностей. Среди них 197 кандидатов
+					медицинских наук, 29 докторов медицинских наук, 8 профессоров, 2 академика РАМН, 7
+					доцентов и старших научных сотрудников, Заслуженный врач России.
+				</p>
+				<p class="about-us__info-descr">
+					В наших медицинских центрах работают врачи как самых востребованных медицинских
+					специальностей: терапевты, кардиологи, урологи, гинекологи, офтальмологи,
+					оториноларингологи, хирурги и другие, так и редких: генетики, репродуктологи,
+					эмбриологи, гепатологи и другие.
+				</p>
+				<p class="about-us__info-descr">
+					В детских отделениях ведут приём доктора, специализирующиеся на лечении детей с первых
+					дней жизни до совершеннолетия.В наших центрах работают опытные специалисты, которые с
+					вниманием относятся к каждому пациенту. Это профессионалы, которые станут вашими
+					партнёрами в сохранении здоровья.
+				</p>
+				<p class="about-us__info-descr">
+					Наша команда – более 3000 врачей различных специальностей. Среди них 197 кандидатов
+					медицинских наук, 29 докторов медицинских наук, 8 профессоров, 2 академика РАМН, 7
+					доцентов и старших научных сотрудников, Заслуженный врач России.
+				</p>
+				<p class="about-us__info-descr">
+					В наших медицинских центрах работают врачи как самых востребованных медицинских специаль
+				</p>
+				<p class="about-us__info-descr">
+					В детских отделениях ведут приём доктора, специализирующиеся на лечении детей с первых
+					дней жизни до совершеннолетия.В наших центрах работают опытные специалисты, которые с
+					вниманием относятся к каждому пациенту. Это профессионалы, которые станут вашими
+					партнёрами в сохранении здоровья.
+				</p>
+				<p class="about-us__info-descr">
+					Наша команда – более 3000 врачей различных специальностей. Среди них 197 кандидатов
+					медицинских наук, 29 докторов медицинских наук, 8 профессоров, 2 академика РАМН, 7
+					доцентов и старших научных сотрудников, Заслуженный врач
+				</p>
+			</div>
+		</section>
+		<section class="slider2">
+			<h2 class="slider2__title">Лицензии</h2>
+			<div class="swiper mySwiper2">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide">Slide 1</div>
+					<div class="swiper-slide">Slide 2</div>
+					<div class="swiper-slide">Slide 3</div>
+					<div class="swiper-slide">Slide 4</div>
+					<div class="swiper-slide">Slide 5</div>
+				</div>
+				<div class="swiper-pagination"></div>
+			</div>
+		</section>
 
-		<footer class="footer container">
-			<ul class="footer__list">
-				<li class="footer__list-item">
-					<a href="#contacts" class="footer__list-item-link"> Контакты </a>
+		<section class="contacts">
+			<a name="contacts"></a>
+			<h2 class="contacts__title">Контакты</h2>
+			<ol class="contacts__list">
+				<li class="contacts__list-item">
+					Наш адрес: <br />
+					г.Домодедово, Мкр. Западный Ул. Зеленая 72/1
 				</li>
-				<li class="footer__list-item">
-					<a href="" class="footer__list-item-link"> Вакансии </a>
+				<li class="contacts__list-item">
+					Телефоны: <br />
+					<a class="contacts__list-link" href="tel:+74967976375">+7 (496-79) 7-63-75 </a><br />
+					<a class="contacts__list-link" href="tel:+74967940427">+7 (496-79) 4-04-27</a>
 				</li>
-				<li class="footer__list-item">
-					<a href="" class="footer__list-item-link"> Запись на прием </a>
+				<li class="contacts__list-item">
+					Режим работы: <br />
+					Пн — Сб: с 8 до 20 часов <br />
+					Вс: с 9 до 17 часов
 				</li>
-			</ul>
-		</footer>
-	</body>
+				<li class="contacts__list-item">
+					Работа процедурного кабинета: с 8:00 до 17:30 (в воскресение с 9:00 до 16:00)
+				</li>
+				<li class="contacts__list-item">
+					Анализы принимаются до 13.00, капельницы и уколы до 17:00.
+				</li>
+				<li class="contacts__list-item">
+					Возможен вызовы на дом медсестры (уколы и забор анализов)
+				</li>
+			</ol>
+		</section>
+		<section class="map">
+			<iframe class="map__iframe"
+				src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2264.20558595797!2d37.76912981612451!3d55.4242079804667!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x414aa6a0d4d23bc1%3A0x7de8d81efb52de69!2z0KHQtdC80LXQudC90YvQuSDQnNC10LTQuNGG0LjQvdGB0LrQuNC5INCm0LXQvdGC0YAg0KHQu9Cw0LnQtA!5e0!3m2!1sru!2sfr!4v1664563364726!5m2!1sru!2sfr"
+				style="border: 0" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+		</section>
+	</main>
+
+	<footer class="footer container">
+		<ul class="footer__list">
+			<li class="footer__list-item">
+				<a href="#contacts" class="footer__list-item-link"> Контакты </a>
+			</li>
+			<li class="footer__list-item">
+				<a href="" class="footer__list-item-link"> Вакансии </a>
+			</li>
+			<li class="footer__list-item">
+				<a href="" class="footer__list-item-link"> Запись на прием </a>
+			</li>
+		</ul>
+	</footer>
+</body>
+
 </html>
