@@ -15,10 +15,11 @@ const dentLink = document.querySelector('.circle__dent');
 const analLink = document.querySelector('.circle__anal');
 const medLink = document.querySelector('.circle__serv');
 const links = [dentLink, analLink, medLink]
+const goHomeEls = document.querySelectorAll('[data-home]')
 
-console.log(links)
+console.log(goHomeEls)
 
-function hadleClick(event) {
+function handleClick(event) {
 	event.preventDefault();
 
 	switch (event.currentTarget) {
@@ -39,6 +40,25 @@ function hadleClick(event) {
 
 }
 
+
+
+function handleGoHome(event) {
+	event.preventDefault();
+
+	dent.classList.add('hide')
+	anal.classList.add('hide')
+	med.classList.add('hide')
+	home.classList.remove('hide')
+
+
+
+}
+
+
 links.forEach(el => {
-	el.addEventListener("click", hadleClick)
+	el.addEventListener("click", handleClick)
+})
+
+goHomeEls.forEach(el => {
+	el.addEventListener("click", handleGoHome)
 })
