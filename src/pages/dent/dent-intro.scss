@@ -75,7 +75,7 @@ $burger: '830px';
 		left: 50%;
 		margin: calc(-0.5 * var(--d));
 		position: absolute;
-		top: 55%;
+		top: 48%;
 		transform: rotate(var(--az)) translate(calc(var(--r) + var(--shift)))
 			rotate(calc(-1 * var(--az)));
 		width: var(--d);
@@ -141,7 +141,7 @@ $burger: '830px';
 	}
 
 	&__text {
-		color: white;
+		color: #000;
 		font-family: $f-roboto;
 		font-size: rem(14);
 		font-weight: 400;

@@ -41,9 +41,11 @@ $burger: '830px';
 
 .circle {
 	--m: 10;
-	--tan: 0.9;
-	--d: 7.5em; /* image size */
-	--rel: 1; /* how much extra space we want between images, 1 = one image size */
+	--tan: 1;
+	--d: 3.2em;
+	--rel: 5;
+	// --d: 7.5em; /* image size */
+	// --rel: 1; /* how much extra space we want between images, 1 = one image size */
 	--r: calc(0.5 * (1 + var(--rel)) * var(--d) / var(--tan)); /* circle radius */
 	--s: calc(2 * var(--r) + var(--d)); /* container size */
 	background-image: url('/assets/intro/7ya.svg');
@@ -56,19 +58,26 @@ $burger: '830px';
 	@include respond-above($burger) {
 		--d: 5.5em;
 		--tan: 0.47;
+		--rel: 1;
 	}
 	@include respond-above('1230px') {
 		--tan: 0.3;
 	}
 
 	&__item {
+		--shift: 1px;
 		--az: calc(var(--i) * 1turn / var(--m));
 		height: var(--d);
-		left: 58%;
+		// left: 58%;
+		// top: 47%;
+
+		left: 46%;
+
 		margin: calc(-0.5 * var(--d));
 		position: absolute;
-		top: 47%;
-		transform: rotate(var(--az)) translate(var(--r)) rotate(calc(-1 * var(--az)));
+		top: 38%;
+		transform: rotate(var(--az)) translate(calc(var(--r) + var(--shift)))
+			rotate(calc(-1 * var(--az)));
 		width: var(--d);
 
 		@include respond-above($burger) {
@@ -124,23 +133,22 @@ $burger: '830px';
 				position: absolute;
 			}
 			@include respond-above('1107px') {
-				left: -360%;
+				left: -237%;
 			}
 		}
 	}
 
 	&__text {
-		color: #fff;
+		color: #000;
 		font-family: $f-roboto;
-		font-size: rem(16);
+		font-size: rem(14);
 		font-weight: 600;
 		text-align: center;
+
 		@include respond-above($burger) {
 			flex-shrink: 0;
 			font-size: rem(24);
 			font-weight: 700;
-		}
-		@include respond-below('1100px') {
 			max-width: 10ch;
 		}
 	}
@@ -156,6 +164,8 @@ $burger: '830px';
 	}
 
 	&__figure > img {
+		align-self: end;
+		max-width: 83%;
 		object-fit: contain;
 		@include respond-above($burger) {
 			--w: 100px;
