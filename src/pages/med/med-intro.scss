@@ -11,7 +11,7 @@ $burger: '830px';
 
 .med-intro {
 	align-items: center;
-	background-image: url('/assets/famaly.jpg');
+	// background-image: url('/assets/famaly.jpg');
 	background-size: cover;
 	display: flex;
 	flex-direction: column;
@@ -179,7 +179,6 @@ $burger: '830px';
 	}
 
 	&__text {
-		color: #fff;
 		font-family: $f-roboto;
 		font-size: rem(12);
 		font-weight: 700;

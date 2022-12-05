@@ -4,17 +4,18 @@ $burger: '830px';
 
 .intro {
 	align-items: center;
-	background-image: url('/assets/famaly.jpg');
+	// background-image: url('/assets/intro/blur-field-texture.jpg');
 	background-size: cover;
 	display: flex;
 	flex-direction: column;
 	padding-block: rem(23) rem(10);
 
 	&__phone {
-		color: #fff;
+		color: #000;
 		font-family: $f-roboto;
-		font-size: rem(20);
+		font-size: rem(26);
 		font-weight: 700;
+
 		@include respond-above($burger) {
 			display: none;
 		}
@@ -27,12 +28,18 @@ $burger: '830px';
 	}
 
 	&__address {
+		background: #198300;
+		box-shadow: 0 1px 3px 4px rgba(25, 131, 0, 1);
 		color: #fff;
 		font-family: $f-ibm;
 		font-size: rem(14);
 		font-style: normal;
 		font-weight: 600;
-		margin-top: rem(10);
+		margin-top: rem(5);
+		padding-block: rem(10);
+		text-align: center;
+		// box-shadow: ;
+		width: 98%;
 		@include respond-above($burger) {
 			display: none;
 		}
