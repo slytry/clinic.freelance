@@ -9,7 +9,9 @@ import '/scripts/main';
 const dent = document.querySelector('#dent');
 const med = document.querySelector('#med');
 const anal = document.querySelector('#anal');
+const info = document.querySelector('#info');
 const home = document.querySelector('#home');
+
 
 const dentLink = document.querySelector('.circle__dent');
 const analLink = document.querySelector('.circle__anal');
@@ -31,10 +33,12 @@ function handleClick(event) {
 		case analLink:
 			anal.classList.remove('hide')
 			home.classList.add('hide')
+			info.classList.remove('hide')
 			break;
 		case medLink:
 			med.classList.remove('hide')
 			home.classList.add('hide')
+			info.classList.remove('hide')
 			break;
 	}
 
@@ -49,8 +53,7 @@ function handleGoHome(event) {
 	anal.classList.add('hide')
 	med.classList.add('hide')
 	home.classList.remove('hide')
-
-
+	info.classList.add('hide')
 
 }
 

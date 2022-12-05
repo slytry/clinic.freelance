@@ -2,6 +2,12 @@
 
 $burger: '830px';
 
+#info {
+	display: grid;
+	margin-block: 20px;
+	place-items: center;
+}
+
 .intro {
 	align-items: center;
 	// background-image: url('/assets/intro/blur-field-texture.jpg');
@@ -15,7 +21,7 @@ $burger: '830px';
 		font-family: $f-roboto;
 		font-size: rem(26);
 		font-weight: 700;
-
+		text-align: center;
 		@include respond-above($burger) {
 			display: none;
 		}
